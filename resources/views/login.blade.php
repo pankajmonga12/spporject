@@ -5,7 +5,7 @@
 </head>
 <body>
 
-{!! Form::open(array('url' => 'login' , 'method' => 'post')) !!}
+{!! Form::open(array('url' => 'admin' , 'method' => 'post')) !!}
 <h1>Login</h1>
 
 <!-- if there are login errors, show them here -->
