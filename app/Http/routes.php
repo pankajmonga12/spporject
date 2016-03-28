@@ -17,4 +17,9 @@ Route::group(['middleware' => ['web']], function () {
         return view('welcome');
     });
 
+    Route::get('admin', array('uses' => 'AdminController@showLogin'));
+
+// route to process the form
+    Route::post('admin', array('uses' => 'AdminController@doLogin'));
+
 });
