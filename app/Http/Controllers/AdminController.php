@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Controllers\Controller;
-use Resources/Views;
+use Resources\Views;
 
 class AdminController  extends Controller
 {
