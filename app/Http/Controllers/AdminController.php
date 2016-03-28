@@ -6,13 +6,13 @@ use App\User;
 use App\Http\Controllers\Controller;
 
 
-public function showLogin()
+ function showLogin()
 {
     // show the form
     return View::make('login');
 }
 
-public function doLogin()
+ function doLogin()
 {
 // process the form
   $rules = array(
