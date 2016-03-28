@@ -3,7 +3,7 @@
 <head>
 <title>Look at me Login</title>
 </head>
-<body><
+<body>
 
 {!! Form::open(array('url' => 'login' , 'method' => 'post')) !!}
 <h1>Login</h1>
