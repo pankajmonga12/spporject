@@ -45,3 +45,5 @@ if ($validator->fails()) {
         // for now we'll just echo success (even though echoing in a controller is bad)
         echo 'SUCCESS!';
 }
+}
+}
