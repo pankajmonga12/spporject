@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 
-
+class AdminController  extends Controller
+{
  function showLogin()
 {
     // show the form
@@ -46,4 +47,6 @@ if ($validator->fails()) {
         echo 'SUCCESS!';
 }
 }
+}
+
 }
