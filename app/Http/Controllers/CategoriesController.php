@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Resources\Views;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use App\Categories;
 class CategoriesController extends Controller
 {
