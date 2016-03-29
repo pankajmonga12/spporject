@@ -80,6 +80,7 @@
 	  	</td>
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
+	  	 <meta name="csrf-token" content="{{ csrf_token() }}" />
 	  	</td>
 	  </tr>
 	<?php } ?>
@@ -92,7 +93,8 @@
     if (confirm("Are You Sure you want to Delete ? ") == true) {
        
        var user = {
-            id: id
+            id: id,
+            _token = $('meta[name="csrf-token"]').attr('content');
         }
 
       $.ajax({
