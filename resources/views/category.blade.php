@@ -1,5 +1,13 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+ <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>	
+</head>
+<body>
 
+</body>
+</html>
 	<tr>
 	  <td>
 		<a href="/index.php/category">Add Category</a>
@@ -30,7 +38,7 @@
 <p>{!! Form::submit('Submit!') !!}</p>
 {!! Form::close() !!}
 
-<?php echo "<pre> Data : ".print_r($categories , TRUE)."</pre>";  ?>
+<?php //echo "<pre> Data : ".print_r($categories , TRUE)."</pre>";  ?>
 
 <table border="1">
 	<tr>

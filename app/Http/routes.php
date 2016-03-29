@@ -11,26 +11,27 @@
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+	Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+	Route::get('/', function () {
+	return view('welcome');
+	});
 
-Route::get('/login', function () {
-        return view('login');
-    });
+	Route::get('/login', function () {
+	return view('login');
+	});
 
 
-    Route::get('admin', array('uses' => 'AdminController@showLogin'));
+	Route::get('admin', array('uses' => 'AdminController@showLogin'));
 
-// route to process the form
-    Route::post('admin', array('uses' => 'AdminController@doLogin'));
+	// route to process the form
+	Route::post('admin', array('uses' => 'AdminController@doLogin'));
 
-     Route::get('category', array('uses' => 'AdminController@showCategory'));
+	Route::get('category', array('uses' => 'AdminController@showCategory'));
 
-     Route::get('subcategory', array('uses' => 'AdminController@showSubcategory'));
+	Route::get('subcategory', array('uses' => 'AdminController@showSubcategory'));
 
-     Route::post('savecategory', array('uses' => 'CategoriesController@saveCat'));
+	Route::post('savecategory', array('uses' => 'CategoriesController@saveCat'));
+	Route::post('deletecategory', 'CategoriesController@deleteCategory');
 
 });
