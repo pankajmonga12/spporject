@@ -31,4 +31,6 @@ Route::get('/login', function () {
 
      Route::get('subcategory', array('uses' => 'AdminController@showSubcategory'));
 
+     Route::post('savecategory', array('uses' => 'CategoriesController@saveCat'));
+
 });
