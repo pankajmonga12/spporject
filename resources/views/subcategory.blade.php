@@ -21,7 +21,7 @@
 	  </td>
 	</tr>
 </table>
-<?php// echo "<pre> Data : ".print_r($categoriesdrop , TRUE)."</pre>"; ?>
+<?php  echo "<pre> Data : ".print_r($categoriesdrop , TRUE)."</pre>"; ?>
 {!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
 <h1>Add New Category</h1>
 
