@@ -51,8 +51,11 @@ class CategoriesController extends Controller
 
   function deleteCategory(Request $request) {
 
-  	$data = $request->input();
-
-  	echo "<pre> data : ".print_r($data , TRUE). "</pre>";
+  	$id = $request->input('id');
+    $categories = Categories::find($id);
+    $categories->delete();
+    Session::flash('message', 'Category is deleted now !'); 
+Session::flash('alert-class', 'alert-danger');
+  	 return Redirect::to('category');
   }
 }

@@ -6,7 +6,9 @@
 </head>
 <body>
 
-
+@if(Session::has('message'))
+<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+@endif
 	<tr>
 	  <td>
 		<a href="/index.php/category">Add Category</a>
