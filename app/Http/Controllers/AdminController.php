@@ -75,6 +75,20 @@ if ($validator->fails()) {
  function showSubcategory()
 {
     // show the form
-    return view('subcategory');
+    $categories = Categories::where('parent', '=', 0)->get();
+    $categoryData = array();
+    $categoryDrop = array();
+    foreach ($categories as $category) {
+    	$categoryDrop[$category->id] =$category->category;
+    	$categoryD = array();
+    	$categoryD['id'] = $category->id;
+    	$categoryD['category'] = $category->category;
+    	$categoryD['parent'] = $category->parent;
+    	$categoryD['status'] = $category->status;
+    	$categoryData[] = $categoryD;
+    }
+
+
+    return view('subcategory' , ['categoriesdrop' => $categoryDrop,'categories' => $categoryData]);
 }
 }

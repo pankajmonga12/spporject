@@ -23,7 +23,7 @@
 </table>
 
 {!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
-<h1>Login</h1>
+<h1>Add New Category</h1>
 
 <!-- if there are login errors, show them here -->
 <p>
