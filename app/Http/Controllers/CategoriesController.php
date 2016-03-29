@@ -37,10 +37,10 @@ class CategoriesController extends Controller
         'status' => 1
     );
 
-	$Categories = new Categories;
-	$Categories->fill( $catData );
-	$Categories->save();
-	 return Redirect::to('category');
+		$Categories = new Categories;
+		$Categories->fill( $catData );
+		$Categories->save();
+	    return Redirect::to('category');
 	
 	}
 
