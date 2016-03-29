@@ -21,7 +21,7 @@
 	  </td>
 	</tr>
 </table>
-
+<?php echo "<pre> Data : ".print_r($categoriesdrop , TRUE)."</pre>"; ?>
 {!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
 <h1>Add New Category</h1>
 
@@ -31,7 +31,7 @@
 </p>
 <p>
     {!!  Form::label('category', 'Category Name')!!}
-    {!!  Form::select('size', $categoriesdrop) !!}
+    {!!  Form::select('size', array('1' => 'Large', 'S' => 'Small')) !!}
 </p>
 
 <p>
