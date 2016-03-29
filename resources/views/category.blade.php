@@ -50,30 +50,5 @@
 			Action
 		</td>
 	</tr>
-	<?php for ($i=0; $i < $categories ; $i++) { ?>
-	  <tr>
-	  	<td>
-	  	<?php echo $i+1; ?>
-	  	</td>
-	  	<td>
-	     <?php echo $categories[$i]['category']; ?>
-	  	</td>
-	  	<td>
-	  	 <?php if($categories[$i]['parent'] == 0) {
-              echo "main Category";
-	  	 	} ?>
-	  	</td>
-	  	<td>
-	     <?php if($categories[$i]['status'] == 1) {
-              echo "Active";
-	  	 	} else {
-	  	 		echo "Inactive";
-	  	 	}
-	  	 	?>
-	  	</td>
-	  	<td>
-	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)"> Delete </input>
-	  	</td>
-	  </tr>
-	<?php } ?> 
+
 </table>
