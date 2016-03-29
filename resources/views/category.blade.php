@@ -29,3 +29,5 @@
 
 <p>{!! Form::submit('Submit!') !!}</p>
 {!! Form::close() !!}
+
+<?php echo "<pre> Data : ".print_r($categories , TRUE)."</pre>";  ?>

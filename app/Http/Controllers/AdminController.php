@@ -58,7 +58,8 @@ if ($validator->fails()) {
  function showCategory()
 {
     // show the form
-    return view('category');
+    $categories = Categories::where('parent', '=', 0)->get();
+    return view('category' , ['categories' => $categories]);
 }
 
  function showSubcategory()
