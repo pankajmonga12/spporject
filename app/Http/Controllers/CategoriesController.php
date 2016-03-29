@@ -26,7 +26,7 @@ class CategoriesController extends Controller
     );
 
 	$Categories = new Categories;
-	$Categories->fill( $array );
+	$Categories->fill( $catData );
 	$Categories->save();
    echo "<pre> data : ".print_r($userdata , TRUE)."</pre>";
 
