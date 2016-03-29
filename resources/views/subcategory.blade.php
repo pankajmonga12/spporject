@@ -31,7 +31,7 @@
 </p>
 <p>
     {!!  Form::label('category', 'Category Name')!!}
-    {!!  Form::select('size', array('1' => 'Large', 'S' => 'Small')) !!}
+    {!!  Form::select('size', $categoriesdrop) !!}
 </p>
 
 <p>
