@@ -19,7 +19,19 @@ class CategoriesController extends Controller
   {
   	
 
-  	$catData = array(
+  	 $rules = array(
+    'category'    => 'required'
+     );
+
+	$validator = Validator::make(Input::all(), $rules);
+
+	if ($validator->fails()) {
+		
+		 return Redirect::to('category')
+        ->withErrors($validator);
+	}  else {
+
+        $catData = array(
         'category'     => Input::get('category'),
         'parent'  => 0,
         'status' => 1
@@ -28,7 +40,12 @@ class CategoriesController extends Controller
 	$Categories = new Categories;
 	$Categories->fill( $catData );
 	$Categories->save();
-   echo "<pre> data : ".print_r($userdata , TRUE)."</pre>";
+	 return Redirect::to('category');
+	
+	}
+
+  	
+   //echo "<pre> data : ".print_r($catData , TRUE)."</pre>";
 
   }
 }
