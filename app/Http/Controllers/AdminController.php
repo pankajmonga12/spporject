@@ -60,7 +60,14 @@ if ($validator->fails()) {
 {
     // show the form
     $categories = Categories::where('parent', '=', 0)->get();
-    return view('category' , ['categories' => $categories]);
+    $categoryData = array();
+    foreach ($categories as $category) {
+    	$categoryData['id'] = $category->id;
+    	$categoryData['category'] = $category->category;
+    	$categoryData['parent'] = $category->parent;
+    	$categoryData['status'] = $category->status;
+    }
+    return view('category' , ['categories' => $categoryData]);
 }
 
  function showSubcategory()
