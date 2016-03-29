@@ -72,7 +72,7 @@
 	  	 	?>
 	  	</td>
 	  	<td>
-	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)"> Delete </input>
+	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
 	  	</td>
 	  </tr>
 	<?php } ?>
