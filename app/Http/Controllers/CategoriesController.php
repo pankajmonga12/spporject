@@ -85,16 +85,16 @@ class CategoriesController extends Controller
         'status' => 1
     );
 
-		/*$Categories = new Categories;
+		$Categories = new Categories;
 		$Categories->fill( $catData );
-		$Categories->save();*/
-	    //return Redirect::to('subcategory');
+		$Categories->save();
+	    return Redirect::to('subcategory');
 	
 	}
 
   	
-  echo "<pre> data : ".print_r($catData , TRUE)."</pre>";
-  die();
+   //echo "<pre> data : ".print_r($catData , TRUE)."</pre>";
+
   }
 
 }
