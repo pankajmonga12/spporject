@@ -76,7 +76,10 @@ if ($validator->fails()) {
 {
     // show the form
     $categories = Categories::where('parent', '=', 0)->get();
-    $categoriesD = Categories::where('parent', '>', 0)->get();
+    $categoriesD = DB::table('categories')
+            ->join('categories as cat', 'cat.id', '=', 'categories.id')
+            ->select('categories.category as category','categories.id as id', 'categories.status as status','cat.category as parent')
+            ->get();
     $categoryData = array();
     $categoryDrop = array();
     $categoryDrop[0] ='Select Category';
