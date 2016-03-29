@@ -82,11 +82,14 @@ if ($validator->fails()) {
     $categoryDrop[0] ='Select Category';
     foreach ($categories as $category) {
     	$categoryDrop[$category->id] =$category->category;
+    }
+
+    foreach ($categoriesD as $categorydatat) {
     	$categoryD = array();
-    	$categoryD['id'] = $category->id;
-    	$categoryD['category'] = $category->category;
-    	$categoryD['parent'] = $category->parent;
-    	$categoryD['status'] = $category->status;
+    	$categoryD['id'] = $categorydatat->id;
+    	$categoryD['category'] = $categorydatat->category;
+    	$categoryD['parent'] = $categorydatat->parent;
+    	$categoryD['status'] = $categorydatat->status;
     	$categoryData[] = $categoryD;
     }
 
