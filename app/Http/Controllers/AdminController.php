@@ -50,9 +50,20 @@ if ($validator->fails()) {
         // redirect them to the secure section or whatever
         // return Redirect::to('secure');
         // for now we'll just echo success (even though echoing in a controller is bad)
-        echo 'SUCCESS!';
+         return view('login');
 }
 }
 }
 
+ function showCategory()
+{
+    // show the form
+    return view('category');
+}
+
+ function showSubcategory()
+{
+    // show the form
+    return view('subcategory');
+}
 }
