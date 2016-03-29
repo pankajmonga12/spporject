@@ -27,4 +27,8 @@ Route::get('/login', function () {
 // route to process the form
     Route::post('admin', array('uses' => 'AdminController@doLogin'));
 
+     Route::get('category', array('uses' => 'AdminController@showCategory'));
+
+     Route::get('subcategory', array('uses' => 'AdminController@showSubcategory'));
+
 });
