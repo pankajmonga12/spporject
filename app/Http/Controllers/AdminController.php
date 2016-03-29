@@ -81,7 +81,7 @@ if ($validator->fails()) {
     $categoryDrop = array();
     $categoryDrop[0] ='Select Category';
     foreach ($categories as $category) {
-    	$categoryDrop[$categoriesD->id] =$categoriesD->category;
+    	$categoryDrop[$category->id] =$category->category;
     	$categoryD = array();
     	$categoryD['id'] = $category->id;
     	$categoryD['category'] = $category->category;
