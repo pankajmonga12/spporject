@@ -6,8 +6,7 @@
 </head>
 <body>
 
-</body>
-</html>
+
 	<tr>
 	  <td>
 		<a href="/index.php/category">Add Category</a>
@@ -84,4 +83,34 @@
 	  	</td>
 	  </tr>
 	<?php } ?>
-</table>
+  </table>
+ </body>
+</html>
+<script type="text/javascript">
+	function Deletecat(id) {
+   
+    if (confirm("Are You Sure you want to Delete ? ") == true) {
+       
+       var user = {
+            id: id
+        }
+
+      $.ajax({
+            url: 'deletecategory',
+            type: 'post',
+            data: user,
+            dataType: 'json',
+            success: function (data) {
+                   
+                  
+            },
+            
+        });
+
+    } else {
+      
+
+    }
+    
+}
+</script>

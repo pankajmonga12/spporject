@@ -48,4 +48,11 @@ class CategoriesController extends Controller
    //echo "<pre> data : ".print_r($catData , TRUE)."</pre>";
 
   }
+
+  function deleteCategory(Request $request) {
+
+  	$data = $request->input();
+
+  	echo "<pre> data : ".print_r($data , TRUE). "</pre>";
+  }
 }
