@@ -23,7 +23,7 @@
 </table>
 
 {!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
-<h1>Add New Category</h1>
+<h1>Add New Sub Category</h1>
 
 <!-- if there are login errors, show them here -->
 <p>
