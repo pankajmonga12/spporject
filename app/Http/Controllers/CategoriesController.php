@@ -55,10 +55,15 @@ class CategoriesController extends Controller
 
   	$id = $request->input('id');
     $categories = Categories::find($id);
-    $categories->delete();
+    if ($categories->delete()) {
     Session::flash('message', 'Category is deleted now !'); 
     Session::flash('alert-class', 'alert-danger');
-  	 Redirect::to('category');
-  	 die();
+     return true;
+    } else {
+    	return false;
+    }
+    
+  	
+  	
   }
 }

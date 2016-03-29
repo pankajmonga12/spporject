@@ -104,7 +104,7 @@
             data: user,
             dataType: 'json',
             success: function (data) {
-                   
+                   console.log(data);
                   
             },
             
