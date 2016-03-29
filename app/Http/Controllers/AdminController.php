@@ -60,12 +60,14 @@ if ($validator->fails()) {
 {
     // show the form
     $categories = Categories::where('parent', '=', 0)->get();
-    $categoryData[] = array();
+    $categoryData = array();
     foreach ($categories as $category) {
-    	$categoryData['id'] = $category->id;
-    	$categoryData['category'] = $category->category;
-    	$categoryData['parent'] = $category->parent;
-    	$categoryData['status'] = $category->status;
+    	$categoryD = array();
+    	$categoryD['id'] = $category->id;
+    	$categoryD['category'] = $category->category;
+    	$categoryD['parent'] = $category->parent;
+    	$categoryD['status'] = $category->status;
+    	$categoryData[] = $categoryD;
     }
     return view('category' , ['categories' => $categoryData]);
 }
