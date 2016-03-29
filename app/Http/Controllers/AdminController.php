@@ -78,6 +78,7 @@ if ($validator->fails()) {
     $categories = Categories::where('parent', '=', 0)->get();
     $categoryData = array();
     $categoryDrop = array();
+    $categoryDrop[0] ='Select Category';
     foreach ($categories as $category) {
     	$categoryDrop[$category->id] =$category->category;
     	$categoryD = array();

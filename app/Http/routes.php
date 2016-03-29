@@ -32,6 +32,9 @@
 	Route::get('subcategory', array('uses' => 'AdminController@showSubcategory'));
 
 	Route::post('savecategory', array('uses' => 'CategoriesController@saveCat'));
+	
 	Route::post('deletecategory', 'CategoriesController@deleteCategory');
+
+	Route::post('savesubcategory', 'CategoriesController@savesubCat');
 
 });

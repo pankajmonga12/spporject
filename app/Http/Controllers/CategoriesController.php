@@ -62,4 +62,39 @@ class CategoriesController extends Controller
     die();
 
   }
+
+   function savesubCat()
+  {
+  	
+
+  	 $rules = array(
+    'category'    => 'required'
+     );
+
+	$validator = Validator::make(Input::all(), $rules);
+
+	if ($validator->fails()) {
+		
+		 return Redirect::to('category')
+        ->withErrors($validator);
+	}  else {
+
+        $catData = array(
+        'category'     => Input::get('category'),
+        'parent'  => 0,
+        'status' => 1
+    );
+
+		$Categories = new Categories;
+		$Categories->fill( $catData );
+		$Categories->save();
+	    return Redirect::to('category');
+	
+	}
+
+  	
+   //echo "<pre> data : ".print_r($catData , TRUE)."</pre>";
+
+  }
+
 }
