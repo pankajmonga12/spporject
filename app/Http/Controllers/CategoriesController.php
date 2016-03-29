@@ -58,6 +58,8 @@ class CategoriesController extends Controller
     $categories->delete();
     Session::flash('message', 'Category is deleted now !'); 
     Session::flash('alert-class', 'alert-danger');
-     return true;  	
+    echo json_encode($array= array('status'=> true));
+    die();
+
   }
 }
