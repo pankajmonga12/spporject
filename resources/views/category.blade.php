@@ -38,7 +38,7 @@
 {!! Form::close() !!}
 
 <?php //echo "<pre> Data : ".print_r($categories , TRUE)."</pre>";  ?>
-
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 <table border="1">
 	<tr>
 		<td>
@@ -80,8 +80,7 @@
 	  	</td>
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
-	  	 <meta name="csrf-token" content="{{ csrf_token() }}" />
-	  	</td>
+	  	 	  	</td>
 	  </tr>
 	<?php } ?>
   </table>
@@ -91,10 +90,10 @@
 	function Deletecat(id) {
    
     if (confirm("Are You Sure you want to Delete ? ") == true) {
-       
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
        var user = {
             id: id,
-            _token = $('meta[name="csrf-token"]').attr('content')
+            _token: CSRF_TOKEN
         }
 
       $.ajax({
