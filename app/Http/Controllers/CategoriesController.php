@@ -19,12 +19,15 @@ class CategoriesController extends Controller
   {
   	
 
-  	$userdata = array(
+  	$catData = array(
         'category'     => Input::get('category'),
         'parent'  => 0,
         'status' => 1
     );
-   
+
+	$Categories = new Categories;
+	$Categories->fill( $array );
+	$Categories->save();
    echo "<pre> data : ".print_r($userdata , TRUE)."</pre>";
 
   }
