@@ -50,7 +50,7 @@
 			Action
 		</td>
 	</tr>
-	<?php for ($i=0; $i < $categories ; $i++) { ?>
+<!--	<?php for ($i=0; $i < $categories ; $i++) { ?>
 	  <tr>
 	  	<td>
 	  	<?php echo $i+1; ?>
@@ -61,7 +61,7 @@
 	  	<td>
 	  	 <?php if($categories[$i]['parent'] == 0) {
               echo "main Category";
-	  	 	}?>
+	  	 	} ?>
 	  	</td>
 	  	<td>
 	     <?php if($categories[$i]['status'] == 1) {
@@ -75,5 +75,5 @@
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)"> Delete </input>
 	  	</td>
 	  </tr>
-	<?php } ?>
+	<?php } ?> -->
 </table>
