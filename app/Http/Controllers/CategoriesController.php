@@ -80,15 +80,15 @@ class CategoriesController extends Controller
 	}  else {
 
         $catData = array(
-        'category'     => Input::get('category'),
-        'parent'  => 0,
+        'category'     => Input::get('subcategory'),
+        'parent'  => Input::get('category'),
         'status' => 1
     );
 
 		$Categories = new Categories;
 		$Categories->fill( $catData );
 		$Categories->save();
-	    return Redirect::to('category');
+	    return Redirect::to('subcategory');
 	
 	}
 

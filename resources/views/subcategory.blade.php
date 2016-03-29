@@ -31,12 +31,12 @@
 </p>
 <p>
     {!!  Form::label('category', 'Category Name')!!}
-    {!!  Form::select('size', $categoriesdrop) !!}
+    {!!  Form::select('category', $categoriesdrop) !!}
 </p>
 
 <p>
-    {!!  Form::label('category', 'Sub Category Name')!!}
-    {!!  Form::text('category', Input::old('category'), array('placeholder' => 'Category Name')) !!}
+    {!!  Form::label('subcategory', 'Sub Category Name')!!}
+    {!!  Form::text('subcategory', Input::old('category'), array('placeholder' => 'Category Name')) !!}
 </p>
 
 

@@ -75,7 +75,7 @@ if ($validator->fails()) {
  function showSubcategory()
 {
     // show the form
-    $categories = Categories::where('parent', '=', 0)->get();
+    $categories = Categories::where('parent', '>', 0)->get();
     $categoryData = array();
     $categoryDrop = array();
     $categoryDrop[0] ='Select Category';
