@@ -60,7 +60,7 @@ if ($validator->fails()) {
 {
     // show the form
     $categories = Categories::where('parent', '=', 0)->get();
-    $categoryData = array();
+    $categoryData[] = array();
     foreach ($categories as $category) {
     	$categoryData['id'] = $category->id;
     	$categoryData['category'] = $category->category;
