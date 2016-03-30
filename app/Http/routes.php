@@ -37,4 +37,6 @@
 
 	Route::post('savesubcategory', 'CategoriesController@savesubCat');
 
+	Route::post('addjob', 'AdminController@showjobform');
+
 });

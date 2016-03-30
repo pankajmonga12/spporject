@@ -101,4 +101,11 @@ if ($validator->fails()) {
 
     return view('subcategory' , ['categoriesdrop' => $categoryDrop,'categories' => $categoryData]);
 }
+
+
+function showjobform()
+{
+    // show the form
+    return view('jobboard');
+}
 }
