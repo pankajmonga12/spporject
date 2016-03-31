@@ -148,8 +148,8 @@ if ($validator->fails()) {
     foreach ($agelimit as $agelimitm) {
     	$agelimitD = array();
     	$agelimitD['id'] = $agelimitm->id;
-    	$agelimitD['minage'] = $agelimitm->title;
-    	$agelimitD['maxage'] = $agelimitm->status;
+    	$agelimitD['minage'] = $agelimitm->minage;
+    	$agelimitD['maxage'] = $agelimitm->maxage;
     	$agelimitData[] = $agelimitD;
     }
     return view('agelimit' , ['agelimit' => $agelimitData]);
