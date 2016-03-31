@@ -38,8 +38,8 @@ class AgelimitController extends Controller
         'status' => 1
     );
 
-
-                $Agelimit = new Agelimit::find('1');
+    $agelId = 1;
+                $Agelimit = new Agelimit::find($agelId);
 
                 if ($Agelimit->id) {
 
