@@ -56,7 +56,7 @@ class AgelimitController extends Controller
                 }
 
                 
-            return Redirect::to('addeligibility');
+            return Redirect::to('addagelimit');
 
         }
 

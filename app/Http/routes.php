@@ -54,7 +54,6 @@
 
     Route::get('addagelimit', 'AdminController@showAgelimit');
 
-    Route::post('savequalification', array('uses' => 'QualificationController@saveQualification'));
-
-    Route::post('deletequalification', 'QualificationController@deleteQualification');
+    Route::post('saveagelimit', array('uses' => 'AgelimitController@saveAgelimit'));
+    
 });

@@ -30,7 +30,7 @@
 	</tr>
 </table>
 
-{!! Form::open(array('url' => 'saveeligibility' , 'method' => 'post')) !!}
+{!! Form::open(array('url' => 'saveagelimit' , 'method' => 'post')) !!}
 <h1>Add New Aligibility</h1>
 
 <!-- if there are login errors, show them here -->
