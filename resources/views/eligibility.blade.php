@@ -35,7 +35,7 @@
 
 <p>
     {!!  Form::label('category', 'Category Name')!!}
-    {!!  Form::text('category', Input::old('category'), array('placeholder' => 'Category Name')) !!}
+    {!!  Form::text('category', Input::old('category'), array('placeholder' => ' New Eligibility ')) !!}
 </p>
 
 
