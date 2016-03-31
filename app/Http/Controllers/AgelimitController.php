@@ -39,7 +39,7 @@ class AgelimitController extends Controller
     );
 
     $agelId = 1;
-                $Agelimit = new Agelimit::find($agelId);
+                $Agelimit = Agelimit::find($agelId);
 
                 if ($Agelimit->id) {
 
