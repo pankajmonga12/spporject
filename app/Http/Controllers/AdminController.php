@@ -11,7 +11,7 @@ use Resources\Views;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use App\Categories;
-use App\EligibilityModel;
+use App\Eligibility;
 use Illuminate\Support\Facades\DB;
 
 class AdminController  extends Controller
