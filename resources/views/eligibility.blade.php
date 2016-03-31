@@ -25,7 +25,7 @@
 	</tr>
 </table>
 
-{!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
+{!! Form::open(array('url' => 'saveeligibility' , 'method' => 'post')) !!}
 <h1>Add New Category</h1>
 
 <!-- if there are login errors, show them here -->
@@ -34,7 +34,7 @@
 </p>
 
 <p>
-    {!!  Form::label('category', 'Category Name')!!}
+    {!!  Form::label('category', 'Aligibility')!!}
     {!!  Form::text('category', Input::old('category'), array('placeholder' => ' New Eligibility ')) !!}
 </p>
 

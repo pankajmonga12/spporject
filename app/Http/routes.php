@@ -40,4 +40,6 @@
 	Route::get('addjob', 'AdminController@showjobform');
 
     Route::get('addeligibility', 'AdminController@showEligibility');
+
+    Route::post('saveeligibility', array('uses' => 'Eligibility@saveEligibility'));
 });
