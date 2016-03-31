@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use App\Eligibility;
 
-class Eligibility extends Controller
+class EligibilityController extends Controller
 {
     
     function saveEligibility()

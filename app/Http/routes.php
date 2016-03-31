@@ -41,5 +41,5 @@
 
     Route::get('addeligibility', 'AdminController@showEligibility');
 
-    Route::post('saveeligibility', array('uses' => 'Eligibility@saveEligibility'));
+    Route::post('saveeligibility', array('uses' => 'EligibilityController@saveEligibility'));
 });
