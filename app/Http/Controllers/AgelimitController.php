@@ -29,7 +29,7 @@ class AgelimitController extends Controller
 
         if ($validator->fails()) {
 
-                 return Redirect::to('eligibility')
+                 return Redirect::to('addagelimit')
         ->withErrors($validator);
         }  else {
 
@@ -41,23 +41,23 @@ class AgelimitController extends Controller
 
     $agelId = 1;
                 $Agelimit = Agelimit::find($agelId);
-                echo "<pre> Data : ".print_r($Agelimit , TRUE)."</pre>";
+                //echo "<pre> Data : ".print_r($Agelimit , TRUE)."</pre>";
 
                 if (isset($Agelimit->id)) {
-                    echo "enter 1 loop ";
+                    //echo "enter 1 loop ";
                 	$Agelimit->minage = $ageData['minage'];
 	                $Agelimit->maxage = $ageData['maxage'];
 	                $Agelimit->save();
                 
                 } else {
-                    echo "enter 2 loop ";
+                    //echo "enter 2 loop ";
                 	$Agelimit = new Agelimit;
 	                $Agelimit->fill( $ageData );
 	                $Agelimit->save();
 
                 }
 
-          
+          return Redirect::to('addagelimit');
 
         }
 

@@ -52,7 +52,7 @@
 <p>{!! Form::submit('Submit!') !!}</p>
 {!! Form::close() !!}
 
-<?php //echo "<pre> Data : ".print_r($categories , TRUE)."</pre>";  ?>
+<?php echo "<pre> Data : ".print_r($agelimit , TRUE)."</pre>";  ?>
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 <table border="1">
 	<tr>
