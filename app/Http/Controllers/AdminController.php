@@ -11,6 +11,7 @@ use Resources\Views;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use App\Categories;
+use App\Eligibility;
 use Illuminate\Support\Facades\DB;
 
 class AdminController  extends Controller
@@ -103,9 +104,23 @@ if ($validator->fails()) {
 }
 
 
-function showjobform()
-{
-    // show the form
-    return view('jobboard');
-}
+	function showjobform()
+	{
+	    // show the form
+	    return view('jobboard');
+	}
+
+	function showEligibility()
+    {
+      $eligibilities = Eligibility::where('status', '=', 1)->get();
+      $eligibilityData = array();
+    foreach ($eligibilities as $eligibility) {
+    	$eligibilityD = array();
+    	$eligibilityD['id'] = $eligibility->id;
+    	$eligibilityD['title'] = $eligibility->title;
+    	$eligibilityD['status'] = $eligibility->status;
+    	$eligibilityData[] = $eligibilityD;
+    }
+    return view('eligibility' , ['eligibility' => $eligibilityData]);
+    }
 }

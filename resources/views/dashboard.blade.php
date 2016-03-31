@@ -6,6 +6,15 @@
 	  <td>
 		<a href="/index.php/subcategory">Add SubCategory</a>
 	  </td>
+
+	  <td>
+		<a href="/index.php/subcategory">Add SubCategory</a>
+	  </td>
+	  
+	  
+	  <td>
+		<a href="/index.php/addeligibility">Add SubCategory</a>
+	  </td>
 	  <td>
 		<a href="/index.php/addjob">Add New Job</a>
 	  </td>

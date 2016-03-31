@@ -39,4 +39,5 @@
 
 	Route::get('addjob', 'AdminController@showjobform');
 
+    Route::get('addeligibility', 'AdminController@showEligibility');
 });
