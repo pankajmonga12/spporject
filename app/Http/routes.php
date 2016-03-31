@@ -42,4 +42,6 @@
     Route::get('addeligibility', 'AdminController@showEligibility');
 
     Route::post('saveeligibility', array('uses' => 'EligibilityController@saveEligibility'));
+
+    Route::post('deleteeligibility', 'CategoriesController@deleteEligibility');
 });

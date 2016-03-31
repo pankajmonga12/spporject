@@ -26,7 +26,7 @@
 </table>
 
 {!! Form::open(array('url' => 'saveeligibility' , 'method' => 'post')) !!}
-<h1>Add New Category</h1>
+<h1>Add New Aligibility</h1>
 
 <!-- if there are login errors, show them here -->
 <p>
