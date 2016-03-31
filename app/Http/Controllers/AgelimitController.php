@@ -56,13 +56,12 @@ class AgelimitController extends Controller
 
                 }
 
-                
-           // return Redirect::to('addagelimit');
+          
 
         }
 
   	
-   //echo "<pre> data : ".print_r($catData , TRUE)."</pre>";
+   
 
   }
  
