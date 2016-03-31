@@ -43,7 +43,7 @@ class AgelimitController extends Controller
                 $Agelimit = Agelimit::find($agelId);
                 echo "<pre> Data : ".print_r($Agelimit , TRUE)."</pre>";
 
-                if ($Agelimit->id) {
+                if (isset($Agelimit->id)) {
                     echo "enter 1 loop ";
                 	$Agelimit->minage = $ageData['minage'];
 	                $Agelimit->maxage = $ageData['maxage'];
