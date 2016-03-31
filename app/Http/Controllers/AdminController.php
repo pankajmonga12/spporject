@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use App\Categories;
 use App\Eligibility;
+use App\Qualification;
 use Illuminate\Support\Facades\DB;
 
 class AdminController  extends Controller
@@ -122,5 +123,19 @@ if ($validator->fails()) {
     	$eligibilityData[] = $eligibilityD;
     }
     return view('eligibility' , ['eligibility' => $eligibilityData]);
+    }
+
+    function showQualification()
+    {
+      $qualification = Qualification::where('status', '=', 1)->get();
+      $qualificationData = array();
+    foreach ($qualification as $qualificationm) {
+    	$eligibilityD = array();
+    	$eligibilityD['id'] = $qualificationm->id;
+    	$eligibilityD['title'] = $qualificationm->title;
+    	$eligibilityD['status'] = $qualificationm->status;
+    	$qualificationData[] = $eligibilityD;
+    }
+    return view('qualification' , ['qualification' => $qualificationData]);
     }
 }

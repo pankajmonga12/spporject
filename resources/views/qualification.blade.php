@@ -20,13 +20,16 @@
 		<a href="/index.php/addeligibility">Add SubCategory</a>
 	  </td>
 	  <td>
+		<a href="/index.php/addqualification">Add Qualification</a>
+	  </td>
+	  <td>
 		<a href="/index.php/addjob">Add New Job</a>
 	  </td>
 	</tr>
 </table>
 
-{!! Form::open(array('url' => 'saveeligibility' , 'method' => 'post')) !!}
-<h1>Add New Aligibility</h1>
+{!! Form::open(array('url' => 'savequalification' , 'method' => 'post')) !!}
+<h1>Add New Qualification</h1>
 
 <!-- if there are login errors, show them here -->
 <p>
@@ -34,8 +37,8 @@
 </p>
 
 <p>
-    {!!  Form::label('title', 'Aligibility')!!}
-    {!!  Form::text('title', Input::old('title'), array('placeholder' => ' New Eligibility ')) !!}
+    {!!  Form::label('title', 'Qualification')!!}
+    {!!  Form::text('title', Input::old('title'), array('placeholder' => ' New Qualification ')) !!}
 </p>
 
 
@@ -59,16 +62,16 @@
 			Action
 		</td>
 	</tr>
-	<?php for ($i=0; $i <count($eligibility) ; $i++) { ?>
+	<?php for ($i=0; $i <count($qualification) ; $i++) { ?>
 	  <tr>
 	  	<td>
 	  	<?php echo $i+1; ?>
 	  	</td>
 	  	<td>
-	     <?php echo $eligibility[$i]['title']; ?>
+	     <?php echo $qualification[$i]['title']; ?>
 	  	</td>
 	  	<td>
-	     <?php if($eligibility[$i]['status'] == 1) {
+	     <?php if($qualification[$i]['status'] == 1) {
               echo "Active";
 	  	 	} else {
 	  	 		echo "Inactive";
@@ -76,7 +79,7 @@
 	  	 	?>
 	  	</td>
 	  	<td>
-	  	 <input type="button" onclick="Deletecat(<?php echo $eligibility[$i]['id']; ?>)" value="Delete"> </input>
+	  	 <input type="button" onclick="Deletecat(<?php echo $qualification[$i]['id']; ?>)" value="Delete"> </input>
 	  	 	  	</td>
 	  </tr>
 	<?php } ?>
@@ -94,7 +97,7 @@
         }
 
       $.ajax({
-            url: 'deleteeligibility',
+            url: 'deletequalification',
             type: 'post',
             data: user,
             dataType: 'json',

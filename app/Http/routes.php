@@ -43,5 +43,11 @@
 
     Route::post('saveeligibility', array('uses' => 'EligibilityController@saveEligibility'));
 
-    Route::post('deleteeligibility', 'CategoriesController@deleteEligibility');
+    Route::post('deleteeligibility', 'EligibilityController@deleteEligibility');
+
+    Route::get('addqualification', 'AdminController@showQualification');
+
+    Route::post('savequalification', array('uses' => 'QualificationController@saveQualification'));
+
+    Route::post('deletequalification', 'QualificationController@deleteQualification');
 });
