@@ -10,7 +10,7 @@ class EligibilityController extends Controller
 {
     //
 
-    function saveCat()
+    function saveEligibility()
   {
   	
 
