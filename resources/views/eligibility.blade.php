@@ -30,12 +30,12 @@
 
 <!-- if there are login errors, show them here -->
 <p>
-    {{ $errors->first('category') }}
+    {{ $errors->first('title') }}
 </p>
 
 <p>
-    {!!  Form::label('category', 'Aligibility')!!}
-    {!!  Form::text('category', Input::old('category'), array('placeholder' => ' New Eligibility ')) !!}
+    {!!  Form::label('title', 'Aligibility')!!}
+    {!!  Form::text('title', Input::old('title'), array('placeholder' => ' New Eligibility ')) !!}
 </p>
 
 
