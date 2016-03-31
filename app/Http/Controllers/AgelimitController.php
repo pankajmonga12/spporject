@@ -40,7 +40,7 @@ class AgelimitController extends Controller
 
     $agelId = 1;
                 $Agelimit = Agelimit::find($agelId);
-                echo "<pre> Data : ".print_r($Agelimit , TRUE."</pre>";
+                echo "<pre> Data : ".print_r($Agelimit , TRUE)."</pre>";
 
                 if ($Agelimit->id) {
                     echo "enter 1 loop ";
