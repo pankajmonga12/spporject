@@ -16,7 +16,7 @@ use App\Qualification;
 use App\Agelimit;
 use Illuminate\Support\Facades\DB;
 
-class AdminController  extends Controller
+class AdminController   extends Controller
 {
  function showLogin()
 {
