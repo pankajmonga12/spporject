@@ -40,15 +40,16 @@ class AgelimitController extends Controller
 
     $agelId = 1;
                 $Agelimit = Agelimit::find($agelId);
+                echo "<pre> Data : ".print_r($Agelimit , TRUE."</pre>";
 
                 if ($Agelimit->id) {
-
+                    echo "enter 1 loop ";
                 	$Agelimit->minage = $ageData['minage'];
 	                $Agelimit->maxage = $ageData['maxage'];
 	                $Agelimit->save();
                 
                 } else {
-
+                    echo "enter 2 loop ";
                 	$Agelimit = new Agelimit;
 	                $Agelimit->fill( $ageData );
 	                $Agelimit->save();
@@ -56,7 +57,7 @@ class AgelimitController extends Controller
                 }
 
                 
-            return Redirect::to('addagelimit');
+           // return Redirect::to('addagelimit');
 
         }
 
