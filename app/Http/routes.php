@@ -52,7 +52,7 @@
     Route::post('deletequalification', 'QualificationController@deleteQualification');
 
 
-    Route::get('addqualification', 'AdminController@showQualification');
+    Route::get('addagelimit', 'AdminController@showAgelimit');
 
     Route::post('savequalification', array('uses' => 'QualificationController@saveQualification'));
 
