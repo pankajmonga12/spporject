@@ -14,6 +14,8 @@ class CreateAgelimitTable extends Migration
     {
         Schema::create('agelimit', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('minage');
+            $table->integer('maxage');
             $table->timestamps();
         });
     }

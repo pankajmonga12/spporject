@@ -23,7 +23,31 @@
 		</tr>
 	</table>
    
-     <h1>Add New Job</h1>
+    
 
+{!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
+ <h1>Add New Job</h1>
+
+
+<p>
+    {!!  Form::label('category', 'Category Name')!!}
+    {!!  Form::select('category', $categoriesdrop) !!}
+</p>
+
+<p>
+    {!!  Form::label('subcategory', 'Sub Category')!!}
+    {!!  Form::select('subcategory', array('none' => 'Select')) !!}
+</p>
+
+<p>
+    {!!  Form::label('category', 'Sub Category Name')!!}
+    {!!  Form::text('subcategory', Input::old('category'), array('placeholder' => 'Category Name')) !!}
+</p>
+
+
+
+
+<p>{!! Form::submit('Submit!') !!}</p>
+{!! Form::close() !!}
    </body>
 </html>

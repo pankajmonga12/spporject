@@ -14,6 +14,8 @@ class CreateEligibilityTable extends Migration
     {
         Schema::create('eligibility', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->integer('status');
             $table->timestamps();
         });
     }
