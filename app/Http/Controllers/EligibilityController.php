@@ -39,7 +39,7 @@ class EligibilityController extends Controller
                 $Eligibility = new Eligibility;
                 $Eligibility->fill( $elgData );
                 $Eligibility->save();
-            return Redirect::to('eligibility');
+            return Redirect::to('addeligibility');
 
         }
 
@@ -59,5 +59,6 @@ class EligibilityController extends Controller
     die();
 
   }
+
 }
 

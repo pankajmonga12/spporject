@@ -39,7 +39,7 @@ class QualificationController extends Controller
                 $qualification = new Qualification;
                 $qualification->fill( $elgData );
                 $qualification->save();
-            return Redirect::to('qualification');
+            return Redirect::to('addqualification');
 
         }
 

@@ -138,4 +138,19 @@ if ($validator->fails()) {
     }
     return view('qualification' , ['qualification' => $qualificationData]);
     }
+
+
+    function showAgelimit()
+    {
+      $agelimit = Agelimit::where('id', '=', 1)->get();
+      $agelimitData = array();
+    foreach ($agelimit as $agelimitm) {
+    	$agelimitD = array();
+    	$agelimitD['id'] = $agelimitm->id;
+    	$agelimitD['minage'] = $agelimitm->title;
+    	$agelimitD['maxage'] = $agelimitm->status;
+    	$agelimitData[] = $agelimitD;
+    }
+    return view('agelimit' , ['agelimit' => $agelimitData]);
+    }
 }
