@@ -140,10 +140,11 @@
             dataType: 'json',
             success: function (data) {
                    console.log(data);
-                   var selectList = document.getElementById('category');
+                   var selectList = document.getElementById('subcategory');
+                   document.getElementById('subcategory').innerHTML = '';
                     var option = document.createElement("option");
 					option.value = 'none';
-					option.text = 'Select';
+					option.text = 'Select Subcategory';
 					selectList.appendChild(option);
                     
                     for (var i = 0; i < data.length; i++) {
