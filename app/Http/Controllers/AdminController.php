@@ -94,16 +94,34 @@ function showJobBoard()
     	$categoryDrop[$category->id] =$category->category;
     }
 
-    foreach ($categoriesD as $categorydatat) {
-    	$categoryD = array();
-    	$categoryD['id'] = $categorydatat->id;
-    	$categoryD['category'] = $categorydatat->category;
-    	$categoryD['parent'] = $categorydatat->parent;
-    	$categoryD['status'] = $categorydatat->status;
-    	$categoryData[] = $categoryD;
+     $agelimit = Agelimit::where('id', '=', 1)->get();
+
+     $agelimitData = array();
+     
+     foreach ($agelimit as $agelimitm) {
+    	$agelimitD = array();
+    	$agelimitD['id'] = $agelimitm->id;
+    	$agelimitD['minage'] = $agelimitm->minage;
+    	$agelimitD['maxage'] = $agelimitm->maxage;
+    	$agelimitData[] = $agelimitD;
     }
 
-    return view('jobboard' , ['categoriesdrop' => $categoryDrop,'categories' => $categoryData]);
+     $eligibilities = Eligibility::where('status', '=', 1)->get();
+      $eligibilityData = array();
+      $eligibilityData[0] ='Select Eligibility';
+    foreach ($eligibilities as $eligibility) {
+
+    	$eligibilityData[$eligibility->id] = $eligibility->title;
+    }
+
+
+     $qualification = Qualification::where('status', '=', 1)->get();
+     $qualificationData = array();
+     $qualificationData[0] ='Select Qualification';
+    foreach ($qualification as $qualificationm) {
+    	$qualificationData[$qualificationm->id] = $qualificationm->title;
+    }
+    return view('jobboard' , ['categoriesdrop' => $categoryDrop,'eligibility' => $eligibilityData,'qualification' => $qualificationData,'agelimit' => $agelimitData]);
 }
 
 

@@ -22,7 +22,7 @@
 		  </td>
 		</tr>
 	</table>
-   
+   <?php echo "<pre> data : ".print_r($agelimit, TRUE."</pre>";  ?>
     
 
 {!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
@@ -72,13 +72,13 @@
 
 <p>
     {!!  Form::label('eligibility', 'Eligibility')!!}
-    {!!  Form::text('eligibility', Input::old('eligibility'), array('placeholder' => 'Eligibility')) !!}
+    {!!  Form::select('eligibility', $eligibility) !!}
 </p>
 
 
 <p>
     {!!  Form::label('qualification', 'Qualification')!!}
-    {!!  Form::text('qualification', Input::old('qualification'), array('placeholder' => 'Qualification')) !!}
+    {!!  Form::select('qualification', $qualification)  !!}
 </p>
 
 
