@@ -15,6 +15,7 @@ use App\Eligibility;
 use App\Qualification;
 use App\Agelimit;
 use App\Jobboard;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 
 class JobboardController extends Controller
