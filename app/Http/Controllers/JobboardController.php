@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\DB;
 class JobboardController extends Controller
 {
     
-   function fetchSubcat()
+   function fetchSubcat( Request $request )
    {
    	 $id = $request->input('id');
 
