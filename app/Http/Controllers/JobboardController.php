@@ -22,7 +22,7 @@ class JobboardController extends Controller
     
    function fetchSubcat( Request $request )
    {
-   	 
+
    	 $id = $request->input('id');
 
    	 $categories = Categories::where('parent', '=',  $id)->get();
@@ -35,7 +35,20 @@ class JobboardController extends Controller
     	$categoryD['status'] = $category->status;
     	$categoryData[] = $categoryD;
     }
- echo json_encode($categoryData);
+        
+        echo json_encode($categoryData);
         die();
+   }
+
+   function saveJob() {
+
+   	 $file = array('image' => Input::file('logo'));
+
+   	  $destinationPath = 'logos'; // upload path
+      $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
+      $fileName = rand(11111,99999).'.'.$extension; // renameing image
+      Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
+      // sending back with message
+      Session::flash('success', 'Upload successfully'); 
    }
 }

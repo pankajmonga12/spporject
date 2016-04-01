@@ -25,7 +25,7 @@
    <?php echo "<pre> data : ".print_r($agelimit, TRUE)."</pre>";  ?>
     
 
-{!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
+{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
  <h1>Add New Job</h1>
 
 

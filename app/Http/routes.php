@@ -60,4 +60,6 @@
 
     Route::post('fetchsubcat', 'JobboardController@fetchSubcat');
 
+    Route::post('savejob', 'JobboardController@saveJob');
+
 });
