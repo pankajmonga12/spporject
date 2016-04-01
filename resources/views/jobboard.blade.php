@@ -140,6 +140,19 @@
             dataType: 'json',
             success: function (data) {
                    console.log(data);
+                   var selectList = document.getElementById('category');
+                    var option = document.createElement("option");
+					option.value = 'none';
+					option.text = 'Select';
+					electList.appendChild(option);
+                    
+                    for (var i = 0; i < data.length; i++) {
+					
+					    var option = document.createElement("option");
+					    option.value = data[i].id;
+					    option.text = data[i].category;
+					    selectList.appendChild(option);
+                    }
             },
             
         });
