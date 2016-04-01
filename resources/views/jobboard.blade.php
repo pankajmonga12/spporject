@@ -22,7 +22,7 @@
 		  </td>
 		</tr>
 	</table>
-   <?php echo "<pre> data : ".print_r($agelimit, TRUE."</pre>";  ?>
+   <?php echo "<pre> data : ".print_r($agelimit, TRUE)."</pre>";  ?>
     
 
 {!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
