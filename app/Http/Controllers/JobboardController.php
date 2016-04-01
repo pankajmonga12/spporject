@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Categories;
 use App\Eligibility;
 use App\Qualification;
+use Illuminate\Support\Facades\Redirect;
 use App\Agelimit;
 use App\Jobboard;
 use Illuminate\Support\Facades\Session;

@@ -22,7 +22,7 @@
 		  </td>
 		</tr>
 	</table>
-   <?php echo "<pre> data : ".print_r($agelimit, TRUE)."</pre>";  ?>
+   <div class="form-section">
     
 
 {!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
@@ -122,7 +122,7 @@
 
 <p>{!! Form::submit('Submit!') !!}</p>
 {!! Form::close() !!}
-
+</div>
 <script type="text/javascript">
 	$(document).ready(function() {
         $('#category').on('change', function() {
