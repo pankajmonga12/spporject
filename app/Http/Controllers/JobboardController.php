@@ -43,6 +43,37 @@ class JobboardController extends Controller
 
    function saveJob() {
 
+   	 $rules = array(
+    'category'    => 'required',
+    'subcategory'    => 'required',
+    'job_name'    => 'required',
+    'job_notification'    => 'required',
+    'descipline'    => 'required',
+    'imp_date'    => 'required',
+    'no_of_post'    => 'required',
+    'post_description'    => 'required',
+    'eligibility'    => 'required',
+    'qualification'    => 'required',
+    'exp_req'    => 'required',
+    'age_limit'    => 'required',
+    'how_to_apply'    => 'required',
+    'application_fees'    => 'required',
+    'website_link'    => 'required',
+    'logo'    => 'required',
+    'detailed_notification'    => 'required'
+
+     );
+
+	 $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) {
+
+                 return Redirect::to('addjob')
+        ->withErrors($validator);
+        }  else { 
+
+        }
+
    	 $file = array('image' => Input::file('logo'));
      
      echo "<pre> data : ".print_r($file , TRUE)."</pre>";
@@ -50,7 +81,35 @@ class JobboardController extends Controller
       $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
       $fileName = rand(11111,99999).'.'.$extension; // renameing image
       Input::file('logo')->move($destinationPath, $fileName); // uploading file to given path
-      // sending back with message
-      Session::flash('success', 'Upload successfully'); 
+      // sending back with message 	
+
+      $jobData = array(
+        'category'    => Input::get('category'),
+	    'subcategory'    => Input::get('subcategory'),
+	    'job_name'    => Input::get('job_name'),
+	    'job_notification'    => Input::get('job_notification'),
+	    'descipline'    => Input::get('descipline'),
+	    'imp_date'    => Input::get('imp_date'),
+	    'no_of_post'    => Input::get('no_of_post'),
+	    'post_description'    => Input::get('post_description'),
+	    'eligibility'    => Input::get('eligibility'),
+	    'qualification'    => Input::get('qualification'),
+	    'exp_req'    => Input::get('exp_req'),
+	    'age_limit'    => Input::get('age_limit'),
+	    'how_to_apply'    => Input::get('how_to_apply'),
+	    'application_fees'    => Input::get('application_fees'),
+	    'website_link'    => Input::get('website_link'),
+	    'logo'    => $fileName,
+	    'detailed_notification'    => Input::get('detailed_notification'),
+    );
+
+    
+     $qualification = new Jobboard;
+                $qualification->fill( $jobData );
+                $qualification->save();
+           
+
+      Session::flash('success', 'Job Save Successfully'); 
+       return Redirect::to('addqualification');
    }
 }
