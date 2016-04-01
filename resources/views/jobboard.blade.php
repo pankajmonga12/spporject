@@ -5,7 +5,7 @@
  <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>	
 </head>
 <body>
-
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 @if(Session::has('message'))
 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
 @endif
@@ -126,10 +126,23 @@
 <script type="text/javascript">
 	$(document).ready(function() {
         $('#category').on('change', function() {
+        	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
             var data = {
-                'id': $(this).val()
+                'id': $(this).val(),
+                 _token: CSRF_TOKEN
             };
            console.log(data);
+
+           $.ajax({
+            url: 'fetchsubcat',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            success: function (data) {
+                   console.log(data);
+            },
+            
+        });
         });
     });
 </script>

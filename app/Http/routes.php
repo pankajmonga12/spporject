@@ -58,4 +58,6 @@
 
     Route::get('jobboard', 'AdminController@showJobBoard');
 
+    Route::post('fetchsubcat', 'JobboardController@fetchSubcat');
+
 });
