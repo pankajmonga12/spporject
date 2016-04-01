@@ -36,7 +36,7 @@
 
 <p>
     {!!  Form::label('subcategory', 'Sub Category')!!}
-    {!!  Form::select('subcategory', array('none' => 'Select Subcategory')) !!}
+    {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('id' => 'categorym'), array('onchange' => 'Changesubcat()'), array('onchange' => 'Changesubcat()')) !!}
 </p>
 
 <p>
