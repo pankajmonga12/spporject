@@ -127,6 +127,11 @@
 	$(document).ready(function() {
         $('#category').on('change', function() {
         	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        	var id = $(this).val();
+        	if ( id == 0 ) {
+
+        		return false;
+        	}
             var data = {
                 'id': $(this).val(),
                  _token: CSRF_TOKEN

@@ -22,6 +22,7 @@ class JobboardController extends Controller
     
    function fetchSubcat( Request $request )
    {
+   	 
    	 $id = $request->input('id');
 
    	 $categories = Categories::where('parent', '=',  $id)->get();
