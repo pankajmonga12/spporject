@@ -110,6 +110,6 @@ class JobboardController extends Controller
            
 
       Session::flash('success', 'Job Save Successfully'); 
-       return Redirect::to('addqualification');
+       return Redirect::to('addjob');
    }
 }
