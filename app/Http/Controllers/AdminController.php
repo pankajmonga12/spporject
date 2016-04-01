@@ -14,6 +14,7 @@ use App\Categories;
 use App\Eligibility;
 use App\Qualification;
 use App\Agelimit;
+use App\Jobboard;
 use Illuminate\Support\Facades\DB;
 
 class AdminController   extends Controller
@@ -75,6 +76,24 @@ if ($validator->fails()) {
     }
     return view('category' , ['categories' => $categoryData]);
 }
+
+
+function showJobBoard()
+{
+    // show the form
+    $categories = Categories::where('parent', '=', 0)->get();
+    $categoryData = array();
+    foreach ($categories as $category) {
+    	$categoryD = array();
+    	$categoryD['id'] = $category->id;
+    	$categoryD['category'] = $category->category;
+    	$categoryD['parent'] = $category->parent;
+    	$categoryD['status'] = $category->status;
+    	$categoryData[] = $categoryD;
+    }
+    return view('jobboard' , ['categories' => $categoryData]);
+}
+
 
  function showSubcategory()
 {

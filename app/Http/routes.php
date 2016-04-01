@@ -55,5 +55,7 @@
     Route::get('addagelimit', 'AdminController@showAgelimit');
 
     Route::post('saveagelimit', array('uses' => 'AgelimitController@saveAgelimit'));
-    
+
+    Route::get('jobboard', 'AdminController@showJobBoard');
+
 });
