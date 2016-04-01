@@ -43,7 +43,8 @@ class JobboardController extends Controller
    function saveJob() {
 
    	 $file = array('image' => Input::file('logo'));
-
+     
+     echo "<pre> data : ".print_r($file , TRUE)."</pre>";
    	  $destinationPath = 'logos'; // upload path
       $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
       $fileName = rand(11111,99999).'.'.$extension; // renameing image
