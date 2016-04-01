@@ -47,7 +47,7 @@ class JobboardController extends Controller
    	  $destinationPath = 'logos'; // upload path
       $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
       $fileName = rand(11111,99999).'.'.$extension; // renameing image
-      Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
+      Input::file('logo')->move($destinationPath, $fileName); // uploading file to given path
       // sending back with message
       Session::flash('success', 'Upload successfully'); 
    }
