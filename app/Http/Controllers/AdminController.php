@@ -103,7 +103,7 @@ function showJobBoard()
     	$categoryData[] = $categoryD;
     }
 
-    return view('jobboard' , ['categories' => $categoryData]);
+    return view('jobboard' , ['categoriesdrop' => $categoryDrop,'categories' => $categoryData]);
 }
 
 
