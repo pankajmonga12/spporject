@@ -144,7 +144,7 @@
                     var option = document.createElement("option");
 					option.value = 'none';
 					option.text = 'Select';
-					electList.appendChild(option);
+					selectList.appendChild(option);
                     
                     for (var i = 0; i < data.length; i++) {
 					
