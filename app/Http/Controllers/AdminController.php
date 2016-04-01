@@ -81,16 +81,28 @@ if ($validator->fails()) {
 function showJobBoard()
 {
     // show the form
-    $categories = Categories::where('parent', '=', 0)->get();
+     $categories = Categories::where('parent', '=', 0)->get();
+    $categoriesD = DB::table('categories')
+            ->join('categories as cat', 'cat.id', '=', 'categories.parent')
+             ->where('categories.parent', '>', 0)
+            ->select('categories.category as category','categories.id as id', 'categories.status as status','cat.category as parent')
+            ->get();
     $categoryData = array();
+    $categoryDrop = array();
+    $categoryDrop[0] ='Select Category';
     foreach ($categories as $category) {
+    	$categoryDrop[$category->id] =$category->category;
+    }
+
+    foreach ($categoriesD as $categorydatat) {
     	$categoryD = array();
-    	$categoryD['id'] = $category->id;
-    	$categoryD['category'] = $category->category;
-    	$categoryD['parent'] = $category->parent;
-    	$categoryD['status'] = $category->status;
+    	$categoryD['id'] = $categorydatat->id;
+    	$categoryD['category'] = $categorydatat->category;
+    	$categoryD['parent'] = $categorydatat->parent;
+    	$categoryD['status'] = $categorydatat->status;
     	$categoryData[] = $categoryD;
     }
+
     return view('jobboard' , ['categories' => $categoryData]);
 }
 
