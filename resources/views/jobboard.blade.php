@@ -122,5 +122,16 @@
 
 <p>{!! Form::submit('Submit!') !!}</p>
 {!! Form::close() !!}
+
+<script type="text/javascript">
+	$(document).ready(function() {
+        $('#category').on('change', function() {
+            var data = {
+                'id': $(this).val()
+            };
+           console.log(data);
+        });
+    });
+</script>
    </body>
 </html>
