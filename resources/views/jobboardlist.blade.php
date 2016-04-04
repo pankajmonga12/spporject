@@ -60,7 +60,7 @@
         	 {{ $joblistD->application_fees  }}
         	</td>
         	<td>
-        	<button onclick="" value="Edit"> Edit  </button>
+        	<button onclick="Editjob({{ $joblistD->id }})" value="Edit"> Edit  </button>
         	</td>
         	<td>
         	<button onclick="" value="Delete"> Delete </button>
@@ -71,3 +71,10 @@
     </table>
 </div>
 {!! $joblist->render() !!}
+
+<script type="text/javascript">
+	
+	function Editjob(id) {
+		 window.open('jobboardedit/'+id);
+	}
+</script>

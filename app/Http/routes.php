@@ -51,7 +51,6 @@
 
     Route::post('deletequalification', 'QualificationController@deleteQualification');
 
-
     Route::get('addagelimit', 'AdminController@showAgelimit');
 
     Route::post('saveagelimit', array('uses' => 'AgelimitController@saveAgelimit'));
@@ -63,4 +62,6 @@
     Route::post('savejob', 'JobboardController@saveJob');
    
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
+
+    Route::get('jobboardedit/{id}', 'AdminController@showJobBoardEdit');
 });
