@@ -28,11 +28,12 @@
    <div class="form-section">
     
 
-{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
+{!! Form::open(array('url' => 'updatejob' , 'method' => 'post' , 'files'=>true)) !!}
  <h1>Add New Job</h1>
 
 <p>
     {!!  Form::label('job_name', 'Job Name')!!}
+    {{ Form::hidden('id', $jobData->id ) }}
     {!!  Form::text('job_name', $jobData->job_name, array('placeholder' => 'Job Name')) !!}
 </p>
 
