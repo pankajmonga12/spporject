@@ -119,13 +119,9 @@ class JobboardController extends Controller
     public function updatejob(Request $request)
     {
         // Validate the request::find(1);...
-		$file = array('image' => Input::file('logo'));
-
+		
 		// echo "<pre> data : ".print_r($file , TRUE)."</pre>";
-		$destinationPath = 'logos'; // upload path
-		$extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
-		$fileName = rand(11111,99999).'.'.$extension; // renameing image
-		Input::file('logo')->move($destinationPath, $fileName);
+		
 
         $jobboard = Jobboard::find( $request->id );
 
