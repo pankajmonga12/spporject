@@ -216,9 +216,9 @@ function showJobBoard()
             ->join('categories as scat', 'scat.id', '=', 'Jobboard.subcategory')
             ->join('qualification as ql', 'ql.id', '=', 'Jobboard.qualification')
             ->join('eligibility as el', 'el.id', '=', 'Jobboard.eligibility')
-            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees');
-
-     return view('jobboardlist' , ['users' => $jobList]);
+            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(1);
+    echo "<pre> Data  ".print_r($jobList , TRUE)."</pre>";
+     // view('jobboardlist' , ['users' => $jobList]);
    	
    }
 }
