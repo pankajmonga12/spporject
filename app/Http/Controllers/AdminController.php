@@ -209,7 +209,7 @@ function showJobBoard()
    
    {
      
-     $users = App\Jobboard::paginate(20);
+     $users = Jobboard::paginate(20);
      return view('jobboardlist' , ['users' => $users]);
    	
    }
