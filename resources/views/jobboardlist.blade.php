@@ -1,7 +1,7 @@
 <div class="container">
-<?php    @foreach ($users as $user)
+   @foreach ($users as $user)
         {{ $user->job_name }}
-    @endforeach ?>
+    @endforeach 
 </div>
 <?php {!! $users->total() !!}
 
