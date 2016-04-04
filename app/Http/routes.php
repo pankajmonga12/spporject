@@ -65,5 +65,9 @@
    
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
+    Route::get('updatedjobview', function () {
+	return view('updatedjobview');
+	});
+
     Route::get('jobboardedit/{id}', 'AdminController@showJobBoardEdit');
 });

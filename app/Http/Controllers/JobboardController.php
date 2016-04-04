@@ -77,7 +77,7 @@ class JobboardController extends Controller
 
    	 $file = array('image' => Input::file('logo'));
      
-     echo "<pre> data : ".print_r($file , TRUE)."</pre>";
+    // echo "<pre> data : ".print_r($file , TRUE)."</pre>";
    	  $destinationPath = 'logos'; // upload path
       $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
       $fileName = rand(11111,99999).'.'.$extension; // renameing image
@@ -113,4 +113,39 @@ class JobboardController extends Controller
       Session::flash('success', 'Job Save Successfully'); 
        return Redirect::to('addjob');
    }
+
+
+
+    public function updatejob(Request $request)
+    {
+        // Validate the request::find(1);...
+		$file = array('image' => Input::file('logo'));
+
+		// echo "<pre> data : ".print_r($file , TRUE)."</pre>";
+		$destinationPath = 'logos'; // upload path
+		$extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
+		$fileName = rand(11111,99999).'.'.$extension; // renameing image
+		Input::file('logo')->move($destinationPath, $fileName);
+
+        $jobboard = Jobboard::find( $request->id );
+
+        $jobboard->job_name = $request->job_name;
+        $jobboard->job_notification = $request->job_notification;
+        $jobboard->descipline = $request->descipline;
+        $jobboard->imp_date = $request->imp_date;
+        $jobboard->no_of_post = $request->no_of_post;
+        $jobboard->post_description = $request->post_description;
+        $jobboard->eligibility = $request->eligibility;
+        $jobboard->qualification = $request->qualification;
+        $jobboard->exp_req = $request->exp_req;
+        $jobboard->age_limit = $request->age_limit;
+        $jobboard->application_fees = $request->application_fees;
+        $jobboard->website_link = $request->website_link;
+        $jobboard->logo = $fileName;
+        $jobboard->detailed_notification = $request->detailed_notification;
+
+        $jobboard->save();
+
+        return Redirect::to('updatedjobview');
+    }
 }
