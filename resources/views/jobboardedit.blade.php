@@ -4,6 +4,7 @@
 <<!DOCTYPE html>
 <html>
 <head>
+<script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>	
 	<title></title>
 </head>
 <body>
@@ -43,7 +44,7 @@
 
 <p>
     {!!  Form::label('job_name', 'Job Name')!!}
-    {!!  Form::text('job_name', Input::old('job_name'), array('placeholder' => 'Job Name')) !!}
+    {!!  Form::text('job_name', $jobData->job_name, array('placeholder' => 'Job Name')) !!}
 </p>
 
 <p>
