@@ -1,7 +1,10 @@
 <div class="container">
-    @foreach ($users as $user)
+<?php    @foreach ($users as $user)
         {{ $user->job_name }}
-    @endforeach
+    @endforeach ?>
 </div>
-{!! $users->total() !!}
-{!! str_replace('/?', '?', $users->render()) !!}
+<?php {!! $users->total() !!}
+
+{!! str_replace('/?', '?', $users->render()) 
+
+<?
