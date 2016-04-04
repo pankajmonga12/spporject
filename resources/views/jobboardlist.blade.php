@@ -33,7 +33,7 @@
 	</tr>
 </table>
     
-    @foreach ($users as $user)
+    @foreach ($joblist as $joblistD)
         <tr>
         	<td>
         		
