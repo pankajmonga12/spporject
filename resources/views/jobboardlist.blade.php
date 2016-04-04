@@ -75,6 +75,7 @@
 <script type="text/javascript">
 	
 	function Editjob(id) {
-		 window.open('jobboardedit/'+id);
+
+         window.open('jobboardedit/'+id, "MsgWindow", "width=1000, height=1000");
 	}
 </script>
