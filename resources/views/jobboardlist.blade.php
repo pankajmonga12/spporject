@@ -26,12 +26,12 @@
 		<th>
 			Aplication Fees
 		</th>
-		<th>
+		<th colspan="2">
 			Action
 		</th>
 
 	</tr>
-</table>
+
     
     @foreach ($joblist as $joblistD)
         <tr>
@@ -42,29 +42,33 @@
              {{ $joblistD->job_name }}      
         	</td>
         	<td>
-        		
+        	<a href="http://128.199.192.88/index.php/public/logos/{{ $joblistD->logo }}" width="100" height="100"></a> 
         	</td>
         	<td>
-        		
+        	   {{ $joblistD->category }}
         	</td>
         	<td>
-        		
+        	  {{ $joblistD->subcategory }}	
         	</td>
         	<td>
-        		
+        	 {{ date("F jS, Y",strtotime($joblistD->imp_date)) }}
         	</td>
         	<td>
-        		
+        	 {{ $joblistD->no_of_post }}
         	</td>
         	<td>
-        		
+        	 {{ $joblistD->application_fees  }}
         	</td>
         	<td>
-        		
+        	<button onclick="" value="Edit">  </button>
+        	</td>
+        	<td>
+        	<button onclick="" value="Delete">  </button>
         	</td>
         </tr>
         
     @endforeach
+    </table>
 </div>
 {!! $joblist->render() !!}
 {!! $joblist->total() !!}
