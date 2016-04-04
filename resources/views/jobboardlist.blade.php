@@ -4,4 +4,4 @@
     @endforeach
 </div>
 
-{!! $users->render() !!}
+{!! str_replace('/?', '?', $users->render()) !!}

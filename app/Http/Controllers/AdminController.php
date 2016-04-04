@@ -17,6 +17,7 @@ use App\Agelimit;
 use App\Jobboard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class AdminController   extends Controller
 {
@@ -209,7 +210,7 @@ function showJobBoard()
    
    {
      
-     $users = Jobboard::paginate(20);
+     $users = Jobboard::paginate(1);
      return view('jobboardlist' , ['users' => $users]);
    	
    }
