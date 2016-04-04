@@ -42,7 +42,7 @@
              {{ $joblistD->job_name }}      
         	</td>
         	<td>
-        	<img href="http://128.199.192.88/logos/{{ $joblistD->logo }}" width="100" height="100"></img> 
+        	<img src="http://128.199.192.88/logos/{{ $joblistD->logo }}" width="100" height="100"></img> 
         	</td>
         	<td>
         	   {{ $joblistD->category }}
