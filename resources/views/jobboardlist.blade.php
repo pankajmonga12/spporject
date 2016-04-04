@@ -66,5 +66,5 @@
         
     @endforeach
 </div>
-{!! $users->render() !!}
+
 {!! $users->total() !!}

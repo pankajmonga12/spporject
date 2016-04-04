@@ -211,7 +211,6 @@ function showJobBoard()
    {
      
      $users = Jobboard::paginate(1);
-     DB::enableQueryLog();
      $jobList = DB::table('Jobboard')
             ->join('categories as cat', 'cat.id', '=', 'Jobboard.category')
             ->join('categories as scat', 'scat.id', '=', 'Jobboard.subcategory')
