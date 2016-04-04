@@ -81,7 +81,7 @@
 
 <p>
     {!!  Form::label('age_limit', 'Age Limit')!!}
-    {!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+    {!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'], $jobData->age_limit) !!}
 </p>
 
 
