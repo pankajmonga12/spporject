@@ -1,4 +1,4 @@
-<?php //echo "<pre> Data  ".print_r($joblist , TRUE)."</pre>"; ?>
+<?php echo "<pre> Data  ".print_r($joblist , TRUE)."</pre>"; ?>
 <div class="container">
 <table>
 	<tr>
