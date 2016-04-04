@@ -31,17 +31,6 @@
 {!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
  <h1>Add New Job</h1>
 
-
-<p>
-    {!!  Form::label('category', 'Category Name')!!}
-    {!!  Form::select('category', $categoriesdrop) !!}
-</p>
-
-<p>
-    {!!  Form::label('subcategory', 'Sub Category')!!}
-    {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('id' => 'categorym'), array('onchange' => 'Changesubcat()'), array('onchange' => 'Changesubcat()')) !!}
-</p>
-
 <p>
     {!!  Form::label('job_name', 'Job Name')!!}
     {!!  Form::text('job_name', $jobData->job_name, array('placeholder' => 'Job Name')) !!}
@@ -49,45 +38,45 @@
 
 <p>
     {!!  Form::label('job_notification', 'Job Notification')!!}
-    {!!  Form::text('job_notification', Input::old('job_notification'), array('placeholder' => 'Job Notification')) !!}
+    {!!  Form::text('job_notification', $jobData->job_notification, array('placeholder' => 'Job Notification')) !!}
 </p>
 
 <p>
     {!!  Form::label('descipline', 'Descipline')!!}
-    {!!  Form::text('descipline', Input::old('descipline'), array('placeholder' => 'Descipline')) !!}
+    {!!  Form::text('descipline', $jobData->descipline, array('placeholder' => 'Descipline')) !!}
 </p>
 
 <p>
     {!!  Form::label('imp_date', 'Imp Date')!!}
-    {!!  Form::date('imp_date', Input::old('imp_date'), array('placeholder' => 'Imp Date')) !!}
+    {!!  Form::date('imp_date', $jobData->imp_date, array('placeholder' => 'Imp Date')) !!}
 </p>
 
 <p>
     {!!  Form::label('no_of_post', 'No. Of Post')!!}
-    {!!  Form::number('no_of_post', Input::old('no_of_post'), array('placeholder' => 'No. Of Post')) !!}
+    {!!  Form::number('no_of_post', $jobData->no_of_post , array('placeholder' => 'No. Of Post')) !!}
 </p>
 
 <p>
     {!!  Form::label('post_description', 'Post Description')!!}
-    {!!  Form::text('post_description', Input::old('post_description'), array('placeholder' => 'Post Description')) !!}
+    {!!  Form::text('post_description', $jobData->post_description , array('placeholder' => 'Post Description')) !!}
 </p>
 
 
 <p>
     {!!  Form::label('eligibility', 'Eligibility')!!}
-    {!!  Form::select('eligibility', $eligibility) !!}
+    {!!  Form::select('eligibility', $eligibility ,$jobData->eligibility) !!}
 </p>
 
 
 <p>
     {!!  Form::label('qualification', 'Qualification')!!}
-    {!!  Form::select('qualification', $qualification)  !!}
+    {!!  Form::select('qualification', $qualification ,$jobData->qualification )  !!}
 </p>
 
 
 <p>
     {!!  Form::label('exp_req', 'Experience Required')!!}
-    {!!  Form::text('exp_req', Input::old('exp_req'), array('placeholder' => 'Experience Required')) !!}
+    {!!  Form::text('exp_req', $jobData->exp_req, array('placeholder' => 'Experience Required')) !!}
 </p>
 
 <p>
@@ -99,18 +88,18 @@
 
 <p>
     {!!  Form::label('how_to_apply', 'How to Apply')!!}
-    {!!  Form::text('how_to_apply', Input::old('how_to_apply'), array('placeholder' => 'How To Apply')) !!}
+    {!!  Form::text('how_to_apply',$jobData->how_to_apply, array('placeholder' => 'How To Apply')) !!}
 </p>
 
 <p>
     {!!  Form::label('application_fees', 'Application Fees')!!}
-    {!!  Form::number('application_fees', Input::old('application_fees'), array('placeholder' => 'Application Fees')) !!}
+    {!!  Form::number('application_fees', $jobData->application_fees, array('placeholder' => 'Application Fees')) !!}
 </p>
 
 
 <p>
     {!!  Form::label('website_link', 'Website Url')!!}
-    {!!  Form::text('website_link', Input::old('website_link'), array('placeholder' => 'Website Url')) !!}
+    {!!  Form::text('website_link', $jobData->website_link, array('placeholder' => 'Website Url')) !!}
 </p>
 
 <p>
@@ -120,7 +109,7 @@
 
 <p>
     {!!  Form::label('detailed_notification', 'Detailed Notifrication')!!}
-    {!!  Form::text('detailed_notification', Input::old('detailed_notification'), array('placeholder' => 'Detailed Notifrication')) !!}
+    {!!  Form::text('detailed_notification', $jobData->detailed_notification, array('placeholder' => 'Detailed Notifrication')) !!}
 </p>
 
 <p>{!! Form::submit('Submit!') !!}</p>
