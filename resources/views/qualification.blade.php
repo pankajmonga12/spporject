@@ -9,24 +9,41 @@
 @if(Session::has('message'))
 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
 @endif
-	<tr>
+	<table>
+		<tr>
 	  <td>
 		<a href="/index.php/category">Add Category</a>
 	  </td>
 	  <td>
 		<a href="/index.php/subcategory">Add SubCategory</a>
 	  </td>
-	    <td>
-		<a href="/index.php/addeligibility">Add SubCategory</a>
+
+	  <td>
+		<a href="/index.php/subcategory">Add SubCategory</a>
 	  </td>
+	  
+
+	  <td>
+		<a href="/index.php/addeligibility">Add Eligibilities</a>
+	  </td>
+
+	  <td>
+		<a href="/index.php/addagelimit">Add age limit</a>
+	  </td>
+
 	  <td>
 		<a href="/index.php/addqualification">Add Qualification</a>
 	  </td>
+
 	  <td>
 		<a href="/index.php/addjob">Add New Job</a>
 	  </td>
+
+	  <td>
+		<a href="/index.php/jobboardlist">Job Listing</a>
+	  </td>
 	</tr>
-</table>
+	</table>
 
 {!! Form::open(array('url' => 'savequalification' , 'method' => 'post')) !!}
 <h1>Add New Qualification</h1>
