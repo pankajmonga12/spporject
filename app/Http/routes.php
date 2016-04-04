@@ -61,5 +61,6 @@
     Route::post('fetchsubcat', 'JobboardController@fetchSubcat');
 
     Route::post('savejob', 'JobboardController@saveJob');
-
+   
+    Route::get('jobboardlist', 'AdminController@showJobBoardList');
 });

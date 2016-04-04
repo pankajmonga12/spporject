@@ -16,6 +16,7 @@ use App\Qualification;
 use App\Agelimit;
 use App\Jobboard;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
 
 class AdminController   extends Controller
 {
@@ -203,4 +204,13 @@ function showJobBoard()
     }
     return view('agelimit' , ['agelimit' => $agelimitData]);
     }
+
+    function showJobBoard() 
+   
+   {
+     
+     $users = App\Jobboard::paginate(20);
+     return view('jobboardlist' , ['users' => $users]);
+   	
+   }
 }
