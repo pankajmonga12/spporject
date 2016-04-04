@@ -1,4 +1,4 @@
-<?php echo "<pre> Data  ".print_r($users , TRUE)."</pre>";  ?>
+<?php echo "<pre> Data  ".print_r($users , TRUE)."</pre>"; ?>
 <div class="container">
 <table>
 	<tr>
@@ -39,32 +39,32 @@
         		
         	</td>
         	<td>
-            
+            {{ $user->job_name }}
         	</td>
         	<td>
-        <a href="http://128.199.192.88/public/logos/" width="100" hight="100"></a>	
+        <a href="http://128.199.192.88/public/logos/{{ $user->job_name }}" width="100" hight="100"></a>	
         	</td>
         	<td>
-        	
+        	{{ $user->job_name }}
         	</td>
         	<td>
-        	
+        	{{ $user->job_name }}
         	</td>
         	<td>
-        	
+        	{{ $user->job_name }}
         	</td>
         	<td>
-        	
+        	{{ $user->job_name }}
         	</td>
         	<td>
-        	
+        	{{ $user->job_name }}
         	</td>
         	<td>
-        	
+        	{{ $user->job_name }}
         	</td>
         </tr>
         
     @endforeach
 </div>
-
+{!! $users->render() !!}
 {!! $users->total() !!}
