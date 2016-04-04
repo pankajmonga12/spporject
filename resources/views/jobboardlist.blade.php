@@ -1,4 +1,4 @@
-<?php echo "<pre> Data  ".print_r($joblist , TRUE)."</pre>"; ?>
+<?php //echo "<pre> Data  ".print_r($joblist , TRUE)."</pre>"; ?>
 <div class="container">
 <table>
 	<tr>
@@ -66,5 +66,5 @@
         
     @endforeach
 </div>
-{!! $users->render() !!}
-{!! $users->total() !!}
+{!! $joblist->render() !!}
+{!! $joblist->total() !!}
