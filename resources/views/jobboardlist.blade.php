@@ -60,10 +60,10 @@
         	 {{ $joblistD->application_fees  }}
         	</td>
         	<td>
-        	<button onclick="" value="Edit">  </button>
+        	<button onclick="" value="Edit"> Edit  </button>
         	</td>
         	<td>
-        	<button onclick="" value="Delete">  </button>
+        	<button onclick="" value="Delete"> Delete </button>
         	</td>
         </tr>
         
