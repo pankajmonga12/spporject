@@ -1,6 +1,6 @@
 <?php echo "<pre> Data  ".print_r($joblist , TRUE)."</pre>"; ?>
 <div class="container">
-<table>
+<table border="1">
 	<tr>
 		<th>
 			S. No.
@@ -39,7 +39,7 @@
         		
         	</td>
         	<td>
-            
+             {{ $joblistD->job_name }}      
         	</td>
         	<td>
         		
