@@ -141,7 +141,6 @@ class JobboardController extends Controller
         $jobboard->age_limit = $request->age_limit;
         $jobboard->application_fees = $request->application_fees;
         $jobboard->website_link = $request->website_link;
-        $jobboard->logo = $fileName;
         $jobboard->detailed_notification = $request->detailed_notification;
 
         $jobboard->save();
