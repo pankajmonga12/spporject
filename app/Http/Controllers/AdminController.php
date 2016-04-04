@@ -205,7 +205,7 @@ function showJobBoard()
     return view('agelimit' , ['agelimit' => $agelimitData]);
     }
 
-    function showJobBoard() 
+    function showJobBoardList() 
    
    {
      
