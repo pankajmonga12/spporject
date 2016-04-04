@@ -9,23 +9,38 @@
 @if(Session::has('message'))
 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
 @endif
-	<tr>
+	
+	  <tr>
 	  <td>
 		<a href="/index.php/category">Add Category</a>
 	  </td>
 	  <td>
 		<a href="/index.php/subcategory">Add SubCategory</a>
 	  </td>
-	    <td>
-		<a href="/index.php/addeligibility">Add SubCategory</a>
+
+	  <td>
+		<a href="/index.php/subcategory">Add SubCategory</a>
+	  </td>
+	  
+
+	  <td>
+		<a href="/index.php/addeligibility">Add Eligibilities</a>
 	  </td>
 
-	   <td>
-		<a href="/index.php/addagelimit">Add Add Age Limit</a>
+	  <td>
+		<a href="/index.php/addagelimit">Add age limit</a>
+	  </td>
+
+	  <td>
+		<a href="/index.php/addqualification">Add Qualification</a>
 	  </td>
 
 	  <td>
 		<a href="/index.php/addjob">Add New Job</a>
+	  </td>
+
+	  <td>
+		<a href="/index.php/jobboardlist">Job Listing</a>
 	  </td>
 	</tr>
 </table>
@@ -52,7 +67,6 @@
 <p>{!! Form::submit('Submit!') !!}</p>
 {!! Form::close() !!}
 
-<?php echo "<pre> Data : ".print_r($agelimit , TRUE)."</pre>";  ?>
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 <table border="1">
 	<tr>
