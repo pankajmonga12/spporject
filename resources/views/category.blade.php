@@ -151,7 +151,7 @@
 							<!-- BEGIN FORM-->
 								{!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
 								
-								<div class="form-body">
+								<div class="form-body" style="margin-bottom: 40px;">
 								<p>
 								{{ $errors->first('category') }}
 								</p>
