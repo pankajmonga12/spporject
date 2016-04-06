@@ -95,6 +95,9 @@ if ($validator->fails()) {
  function showCategory()
 {
     // show the form
+     if (Auth::check())
+   {
+
     $categories = Categories::where('parent', '=', 0)->get();
     $categoryData = array();
     foreach ($categories as $category) {
@@ -115,6 +118,16 @@ if ($validator->fails()) {
 	$data['categories'] = $categoryData;
 
     return view('category' , $data);
+  
+  } else {
+	 
+	 $data['header'] = View::make('partial.header');
+
+   /* Footer partial view */
+     $data['footer'] = View::make('partial.footer');
+
+     return view('login', $data );
+  }
 }
 
 
@@ -168,6 +181,9 @@ function showJobBoard()
  function showSubcategory()
 {
     // show the form
+
+     if (Auth::check())
+   {
     $categories = Categories::where('parent', '=', 0)->get();
     $categoriesD = DB::table('categories')
             ->join('categories as cat', 'cat.id', '=', 'categories.parent')
@@ -202,6 +218,16 @@ function showJobBoard()
 	$data['categories'] = $categoryData;
 
     return view('subcategory' , $data);
+
+  } else {
+	 
+	 $data['header'] = View::make('partial.header');
+
+   /* Footer partial view */
+     $data['footer'] = View::make('partial.footer');
+
+     return view('login', $data );
+  }
 }
 
 
