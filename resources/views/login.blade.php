@@ -57,11 +57,11 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<div class="form-group">
 
-		{!!  Form::label('email', 'Email Address',array('class' => 'control-label visible-ie8 visible-ie9'))!!}
-        {!!  Form::text('email', Input::old('email'), array('placeholder' => 'email ID'), array('class' => 'form-control form-control-solid placeholder-no-fix')) !!}
+		<label class="control-label visible-ie8 visible-ie9">Email ID</label>
+        {!!  Form::text('email', array('placeholder' => 'email ID'), array('class' => 'form-control form-control-solid placeholder-no-fix')) !!}
 		</div>
 		<div class="form-group">
-			{!! Form::label('password', 'Password' , array('class' => 'control-label visible-ie8 visible-ie9')) !!}
+			<label class="control-label visible-ie8 visible-ie9">Password</label>
 			{!! Form::password('password',array('class' => 'form-control form-control-solid placeholder-no-fix')) !!}
 		</div>
 		<div class="form-actions">
