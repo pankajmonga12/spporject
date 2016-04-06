@@ -28,9 +28,8 @@ class AdminController   extends Controller
 
     if (Auth::check())
    {
-     $userData = Auth::user();
-
-     echo "<pre> User Data : ".print_r($userData , TRUE)."</pre>";
+   	
+    return view('dashboard');
 
    } else {
 	 $data['header'] = View::make('partial.header');
