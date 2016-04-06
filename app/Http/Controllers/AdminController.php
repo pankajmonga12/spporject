@@ -190,8 +190,18 @@ function showJobBoard()
     	$categoryData[] = $categoryD;
     }
 
+    
+    $data['header'] = View::make('partial.header');
 
-    return view('subcategory' , ['categoriesdrop' => $categoryDrop,'categories' => $categoryData]);
+   /* Footer partial view */
+	$data['footer'] = View::make('partial.footer');
+
+	$data['submenu'] = View::make('partial.submenu');
+
+	$data['categoriesdrop'] = $categoryDrop;
+	$data['categories'] = $categoryData;
+
+    return view('subcategory' , $data);
 }
 
 
