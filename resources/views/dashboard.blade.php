@@ -12,10 +12,29 @@
 			</a>
 			<div class="menu-toggler sidebar-toggler">
 			</div>
-	</div>
-      <div class="top-menu">
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN HORIZANTAL MENU -->
+		<!-- DOC: Remove "hor-menu-light" class to have a horizontal menu with theme background instead of white background -->
+		<!-- DOC: This is desktop version of the horizontal menu. The mobile version is defined(duplicated) in the responsive menu below along with sidebar menu. So the horizontal menu has 2 seperate versions -->
+		<div class="hor-menu hor-menu-light hidden-sm hidden-xs">
+			
+				
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN TOP NAVIGATION MENU -->
+		<div class="top-menu">
 			<ul class="nav navbar-nav pull-right">
-      <li class="dropdown dropdown-user">
+				<!-- BEGIN NOTIFICATION DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+			
+				<!-- END INBOX DROPDOWN -->
+				<!-- BEGIN TODO DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				
+				<!-- END TODO DROPDOWN -->
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				<li class="dropdown dropdown-user">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 					<img alt="" class="img-circle" src="../../assets/admin/layout/img/avatar3_small.jpg"/>
 					<span class="username username-hide-on-mobile">
@@ -55,11 +74,22 @@
 						</li>
 					</ul>
 				</li>
-				</ul>
-
-   </div>
-  </div> 
-  </div>
+				<!-- END USER LOGIN DROPDOWN -->
+				<!-- BEGIN QUICK SIDEBAR TOGGLER -->
+				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+				<li class="dropdown dropdown-quick-sidebar-toggler">
+					<a href="javascript:;" class="dropdown-toggle">
+					<i class="icon-logout"></i>
+					</a>
+				</li>
+				<!-- END QUICK SIDEBAR TOGGLER -->
+			</ul>
+		</div>
+		<!-- END TOP NAVIGATION MENU -->
+	</div>
+	</div>
+	<!-- END HEADER INNER -->
+</div>
 </body>
 <footer>
 	<?php echo ($header) ?> 
