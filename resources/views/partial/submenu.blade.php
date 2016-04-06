@@ -23,10 +23,12 @@
 					</form>
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
-											<li>
+											<li class="">
 												<a href="/category">Add Category</a>
 											</li>
-											<li>
+											<li class="<?php if ($active == 'subcat') {
+												echo 'active';
+											} ?>">
 												<a href="/subcategory">Add SubCategory</a>
 											</li>
 											<li>

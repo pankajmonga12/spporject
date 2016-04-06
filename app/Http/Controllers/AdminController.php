@@ -206,13 +206,13 @@ function showJobBoard()
     	$categoryData[] = $categoryD;
     }
 
-    
+    $activeD['active']= 'subcat';    
     $data['header'] = View::make('partial.header');
 
    /* Footer partial view */
 	$data['footer'] = View::make('partial.footer');
 
-	$data['submenu'] = View::make('partial.submenu');
+	$data['submenu'] = View::make('partial.submenu',$activeD);
 
 	$data['categoriesdrop'] = $categoryDrop;
 	$data['categories'] = $categoryData;
