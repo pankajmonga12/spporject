@@ -1,26 +1,35 @@
-<div class="hor-menu hor-menu-light hidden-sm hidden-xs">
-			<ul class="nav navbar-nav">
+	<div class="page-sidebar-wrapper">
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU1 -->
+			<ul class="page-sidebar-menu hidden-sm hidden-xs" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: Remove data-hover="megadropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
-				<li class="classic-menu-dropdown active">
-					<a href="index.html">
-					Dashboard <span class="selected">
-					</span>
+
+				<li class="sidebar-search-wrapper">
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+					<form class="sidebar-search sidebar-search-bordered" action="extra_search.html" method="POST">
+						<a href="javascript:;" class="remove">
+						<i class="icon-close"></i>
+						</a>
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search...">
+							<span class="input-group-btn">
+							<button class="btn submit"><i class="icon-magnifier"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li>
+					<a href="charts.html">
+					<i class="fa fa-bar-chart-o"></i>
+					<span class="title">
+					Visual Charts </span>
 					</a>
 				</li>
-				<li class="mega-menu-dropdown">
-					<a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
-					Mega <i class="fa fa-angle-down"></i>
-					</a>
-					<ul>
-						<li>
-							<!-- Content container to add padding -->
-							<div class="mega-menu-content">
-								<div class="row">
-									<div class="col-md-4">
-										<ul class="mega-menu-submenu">
-											<li>
-												<h3>Dashboard</h3>
-											</li>
 											<li>
 												<a href="/category">Add Category</a>
 											</li>
@@ -47,8 +56,5 @@
 											</li>
 										</ul>
 									</div>
-								</div>
-							</div>
-						</li>
-				  </ul>	
+							
 		</div>
