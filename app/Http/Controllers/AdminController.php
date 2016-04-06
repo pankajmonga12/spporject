@@ -28,7 +28,14 @@ class AdminController   extends Controller
 
     if (Auth::check())
    {
+     
+    $data['header'] = View::make('partial.header');
 
+   /* Footer partial view */
+	$data['footer'] = View::make('partial.footer');
+
+	$data['submenu'] = View::make('partial.submenu');
+    
     return view('dashboard');
 
    } else {
