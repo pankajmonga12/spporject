@@ -80,12 +80,13 @@ if ($validator->fails()) {
         // redirect them to the secure section or whatever
         // return Redirect::to('secure');
         // for now we'll just echo success (even though echoing in a controller is bad)
+         $activeD['active']= 'none';  
         $data['header'] = View::make('partial.header');
 
    /* Footer partial view */
         $data['footer'] = View::make('partial.footer');
 
-        $data['submenu'] = View::make('partial.submenu');
+        $data['submenu'] = View::make('partial.submenu', $activeD);
 
          return view('dashboard' , $data);
     }
