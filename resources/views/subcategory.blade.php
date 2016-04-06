@@ -182,7 +182,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												  {!!  Form::text('subcategory', Input::old('subcategory'),, array('class' => 'form-control') array('placeholder' => 'Sub Category Name')) !!} 
+												  {!!  Form::text('subcategory', Input::old('subcategory'),array('class' => 'form-control'), array('placeholder' => 'Sub Category Name')) !!} 
 											</div>
 										</div>
 									</div>
