@@ -105,7 +105,16 @@ if ($validator->fails()) {
     	$categoryD['status'] = $category->status;
     	$categoryData[] = $categoryD;
     }
-    return view('category' , ['categories' => $categoryData]);
+     $data['header'] = View::make('partial.header');
+
+   /* Footer partial view */
+	$data['footer'] = View::make('partial.footer');
+
+	$data['submenu'] = View::make('partial.submenu');
+
+	$data['categories'] = $categoryData;
+
+    return view('category' , $data);
 }
 
 
