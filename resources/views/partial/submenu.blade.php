@@ -23,13 +23,6 @@
 					</form>
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
-				<li>
-					<a href="charts.html">
-					<i class="fa fa-bar-chart-o"></i>
-					<span class="title">
-					Visual Charts </span>
-					</a>
-				</li>
 											<li>
 												<a href="/category">Add Category</a>
 											</li>
