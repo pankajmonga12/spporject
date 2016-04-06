@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <?php echo ($header) ?> 
 <body class="page-header-fixed page-quick-sidebar-over-content page-sidebar-closed-hide-logo">
@@ -116,21 +116,25 @@
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			HOME
+			Categories
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="index.html">Home</a>
+						<a href="/">Home</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					 <li>
+						<i class="fa"></i>
+						<a href="#">Cateogory</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 				</ul>
 			</div>
-			<!-- END PAGE HEADER-->
-			<!-- BEGIN PAGE CONTENT-->
 
-			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->1
 			<div class="row">
 				
 				{!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
@@ -199,6 +203,9 @@
 	<?php } ?>
   </table>
 			</div>
+
+			</div>
+			
 	</div>
 	<!-- END CONTENT -->
 	<!-- BEGIN QUICK SIDEBAR -->
