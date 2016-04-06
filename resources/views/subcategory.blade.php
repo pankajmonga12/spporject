@@ -163,14 +163,14 @@
 										<button class="close" data-close="alert"></button>
 										
 									</div>
-									<div class="form-group">
+									<div class="form-group" style="    margin-bottom: 57px;">
 										<label class="control-label col-md-3">Select Category  <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												  {!!  Form::select('category', $categoriesdrop) !!}) 
+												  {!!  Form::select('category', $categoriesdrop) !!}
 											</div>
 										</div>
 									</div>
@@ -182,7 +182,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												  {!!  Form::text('subcategory', Input::old('subcategory'), array('placeholder' => 'Sub Category Name')) !!} 
+												  {!!  Form::text('subcategory', Input::old('subcategory'),, array('class' => 'form-control') array('placeholder' => 'Sub Category Name')) !!} 
 											</div>
 										</div>
 									</div>
@@ -238,12 +238,8 @@
 	  	 	} ?>
 	  	</td>
 	  	<td>
-	     <?php if($categories[$i]['status'] == 1) {
-              echo "Active";
-	  	 	} else {
-	  	 		echo "Inactive";
-	  	 	}
-	  	 	?>
+	      <?php echo $categories[$i]['parent'];
+            ?>
 	  	</td>
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
