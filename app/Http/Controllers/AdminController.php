@@ -36,7 +36,7 @@ class AdminController   extends Controller
 
 	$data['submenu'] = View::make('partial.submenu');
     
-    return view('dashboard');
+    return view('dashboard',$data);
 
    } else {
 	 $data['header'] = View::make('partial.header');
