@@ -47,9 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <html lang="en">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
-<?php
-   echo View::make('partials.header'); 
-?>
+<?php echo ($header) ?> 
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
 <body class="login">
@@ -423,9 +421,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	</form>
 	<!-- END REGISTRATION FORM -->
 </div>
-<?php
-   echo View::make('partials.footer'); 
-?>
+<?php echo $footer; ?> 
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {     
