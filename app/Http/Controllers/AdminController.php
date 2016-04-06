@@ -25,12 +25,22 @@ class AdminController   extends Controller
  function showLogin()
 {
     // show the form
-    $data['header'] = View::make('partial.header');
+
+    if (Auth::check())
+   {
+     $userData = Auth::user();
+
+     echo "<pre> User Data : ".print_r($userData , TRUE)."</pre>";
+
+   } else {
+	 $data['header'] = View::make('partial.header');
 
    /* Footer partial view */
-   $data['footer'] = View::make('partial.footer');
+     $data['footer'] = View::make('partial.footer');
 
-    return view('login', $data );
+     return view('login', $data );
+  }
+    
 }
 
  function doLogin()
