@@ -136,28 +136,65 @@
 			<!-- END PAGE HEADER-->
 			<!-- BEGIN PAGE CONTENT-->1
 			<div class="row">
+				<div class="col-md-10 ">
+          
+				   <div class="portlet light bordered">
+					
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span class="caption-subject bold uppercase">NEW CATEGORY</span>
+							</div>
+					
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+								{!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
+								
+								<div class="form-body">
+								<p>
+								{{ $errors->first('category') }}
+								</p>
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class=" display-hide">
+										<button class="close" data-close="alert"></button>
+										
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Add New Category <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('category', Input::old('category'), array('class' => 'form-control'),array('placeholder' => 'Category Name')) !!}
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save Category</button>
+											<button type="button" class="btn default">Cancel</button>
+										</div>
+									</div>
+								</div>
+							{!! Form::close() !!}
+							<!-- END FORM-->
+						</div>
+					</div>
+				</div>
 				
-				{!! Form::open(array('url' => 'savecategory' , 'method' => 'post')) !!}
-				<h1>Add New Category</h1>
-
-				<!-- if there are login errors, show them here -->
-				<p>
-				    {{ $errors->first('category') }}
-				</p>
-
-				<p>
-				    {!!  Form::label('category', 'Category Name')!!}
-				    {!!  Form::text('category', Input::old('category'), array('placeholder' => 'Category Name')) !!}
-				</p>
-
-
-				<p>{!! Form::submit('Submit!') !!}</p>
-				{!! Form::close() !!}
 			</div>
 			<!-- END PAGE CONTENT-->
 			<div class="row">
 				<meta name="csrf-token" content="{{ csrf_token() }}" />
-<table border="1">
+<table class="table table-striped table-bordered table-hover">
 	<tr>
 		<td>
 			S. No.
