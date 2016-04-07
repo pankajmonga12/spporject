@@ -225,7 +225,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('category', $categoriesdrop ,array('class' => 'form-control') ) !!}
+												 {!!  Form::select('category', $categoriesdrop ,array('class' => 'form-control'), array('id' => 'category') ) !!}
 												
 											</div>
 										</div>
@@ -238,7 +238,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('id' => 'categorym'), array('onchange' => 'Changesubcat()'), array('onchange' => 'Changesubcat()')) !!}
+												 {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('id' => 'subcategory'), array('onchange' => 'Changesubcat)) !!}
 											</div>
 										</div>
 									</div>
