@@ -191,7 +191,6 @@ function showJobBoard()
 				$data['eligibility'] = $eligibilityData;
 				$data['qualification'] = $qualificationData;
 				$data['agelimit'] = $agelimitData;
-				$data['jobData'] = $jobData;
 
     return view('jobboard' ,$data);
 }
