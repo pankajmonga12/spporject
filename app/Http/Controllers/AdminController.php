@@ -178,7 +178,22 @@ function showJobBoard()
     foreach ($qualification as $qualificationm) {
     	$qualificationData[$qualificationm->id] = $qualificationm->title;
     }
-    return view('jobboard' , ['categoriesdrop' => $categoryDrop,'eligibility' => $eligibilityData,'qualification' => $qualificationData,'agelimit' => $agelimitData]);
+
+				$activeD['active']= 'job';    
+				$data['header'] = View::make('partial.header');
+
+				/* Footer partial view */
+				$data['footer'] = View::make('partial.footer');
+
+				$data['submenu'] = View::make('partial.submenu',$activeD);
+
+				$data['categoriesdrop'] = $categoryDrop;
+				$data['eligibility'] = $eligibilityData;
+				$data['qualification'] = $qualificationData;
+				$data['agelimit'] = $agelimitData;
+				$data['jobData'] = $jobData;
+
+    return view('jobboard' ,$data);
 }
 
 
