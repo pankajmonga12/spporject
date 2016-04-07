@@ -9,6 +9,7 @@
         "laravel/framework": "5.2.*",
         "twitter/bootstrap": "*",
         "illuminate/html": "5.*",
+        "vinelab/laravel-editor": "*",
         "laravelcollective/html": "~5.0"
     },
     "require-dev": {
