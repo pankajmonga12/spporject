@@ -165,7 +165,7 @@
 										
 									</div>
 
-									<div class="form-group">
+									<div class="form-group" style="margin-bottom: 54px;">
 										<label class="control-label col-md-3">Set Minimum Age <span class="required">
 										* </span>
 										</label>
