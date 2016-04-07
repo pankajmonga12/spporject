@@ -266,7 +266,57 @@
 											</div>
 										</div>
 									</div>
+                                  
 
+									<div class="form-group">
+										<label class="control-label col-md-3">Descipline <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('descipline', Input::old('descipline'), array('class' => 'form-control'),array('placeholder' => 'Descipline')) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Imp. Date <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::date('imp_date', Input::old('imp_date'), array('class' => 'form-control'), array('placeholder' => 'Imp Date')) !!}
+											</div>
+										</div>
+									</div>
+
+									
+
+									<div class="form-group">
+										<label class="control-label col-md-3">No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Job Description <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('post_description', Input::old('post_description'), array('class' => 'form-control'),array('placeholder' => 'Job Description')) !!}
+											</div>
+										</div>
+									</div>
 
 									
 
