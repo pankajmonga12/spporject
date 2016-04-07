@@ -245,10 +245,10 @@ function showJobBoard()
 				/* Footer partial view */
 				$data['footer'] = View::make('partial.footer');
 
-				$data['submenu'] = View::make('partial.submenu',$activeD);
+				//$data['submenu'] = View::make('partial.submenu', $activeD );
 
-	    return view('jobboard' , $data );
-	}
+	      return view('jobboard' , $data );
+	}  
 
 	function showEligibility()
     {
