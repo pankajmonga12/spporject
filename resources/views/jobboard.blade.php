@@ -347,7 +347,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'!!}
+												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required')!!}
 											</div>
 										</div>
 									</div>
@@ -371,7 +371,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('how_to_apply', Input::old('how_to_apply'), array('class' => 'form-control'),array('placeholder' => 'How to Apply'!!}
+												{!!  Form::text('how_to_apply', Input::old('how_to_apply'), array('class' => 'form-control'),array('placeholder' => 'How to Apply')!!}
 											</div>
 										</div>
 									</div>
@@ -383,7 +383,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'!!}
+												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees')!!}
 											</div>
 										</div>
 									</div>
@@ -395,7 +395,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('website_link', Input::old('website_link'), array('class' => 'form-control'),array('placeholder' => 'Website Url'!!}
+												{!!  Form::text('website_link', Input::old('website_link'), array('class' => 'form-control'),array('placeholder' => 'Website Url')!!}
 											</div>
 										</div>
 									</div>
@@ -419,7 +419,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('detailed_notification', Input::old('detailed_notification'), array('class' => 'form-control'),array('placeholder' => 'Detailed Notification'!!}
+												{!!  Form::text('detailed_notification', Input::old('detailed_notification'), array('class' => 'form-control'),array('placeholder' => 'Detailed Notification')!!}
 											</div>
 										</div>
 									</div>
