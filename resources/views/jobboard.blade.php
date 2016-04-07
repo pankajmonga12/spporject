@@ -504,4 +504,17 @@ Demo.init(); // init demo features
         });
     });
 </script>
+<style type="text/css">
+	.form-group {
+    /* width: 998px; */
+    margin-bottom: 55px;
+    padding: 8px;
+    /* margin-right: -159px; */
+}
+</style>
+<style type="text/css">
+	select {
+    max-width: 226px;
+}
+</style>
 </html>
