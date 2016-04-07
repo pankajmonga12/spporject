@@ -451,6 +451,7 @@
 </div>
 </body>
 <footer>
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<?php echo ($footer) ?> 
 </footer>
 <script>
