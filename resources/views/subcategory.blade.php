@@ -233,12 +233,11 @@
 	     <?php echo $categories[$i]['category']; ?>
 	  	</td>
 	  	<td>
-	  	 <?php if($categories[$i]['parent'] == 0) {
-              echo "main Category";
-	  	 	} ?>
+	  	  <?php echo $categories[$i]['parent'];
+            ?>
 	  	</td>
 	  	<td>
-	      <?php echo $categories[$i]['parent'];
+	      <?php echo $categories[$i]['status'];
             ?>
 	  	</td>
 	  	<td>
