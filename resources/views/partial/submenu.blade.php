@@ -23,7 +23,9 @@
 					</form>
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
-											<li class="">
+											<li  class="<?php if ($active == 'cat') {
+												echo 'active';
+											} ?>">
 												<a href="/category">Add Category</a>
 											</li>
 											<li class="<?php if ($active == 'subcat') {

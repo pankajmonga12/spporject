@@ -29,12 +29,14 @@ class AdminController   extends Controller
     if (Auth::check())
    {
      
-    $data['header'] = View::make('partial.header');
 
-   /* Footer partial view */
-	$data['footer'] = View::make('partial.footer');
+    $activeD['active']= 'none';  
+		$data['header'] = View::make('partial.header');
 
-	$data['submenu'] = View::make('partial.submenu');
+		/* Footer partial view */
+		$data['footer'] = View::make('partial.footer');
+
+		$data['submenu'] = View::make('partial.submenu', $activeD);
     
     return view('dashboard',$data);
 
@@ -109,12 +111,13 @@ if ($validator->fails()) {
     	$categoryD['status'] = $category->status;
     	$categoryData[] = $categoryD;
     }
-     $data['header'] = View::make('partial.header');
+    $activeD['active']= 'cat';  
+		$data['header'] = View::make('partial.header');
 
-   /* Footer partial view */
-	$data['footer'] = View::make('partial.footer');
+		/* Footer partial view */
+		$data['footer'] = View::make('partial.footer');
 
-	$data['submenu'] = View::make('partial.submenu');
+		$data['submenu'] = View::make('partial.submenu', $activeD);
 
 	$data['categories'] = $categoryData;
 
