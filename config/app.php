@@ -149,12 +149,14 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
 
+
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],
