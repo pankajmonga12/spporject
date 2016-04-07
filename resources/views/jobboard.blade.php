@@ -310,7 +310,7 @@
 										<label class="control-label col-md-3">Job Description <span class="required">
 										* </span>
 										</label>
-										<div class="col-md-4">
+										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												{{ Form::textarea('post_description',null, ['size' => '100x100']) }}
