@@ -364,17 +364,22 @@
 										</div>
 									</div>
 
-									<div class="form-group">
-										<label class="control-label col-md-3">How to Apply <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												{!!  Form::text('how_to_apply', Input::old('how_to_apply'), array('class' => 'form-control'),array('placeholder' => 'How to Apply'))!!}
-											</div>
-										</div>
-									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Application Fees <span class="required">
