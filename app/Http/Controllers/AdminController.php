@@ -238,7 +238,16 @@ function showJobBoard()
 	function showjobform()
 	{
 	    // show the form
-	    return view('jobboard');
+
+		    $activeD['active']= 'job';    
+				$data['header'] = View::make('partial.header');
+
+				/* Footer partial view */
+				$data['footer'] = View::make('partial.footer');
+
+				$data['submenu'] = View::make('partial.submenu',$activeD);
+
+	    return view('jobboard' , $data);
 	}
 
 	function showEligibility()
@@ -377,7 +386,22 @@ function showJobBoard()
     }
 
     //echo "<pre> Data  ".print_r($jobList , TRUE)."</pre>";
-     return view('jobboardedit' , ['categoriesdrop' => $categoryDrop,'eligibility' => $eligibilityData,'qualification' => $qualificationData,'agelimit' => $agelimitData,'jobData' => $jobData]);
+
+    $activeD['active']= 'job';    
+     $data['header'] = View::make('partial.header');
+
+   /* Footer partial view */
+	   $data['footer'] = View::make('partial.footer');
+
+	   $data['submenu'] = View::make('partial.submenu',$activeD);
+
+	   $data['categoriesdrop'] = $categoryDrop;
+	   $data['eligibility'] = $eligibilityData;
+	   $data['qualification'] = $qualificationData;
+	   $data['agelimit'] = $agelimitData;
+	   $data['jobData'] = $jobData;
+
+     return view('jobboardedit' , $data );
    	
    }
 }

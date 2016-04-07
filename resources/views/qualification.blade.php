@@ -208,7 +208,7 @@
 		<td>
 			Action
 		</td>
-	</tr> ?>
+	</tr> 
 	<?php for ($i=0; $i <count($qualification) ; $i++) { ?>
 	  <tr>
 	  	<td>
