@@ -237,8 +237,11 @@
             ?>
 	  	</td>
 	  	<td>
-	      <?php echo $categories[$i]['status'];
-            ?>
+	      <?php  if($categories[$i]['status'] == 1) {
+              echo "Active";
+	  	 	} else {
+	  	 		echo "Inactive";
+	  	 	}?>
 	  	</td>
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
