@@ -238,7 +238,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('id' => 'subcategory')) !!}
+												 {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('class' => 'form-control'),array('id' => 'subcategory')) !!}
 											</div>
 										</div>
 									</div>
