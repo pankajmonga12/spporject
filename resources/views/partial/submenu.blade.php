@@ -42,7 +42,9 @@
 												echo 'active';
 											} ?>">
 												<a href="/addagelimit">Add age limit</a>
-											</li>
+											</li lass="<?php if ($active == 'qualification') {
+												echo 'active';
+											} ?>">
 											<li>
 												<a href="/addqualification">Add Qualification</a>
 											</li>

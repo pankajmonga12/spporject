@@ -278,7 +278,16 @@ function showJobBoard()
     	$eligibilityD['status'] = $qualificationm->status;
     	$qualificationData[] = $eligibilityD;
     }
-    return view('qualification' , ['qualification' => $qualificationData]);
+     $activeD['active']= 'qualification';    
+     $data['header'] = View::make('partial.header');
+
+   /* Footer partial view */
+	   $data['footer'] = View::make('partial.footer');
+
+	   $data['submenu'] = View::make('partial.submenu',$activeD);
+
+	   $data['qualification'] = $qualificationData;
+    return view('qualification' , $data);
     }
 
 
