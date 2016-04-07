@@ -38,7 +38,9 @@
 											} ?>">
 												<a href="/addeligibility">Add Eligibilities</a>
 											</li>
-											<li>
+											<li class="<?php if ($active == 'agelimit') {
+												echo 'active';
+											} ?>">
 												<a href="/addagelimit">Add age limit</a>
 											</li>
 											<li>

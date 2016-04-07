@@ -21,8 +21,8 @@ class AgelimitController extends Controller
   	
 
   	 $rules = array(
-    'minage'    => 'required',
-    'maxage'    => 'required',
+    'minage'    => 'required|numeric',
+    'maxage'    => 'required|numeric',
      );
 
 	 $validator = Validator::make(Input::all(), $rules);

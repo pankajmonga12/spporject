@@ -293,7 +293,18 @@ function showJobBoard()
     	$agelimitD['maxage'] = $agelimitm->maxage;
     	$agelimitData[] = $agelimitD;
     }
-    return view('agelimit' , ['agelimit' => $agelimitData]);
+
+     $activeD['active']= 'agelimit';    
+     $data['header'] = View::make('partial.header');
+
+   /* Footer partial view */
+	   $data['footer'] = View::make('partial.footer');
+
+	   $data['submenu'] = View::make('partial.submenu',$activeD);
+
+	   $data['agelimit'] = $agelimitData;
+
+    return view('agelimit' , $data );
     }
 
     function showJobBoardList() 
