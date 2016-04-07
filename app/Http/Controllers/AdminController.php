@@ -247,7 +247,7 @@ function showJobBoard()
 
 				//$data['submenu'] = View::make('partial.submenu', $activeD );
 
-	      return view('jobboard' , $data );
+	      return view('jobboard' );
 	}  
 
 	function showEligibility()
