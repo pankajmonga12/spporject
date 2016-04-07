@@ -313,7 +313,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {{ Editor::view() }}
+												{{ Form::textarea('post_description') }}
 											</div>
 										</div>
 									</div>
@@ -507,4 +507,10 @@ Demo.init(); // init demo features
     max-width: 226px;
 }
 </style>
+ <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+    <script>
+        $('textarea').ckeditor();
+        // $('.textarea').ckeditor(); // if class is prefered.
+    </script>
 </html>
