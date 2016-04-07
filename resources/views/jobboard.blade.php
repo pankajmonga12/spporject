@@ -242,6 +242,30 @@
 											</div>
 										</div>
 									</div>
+                                   
+                                   <div class="form-group">
+										<label class="control-label col-md-3">Job Title <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('job_name', Input::old('job_name'), array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Job Notification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('job_notification', Input::old('job_notification'), array('class' => 'form-control'),array('placeholder' => 'Job Notification')) !!}
+											</div>
+										</div>
+									</div>
 
 
 									
@@ -287,5 +311,46 @@ Demo.init(); // init demo features
     });
   </script>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+        $('#category').on('change', function() {
+        	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        	var id = $(this).val();
+        	if ( id == 0 ) {
 
+        		return false;
+        	}
+            var data = {
+                'id': $(this).val(),
+                 _token: CSRF_TOKEN
+            };
+           console.log(data);
+
+           $.ajax({
+            url: 'fetchsubcat',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+            success: function (data) {
+                   console.log(data);
+                   var selectList = document.getElementById('subcategory');
+                   document.getElementById('subcategory').innerHTML = '';
+                    var option = document.createElement("option");
+					option.value = 'none';
+					option.text = 'Select Subcategory';
+					selectList.appendChild(option);
+                    
+                    for (var i = 0; i < data.length; i++) {
+					
+					    var option = document.createElement("option");
+					    option.value = data[i].id;
+					    option.text = data[i].category;
+					    selectList.appendChild(option);
+                    }
+            },
+            
+        });
+        });
+    });
+</script>
 </html>
