@@ -332,7 +332,7 @@
 										</div>
 									</div>
                                  
-                                 
+
 									<div class="form-group">
 										<label class="control-label col-md-3">Qualification <span class="required">
 										* </span>
@@ -344,7 +344,80 @@
 											</div>
 										</div>
 									</div>
+                                  
 
+                                     
+									<div class="form-group">
+										<label class="control-label col-md-3">Experience Required <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Website Url <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('website_link', Input::old('website_link'), array('class' => 'form-control'),array('placeholder' => 'Website Url'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Logo <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!! Form::file('logo')!!}
+											</div>
+										</div>
+									</div>
+	                              
+	                              <div class="form-group">
+										<label class="control-label col-md-3">Website Url <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('detailed_notification', Input::old('detailed_notification'), array('class' => 'form-control'),array('placeholder' => 'Detailed Notification'))!!}
+											</div>
+										</div>
+									</div>
 
 									
 
