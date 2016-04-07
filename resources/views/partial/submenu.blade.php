@@ -34,9 +34,6 @@
 												<a href="/subcategory">Add SubCategory</a>
 											</li>
 											<li>
-												<a href="/subcategory">Add SubCategory</a>
-											</li>
-											<li>
 												<a href="/addeligibility">Add Eligibilities</a>
 											</li>
 											<li>
