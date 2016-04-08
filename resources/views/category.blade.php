@@ -141,7 +141,7 @@
 										<label class="control-label col-md-3">New Category <span class="required">
 										* </span>
 										</label>
-										<div class="col-md-4">
+										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												<input type="hidden" class="form-control" id="catcid" name="id"/>
@@ -154,7 +154,7 @@
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn green">Submit</button>
+											<button type="submit" class="btn green">Save Cateogry</button>
 											<button type="button" class="btn default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
