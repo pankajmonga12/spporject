@@ -126,7 +126,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="/index.php/home/changepassword" id="changepasswordform" class="form-horizontal"  method="POST">
+							<form action="/index.php/home/changecategory" id="changepasswordform" class="form-horizontal"  method="POST">
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -138,14 +138,14 @@
 									</div>
 									
 									<div class="form-group">
-										<label class="control-label col-md-3">New PASSWORD <span class="required">
+										<label class="control-label col-md-3">New Category <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="hidden" class="form-control" id="usercid" name="id"/>
-												<input type="text" class="form-control" id="password" name="password"/>
+												<input type="hidden" class="form-control" id="catcid" name="id"/>
+												<input type="text" class="form-control" id="category" name="category"/>
 											</div>
 										</div>
 									</div>
@@ -429,6 +429,8 @@ Demo.init(); // init demo features
 <script type="text/javascript">
 	function Editcategory(catName , id) {
 
+    document.getElementById('category').value = catName;
+    document.getElementById('catcid').value = id;
 		$('#change-category').modal('show');
 	}
 </script>
