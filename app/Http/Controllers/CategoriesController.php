@@ -101,7 +101,7 @@ class CategoriesController extends Controller
   function updatecat( Request $request )
   {
   	
-  	    $category = Jobboard::find( $request->id );
+  	    $category = Categories::find( $request->id );
 
         $category->category = $request->category;
 
