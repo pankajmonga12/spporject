@@ -59,4 +59,18 @@ class QualificationController extends Controller
     die();
 
   }
+
+  function updatequalification( Request $request )
+  {
+  	
+  	    $qualification = Qualification::find( $request->id );
+
+        $qualification->title = $request->title;
+
+        $qualification->save();
+
+        return Redirect::to('addqualification');
+
+  }
+
 }

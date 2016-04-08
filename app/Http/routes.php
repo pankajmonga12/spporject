@@ -65,7 +65,11 @@
 
     Route::post('changecategory', 'CategoriesController@updatecat');
 
-     Route::post('changeeligibility', 'EligibilityController@updateeligibility');
+    Route::post('changecategory', 'CategoriesController@updatecat');
+
+    Route::post('changeeligibility', 'EligibilityController@updateeligibility');
+
+    Route::post('changequalification', 'QualificationController@updatequalification');
    
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
