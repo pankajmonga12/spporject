@@ -106,7 +106,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="/changecategory" id="changepasswordform" class="form-horizontal"  method="POST">
+							<form action="/changeeligibility" id="changepasswordform" class="form-horizontal"  method="POST">
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>

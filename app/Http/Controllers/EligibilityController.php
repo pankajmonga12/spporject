@@ -60,5 +60,18 @@ class EligibilityController extends Controller
 
   }
 
+  function updateeligibility( Request $request )
+  {
+  	
+  	    $eligibility = Eligibility::find( $request->id );
+
+        $eligibility->title = $request->title;
+
+        $eligibility->save();
+
+        return Redirect::to('addeligibility');
+
+  }
+
 }
 
