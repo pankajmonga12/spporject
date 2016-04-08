@@ -127,7 +127,7 @@
 					</li>
 					 <li>
 						<i class="fa"></i>
-						<a href="#">Cateogory</a>
+						<a href="#">Qualification</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 				</ul>
