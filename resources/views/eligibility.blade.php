@@ -183,7 +183,7 @@
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Categories
+			Eligibility
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
