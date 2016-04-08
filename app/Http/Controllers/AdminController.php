@@ -207,7 +207,7 @@ function showJobBoard()
     $categoriesD = DB::table('categories')
             ->join('categories as cat', 'cat.id', '=', 'categories.parent')
              ->where('categories.parent', '>', 0)
-            ->select('categories.category as category','categories.id as id', 'categories.status as status','cat.category as parent')
+            ->select('categories.category as category','categories.id as id','categories.parent as parent_id', 'ccategories.parent as parent_idategories.status as status','cat.category as parent')
             ->get();
     $categoryData = array();
     $categoryDrop = array();
@@ -221,6 +221,7 @@ function showJobBoard()
     	$categoryD['id'] = $categorydatat->id;
     	$categoryD['category'] = $categorydatat->category;
     	$categoryD['parent'] = $categorydatat->parent;
+    	$categoryD['parent_id'] = $categorydatat->parent_id;
     	$categoryD['status'] = $categorydatat->status;
     	$categoryData[] = $categoryD;
     }
