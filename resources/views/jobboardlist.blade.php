@@ -116,7 +116,7 @@
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Categories
+			Job Board List
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -127,7 +127,7 @@
 					</li>
 					 <li>
 						<i class="fa"></i>
-						<a href="#">Qualification</a>
+						<a href="#">Job Board List</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 				</ul>
