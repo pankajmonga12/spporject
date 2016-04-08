@@ -62,6 +62,8 @@
     Route::post('savejob', 'JobboardController@saveJob');
 
     Route::post('updatejob', 'JobboardController@updateJob');
+
+    Route::post('changecategory', 'CategoriesController@updatecat');
    
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 

@@ -97,4 +97,18 @@ class CategoriesController extends Controller
 
   }
 
+
+  function updatecat( Request $request )
+  {
+  	
+  	    $category = Jobboard::find( $request->id );
+
+        $category->category = $request->category;
+
+        $category->save();
+
+        return Redirect::to('category');
+
+  }
+
 }
