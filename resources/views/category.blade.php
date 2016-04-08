@@ -145,6 +145,7 @@
 											<div class="input-icon right">
 												<i class="fa"></i>
 												<input type="hidden" class="form-control" id="catcid" name="id"/>
+												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 												<input type="text" class="form-control" id="category" name="category"/>
 											</div>
 										</div>
