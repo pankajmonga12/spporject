@@ -163,7 +163,7 @@
 												<i class="fa"></i>
 												<input type="hidden" class="form-control" id="subid" name="id"/>
 												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-												  {!!  Form::text('subcategory', Input::old('subcategory'),array('class' => 'form-control'), array('placeholder' => 'Sub Category Name')) !!} 
+												  {!!  Form::text('subcategory', Input::old('subcategory'),array('class' => 'form-control'), array('placeholder' => 'Sub Category Name'),array('id' => 'subcategory')) !!} 
 											</div>
 										</div>
 									</div>
@@ -306,7 +306,6 @@
 			Action
 		</td>
 	</tr>
-	<?php echo "<pre> Data : ".print_r($categories , TRUE)."</pre>"; ?>
 	<?php for ($i=0; $i <count($categories) ; $i++) { ?>
 	  <tr>
 	  	<td>
@@ -330,7 +329,7 @@
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
 	  	</td>
 	  	<td>
-	  		<button onclick="changeSubcategory('<?php echo $categories[$i]['category']; ?>' , <?php echo $categories[$i]['id']; ?>)">Edit</button>
+	  		<button onclick="changeSubcategory('<?php echo $categories[$i]['category']; ?>' , <?php echo $categories[$i]['id']; ?>, <?php echo $categories[$i]['parent_id']; ?>)">Edit</button>
 	  	</td>
 	  </tr>
 	<?php } ?>
@@ -395,4 +394,13 @@ Demo.init(); // init demo features
     }
     
 }
+</script>
+
+<script type="text/javascript">
+	function changeSubcategory(cValue , id , catId) {
+
+    document.getElementById('subcategory').value = cValue;
+    document.getElementById('subid').value = id;
+		$('#change-subcategory').modal('show');
+	}
 </script>
