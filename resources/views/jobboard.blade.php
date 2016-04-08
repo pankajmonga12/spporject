@@ -403,7 +403,7 @@
 										<label class="control-label col-md-3">Job Notification <span class="required">
 										* </span>
 										</label>
-										<div class="col-md-4">
+										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												{{ Form::textarea('job_notification',null, ['size' => '100x100']) }}
@@ -416,7 +416,7 @@
 										<label class="control-label col-md-3">How To Apply  <span class="required">
 										* </span>
 										</label>
-										<div class="col-md-4">
+										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												{{ Form::textarea('how_to_apply',null, ['size' => '100x100']) }}
@@ -429,7 +429,7 @@
 										<label class="control-label col-md-3">Details Notification <span class="required">
 										* </span>
 										</label>
-										<div class="col-md-4">
+										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												{{ Form::textarea('detailed_notification',null, ['size' => '100x100']) }}
