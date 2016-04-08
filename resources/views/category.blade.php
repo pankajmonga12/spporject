@@ -360,7 +360,7 @@
 	  	</td>
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input> </td>
-	  	<td><button onclick="Editcategory('\ <?php echo $categories[$i]['category']; ?>\' , <?php echo $categories[$i]['id']; ?> )"> Edit Category </button> 	  	
+	  	<td><button onclick="Editcategory('<?php echo $categories[$i]['category']; ?>' , <?php echo $categories[$i]['id']; ?> )"> Edit Category </button> 	  	
 	  	</td>
 
 	  </tr>
