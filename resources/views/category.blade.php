@@ -208,7 +208,7 @@
 		<td>
 			Status
 		</td>
-		<td>
+		<td colspan="2">
 			Action
 		</td>
 	</tr>
@@ -236,6 +236,7 @@
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
 	  	 	  	</td>
+	  	 	  	<button onclick="Editcatogory( <?php echo $categories[$i]['category']; ?> , <?php echo $categories[$i]['id']; ?> )"> Edit Category </button>
 	  </tr>
 	<?php } ?>
   </table>
