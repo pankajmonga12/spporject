@@ -401,6 +401,7 @@ Demo.init(); // init demo features
 
     document.getElementById('subcategory').value = cValue;
     document.getElementById('subid').value = id;
+    document.querySelector('[name="category"]').catId; 
 		$('#change-subcategory').modal('show');
 	}
 </script>
