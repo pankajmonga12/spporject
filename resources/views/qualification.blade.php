@@ -186,7 +186,7 @@
 						<div class="portlet-title">
 							<div class="caption font-red-sunglo">
 								<i class="icon-settings font-red-sunglo"></i>
-								<span class="caption-subject bold uppercase"> CHANGE ELIGIBILITY</span>
+								<span class="caption-subject bold uppercase"> CHANGE QUALIFICATION</span>
 							</div>
 					
 						</div>
@@ -204,7 +204,7 @@
 									</div>
 									
 									<div class="form-group">
-										<label class="control-label col-md-3">New Eligibility <span class="required">
+										<label class="control-label col-md-3">New Qualificaton <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-7">
@@ -221,7 +221,7 @@
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn green">Save Eligibility</button>
+											<button type="submit" class="btn green">Save Qualification</button>
 											<button type="button" class="btn default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
@@ -358,7 +358,7 @@
 	  	 <input type="button" onclick="Deletecat(<?php echo $qualification[$i]['id']; ?>)" value="Delete"> </input>
 	  	</td>
 	  	<td>
-	  	 	<button onclick="changeQualification('<?php echo $eligibility[$i]['title']; ?>' , <?php echo $eligibility[$i]['id']; ?>)">Edit</button>
+	  	 	<button onclick="changeQualification('<?php echo $qualification[$i]['title']; ?>' , <?php echo $qualification[$i]['id']; ?>)">Edit</button>
 	  	 </td>
 	  </tr>
 	<?php } ?>
