@@ -151,7 +151,7 @@
 							<!-- BEGIN FORM-->
 							{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
 								
-								<div class="form-body" style="margin-bottom: 40px;">
+								<div class="form-body" style="margin-bottom: 40px; height: 2413px;">
 								<p>
 								{{ $errors->first('category') }}
 								</p>
