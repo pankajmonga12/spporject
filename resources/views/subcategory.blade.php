@@ -108,6 +108,88 @@
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
 		<div class="page-content">
+
+
+
+
+	<div class="modal fade" id="change-subcategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div class="modal-body">
+							<div class="portlet light bordered">
+					<?php //echo $this->session->flashdata('error_msg'); ?>
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span class="caption-subject bold uppercase"> CHANGE SUB CATEGORY</span>
+							</div>
+					
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							{!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									
+									<div class="form-group" style="    margin-bottom: 57px;">
+										<label class="control-label col-md-3">Select Category  <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												  {!!  Form::select('category', $categoriesdrop) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">New Sub Category <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="hidden" class="form-control" id="subid" name="id"/>
+												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+												  {!!  Form::text('subcategory', Input::old('subcategory'),array('class' => 'form-control'), array('placeholder' => 'Sub Category Name')) !!} 
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save Eligibility</button>
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							{!! Form::close() !!}
+							<!-- END FORM-->
+						</div>
+					</div>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+
+
+
 			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 			<!-- /.modal -->
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -116,7 +198,7 @@
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Categories
+			Sub Categories
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -127,7 +209,7 @@
 					</li>
 					 <li>
 						<i class="fa"></i>
-						<a href="#">Cateogory</a>
+						<a href="#">Sub Cateogory</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 				</ul>
@@ -220,10 +302,11 @@
 		<td>
 			Status
 		</td>
-		<td>
+		<td colspan="2">
 			Action
 		</td>
 	</tr>
+	<?php echo "<pre> Data : ".print_r($categories , TRUE."</pre>"; ?>
 	<?php for ($i=0; $i <count($categories) ; $i++) { ?>
 	  <tr>
 	  	<td>
@@ -245,7 +328,10 @@
 	  	</td>
 	  	<td>
 	  	 <input type="button" onclick="Deletecat(<?php echo $categories[$i]['id']; ?>)" value="Delete"> </input>
-	  	 	  	</td>
+	  	</td>
+	  	<td>
+	  		<button onclick="changeSubcategory('<?php echo $categories[$i]['category']; ?>' , <?php echo $categories[$i]['id']; ?>)">Edit</button>
+	  	</td>
 	  </tr>
 	<?php } ?>
   </table>
