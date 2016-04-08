@@ -143,7 +143,7 @@
 						<div class="portlet-title">
 							<div class="caption font-red-sunglo">
 								<i class="icon-settings font-red-sunglo"></i>
-								<span class="caption-subject bold uppercase">Eligibility </span>
+								<span class="caption-subject bold uppercase">Qualification </span>
 							</div>
 					
 						</div>

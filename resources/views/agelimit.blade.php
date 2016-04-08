@@ -143,7 +143,7 @@
 						<div class="portlet-title">
 							<div class="caption font-red-sunglo">
 								<i class="icon-settings font-red-sunglo"></i>
-								<span class="caption-subject bold uppercase">NEW CATEGORY</span>
+								<span class="caption-subject bold uppercase">SET AGE LIMIT</span>
 							</div>
 					
 						</div>
