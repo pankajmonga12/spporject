@@ -44,7 +44,7 @@
 												echo 'active';
 											} ?>">
 												<a href="/addagelimit">Add age limit</a>
-											</li class="<?php if ($active == 'qualification') {
+											</li class="<?php if ($active = 'qualification') {
 												echo 'active';
 											} ?>">
 											<li>
