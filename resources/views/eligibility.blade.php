@@ -296,7 +296,7 @@
 	  	 <input type="button" onclick="Deletecat(<?php echo $eligibility[$i]['id']; ?>)" value="Delete"> </input>
 	  	 </td>
 	  	 <td>
-	  	 	<button onclick="changeEligibility('<?php echo $eligibility[$i]['title']; ?>' , <?php echo $eligibility[$i]['id']; ?>)"></button>
+	  	 	<button onclick="changeEligibility('<?php echo $eligibility[$i]['title']; ?>' , <?php echo $eligibility[$i]['id']; ?>)">Edit</button>
 	  	 </td>
 
 	  </tr>
@@ -364,7 +364,7 @@ Demo.init(); // init demo features
 </script>
 
 <script type="text/javascript">
-	function Editcategory(eValue , id) {
+	function changeEligibility(eValue , id) {
 
     document.getElementById('eligibility').value = eValue;
     document.getElementById('eid').value = id;
