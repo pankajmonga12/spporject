@@ -306,7 +306,7 @@
 			Action
 		</td>
 	</tr>
-	<?php echo "<pre> Data : ".print_r($categories , TRUE."</pre>"; ?>
+	<?php echo "<pre> Data : ".print_r($categories , TRUE)."</pre>"; ?>
 	<?php for ($i=0; $i <count($categories) ; $i++) { ?>
 	  <tr>
 	  	<td>
