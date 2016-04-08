@@ -5,7 +5,7 @@
 			<!-- BEGIN SIDEBAR MENU1 -->
 			<ul class="page-sidebar-menu hidden-sm hidden-xs" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: Remove data-hover="megadropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
-               <?php  echo $active; ?>
+               <?php  //echo $active; ?>
 				<li class="sidebar-search-wrapper">
 					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
 					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
@@ -44,10 +44,10 @@
 												echo 'active';
 											} ?>">
 												<a href="/addagelimit">Add age limit</a>
-											</li class="<?php if ($active = 'qualification') {
+											</li>
+											<li class="<?php if ($active == 'qualification') {
 												echo 'active';
 											} ?>">
-											<li>
 												<a href="/addqualification">Add Qualification</a>
 											</li>
 											<li class="<?php if ($active == 'job') {
