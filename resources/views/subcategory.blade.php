@@ -163,7 +163,7 @@
 												<i class="fa"></i>
 												<input type="hidden" class="form-control" id="subid" name="id"/>
 												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-												  {!!  Form::text('subcategory', Input::old('subcategory'),array('class' => 'form-control'), array('placeholder' => 'Sub Category Name'),array('id' => 'subcategory')) !!} 
+												 <input type="text" class="form-control" id="subcategory" name="subcategory"/>
 											</div>
 										</div>
 									</div>
