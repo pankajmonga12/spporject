@@ -245,7 +245,7 @@
 			<!-- END STYLE CUSTOMIZER -->
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Categories
+			QUALIFICATION
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
