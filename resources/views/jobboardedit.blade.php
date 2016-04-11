@@ -237,7 +237,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::date('imp_date' ,$jobData->imp_date, descipline array('class' => 'form-control'), array('placeholder' => 'Imp Date')) !!}
+												{!!  Form::date('imp_date' ,$jobData->imp_date, array('class' => 'form-control'), array('placeholder' => 'Imp Date')) !!}
 											</div>
 										</div>
 									</div>
@@ -305,7 +305,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'],$jobData->age_limit) !!}
 											</div>
 										</div>
 									</div>
@@ -329,7 +329,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('website_link', $jobData->website_link, array('class' => 'form-control'),array('placeholder' => 'Website Url'))!!}
+												{!!  Form::text('website_link',$jobData->website_link, array('class' => 'form-control'),array('placeholder' => 'Website Url'))!!}
 											</div>
 										</div>
 									</div>
@@ -341,12 +341,11 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<img src="http://128.199.192.88/logos">
+												<img src="http://128.199.192.88/logos/{{$jobData->logo}}">
 												 {!! Form::file('logo')!!}
 											</div>
 										</div>
 									</div>
-
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Job Description <span class="required">
@@ -355,7 +354,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('post_description','$jobData->post_description', ['size' => '100x100']) }}
+												{{ Form::textarea('post_description',$jobData->post_description, ['size' => '100x100']) }}
 											</div>
 										</div>
 									</div>
