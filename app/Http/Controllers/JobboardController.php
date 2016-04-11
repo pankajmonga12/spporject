@@ -118,8 +118,10 @@ class JobboardController extends Controller
 	    'detailed_notification_file'    => $fileNamedoc,
 	    'detailed_notification'    => Input::get('detailed_notification')
     );
+
+      $jobType = print_r( $jobData['job_type'] , TRUE);
    
-     if ($jobData['job_type'] = 2) {
+     if ($jobType = 2) {
      	
      	$jobData['job_state'] == Input::get('job_state');
      }
