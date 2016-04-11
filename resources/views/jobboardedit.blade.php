@@ -5,6 +5,24 @@
 <html>
 <head>
 <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>	
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<link href="http://128.199.192.88/assets/admin/pages/css/login.css" rel="stylesheet" type="text/css"/>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN THEME STYLES -->
+<link href="http://128.199.192.88/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link href="http://128.199.192.88/assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="http://128.199.192.88/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+
 	<title></title>
 </head>
 <body>
@@ -158,5 +176,18 @@
         });
     });
 </script>
+
+<style type="text/css">
+	select {
+    max-width: 226px;
+}
+</style>
+ <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+    <script>
+        $('textarea').ckeditor();
+        // $('.textarea').ckeditor(); // if class is prefered.
+    </script>
+
 </body>
 </html>
