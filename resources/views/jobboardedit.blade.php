@@ -305,7 +305,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'], $jobData->age_limit) !!}
 											</div>
 										</div>
 									</div>
