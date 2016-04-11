@@ -305,7 +305,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'],$jobData->age_limit) !!}
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
 											</div>
 										</div>
 									</div>
@@ -341,7 +341,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<img src="http://128.199.192.88/logos/{{ $jobData->logo}}">
+												<img src="http://128.199.192.88/logos">
 												 {!! Form::file('logo')!!}
 											</div>
 										</div>
