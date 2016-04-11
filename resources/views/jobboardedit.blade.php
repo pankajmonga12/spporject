@@ -45,7 +45,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<?php  echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>"; ?>
+							<?php  //echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>"; ?>
 							{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
 								
 								<div class="form-body" style="margin-bottom: 40px; height: 2413px;">
@@ -225,7 +225,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('descipline', Input::old('descipline'), array('class' => 'form-control'),array('placeholder' => 'Descipline')) !!}
+												{!!  Form::text('descipline', $jobData->descipline, array('class' => 'form-control'),array('placeholder' => 'Descipline')) !!}
 											</div>
 										</div>
 									</div>
@@ -237,7 +237,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::date('imp_date', Input::old('imp_date'), array('class' => 'form-control'), array('placeholder' => 'Imp Date')) !!}
+												{!!  Form::date('imp_date' ,$jobData->imp_date, descipline array('class' => 'form-control'), array('placeholder' => 'Imp Date')) !!}
 											</div>
 										</div>
 									</div>
@@ -251,7 +251,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+												{!!  Form::text('no_of_post',$jobData->no_of_post, array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
 											</div>
 										</div>
 									</div>
@@ -266,7 +266,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::select('eligibility', $eligibility) !!}
+												{!!  Form::select('eligibility', $eligibility , $jobData->eligibility) !!}
 											</div>
 										</div>
 									</div>
@@ -279,7 +279,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('qualification', $qualification)  !!}
+												 {!!  Form::select('qualification', $jobData->qualification , $jobData->qualification)  !!}
 											</div>
 										</div>
 									</div>
@@ -293,7 +293,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'))!!}
+												{!!  Form::text('exp_req',  $jobData->exp_req , array('class' => 'form-control'),array('placeholder' => 'Experience Required'))!!}
 											</div>
 										</div>
 									</div>
@@ -305,7 +305,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'],$jobData->age_limit) !!}
 											</div>
 										</div>
 									</div>
@@ -317,7 +317,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+												{!!  Form::number('application_fees',$jobData->application_fees, array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
@@ -329,7 +329,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('website_link', Input::old('website_link'), array('class' => 'form-control'),array('placeholder' => 'Website Url'))!!}
+												{!!  Form::text('website_link', $jobData->website_link, array('class' => 'form-control'),array('placeholder' => 'Website Url'))!!}
 											</div>
 										</div>
 									</div>
@@ -341,20 +341,8 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
+												<img src="http://128.199.192.88/logos/{{ $jobData->logo}}">
 												 {!! Form::file('logo')!!}
-											</div>
-										</div>
-									</div>
-
-
-									<div class="form-group">
-										<label class="control-label col-md-3">Detailed Notification <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												 {!! Form::file('detailed_notification_file')!!}
 											</div>
 										</div>
 									</div>
@@ -367,7 +355,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('post_description','job description', ['size' => '100x100']) }}
+												{{ Form::textarea('post_description','$jobData->post_description', ['size' => '100x100']) }}
 											</div>
 										</div>
 									</div>
@@ -379,7 +367,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('job_notification',null, ['size' => '100x100']) }}
+												{{ Form::textarea('job_notification',$jobData->job_notification, ['size' => '100x100']) }}
 											
 											</div>
 										</div>
@@ -392,7 +380,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('how_to_apply',null, ['size' => '100x100']) }}
+												{{ Form::textarea('how_to_apply',$jobData->how_to_apply, ['size' => '100x100']) }}
 											
 											</div>
 										</div>
@@ -405,7 +393,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('detailed_notification',null, ['size' => '100x100']) }}
+												{{ Form::textarea('detailed_notification',$jobData->detailed_notification, ['size' => '100x100']) }}
 											
 											</div>
 										</div>
