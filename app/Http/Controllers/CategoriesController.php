@@ -111,4 +111,20 @@ class CategoriesController extends Controller
 
   }
 
+
+  function subcategory( Request $request )
+  {
+  	
+  	    $category = Categories::find( $request->id );
+        
+        $category->category = $request->subcategory;
+        $category->parent = $request->category;
+
+
+        $category->save();
+
+        return Redirect::to('subcategory');
+
+  }
+
 }

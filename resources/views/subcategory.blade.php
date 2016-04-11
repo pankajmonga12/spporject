@@ -131,7 +131,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							{!! Form::open(array('url' => 'savesubcategory' , 'method' => 'post')) !!}
+							{!! Form::open(array('url' => 'updatesubcategory' , 'method' => 'post')) !!}
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -172,7 +172,7 @@
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn green">Save Eligibility</button>
+											<button type="submit" class="btn green">Save Subcategory</button>
 											<button type="button" class="btn default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
