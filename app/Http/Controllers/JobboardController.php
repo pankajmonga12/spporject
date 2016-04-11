@@ -119,7 +119,7 @@ class JobboardController extends Controller
 	    'detailed_notification'    => Input::get('detailed_notification')
     );
    
-     if ($jobData['job_type'] == 2) {
+     if ((int)$jobData['job_type'] == 2) {
      	
      	$jobData['job_state'] == Input::get('job_state');
      }
