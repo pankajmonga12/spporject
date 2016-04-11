@@ -255,7 +255,7 @@
 										</div>
 									</div>
 
-									<div class="form-group" id="stateDropdown">
+									<div class="form-group" id="stateDropdown" style="display: none">
 										<label class="control-label col-md-3">Select State <span class="required">
 										* </span>
 										</label>
@@ -607,6 +607,14 @@ Demo.init(); // init demo features
         	
         	var id = $(this).val();
             console.log('type val = '+id);
+
+            if (id == 2) {
+
+            	document.getElementById('stateDropdown').style.display = 'block';
+            } else {
+
+            	document.getElementById('stateDropdown').style.display = 'none';
+            }
 
         });
     });
