@@ -112,7 +112,7 @@ class CategoriesController extends Controller
   }
 
 
-  function subcategory( Request $request )
+  function updatesubcat( Request $request )
   {
   	
   	    $category = Categories::find( $request->id );
