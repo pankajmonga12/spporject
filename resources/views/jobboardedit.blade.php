@@ -121,7 +121,8 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('category', $categoriesdrop ,array('class' => 'form-control'), array('id' => 'category') ) !!}
+												{{ Form::hidden('id', $jobData->id ) }}
+												 {!!  Form::select('category', $categoriesdrop ,$jobData->category,array('class' => 'form-control'), array('id' => 'category') ) !!}
 												
 											</div>
 										</div>
@@ -134,7 +135,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('class' => 'form-control'),array('id' => 'subcategory')) !!}
+												
 											</div>
 										</div>
 									</div>
@@ -146,7 +147,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('job_type', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'), array('class' => 'form-control'),array('id' => 'job-type')) !!}
+												 {!!  Form::select('job_type', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'),$jobData->job_type, array('class' => 'form-control'),array('id' => 'job-type')) !!}
 											</div>
 										</div>
 									</div>
@@ -208,7 +209,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('job_name', Input::old('job_name'), array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
+												{!!  Form::text('job_name',$jobData->job_name, array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
 											</div>
 										</div>
 									</div>

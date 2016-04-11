@@ -225,7 +225,8 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('category', $categoriesdrop ,array('class' => 'form-control'), array('id' => 'category') ) !!}
+												
+												 {!!  Form::select('category', $categoriesdrop,array('class' => 'form-control'), array('id' => 'category') ) !!}
 												
 											</div>
 										</div>
@@ -541,11 +542,12 @@
 	</div>
 	<!-- END QUICK SIDEBAR -->
 </div>
-</body>
 <footer>
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 	<?php echo ($footer) ?> 
 </footer>
+</body>
+
 <script>
     jQuery(document).ready(function() {    
        Metronic.init(); // init metronic core components
