@@ -30,110 +30,407 @@
 @if(Session::has('message'))
 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
 @endif
-	<table>
-		<tr>
-		  <td>
-			<a href="/index.php/category">Add Category</a>
-		  </td>
-		  <td>
-			<a href="/index.php/subcategory">Add SubCategory</a>
-		  </td>
-		  <td>
-			<a href="/index.php/addjob">Add New Job</a>
-		  </td>
-		</tr>
-	</table>
    <div class="form-section">
-    
+   <div class="row">
+				<div class="col-md-10 ">
+          
+				   <div class="portlet light bordered">
+					
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span class="caption-subject bold uppercase">New Job </span>
+							</div>
+					
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
+								
+								<div class="form-body" style="margin-bottom: 40px; height: 2413px;">
+								<p>
+								{{ $errors->first('category') }}
+								</p>
+								<p>
+								{{ $errors->first('subcategory') }}
+								</p>
+								<p>
+								{{ $errors->first('job_name') }}
+								</p>
+								<p>
+								{{ $errors->first('job_notification') }}
+								</p>
+								<p>
+								{{ $errors->first('descipline') }}
+								</p>
+								<p>
+								{{ $errors->first('imp_date') }}
+								</p>
+								<p>
+								{{ $errors->first('no_of_post') }}
+								</p>
+								<p>
+								{{ $errors->first('post_description') }}
+								</p>
+								<p>
+								{{ $errors->first('eligibility') }}
+								</p>
+								<p>
+								{{ $errors->first('qualification') }}
+								</p>
 
-{!! Form::open(array('url' => 'updatejob' , 'method' => 'post' , 'files'=>true)) !!}
- <h1>Add New Job</h1>
+								<p>
+								{{ $errors->first('exp_req') }}
+								</p>
 
-<p>
-    {!!  Form::label('job_name', 'Job Name')!!}
-    {{ Form::hidden('id', $jobData->id ) }}
-    {!!  Form::text('job_name', $jobData->job_name, array('placeholder' => 'Job Name')) !!}
-</p>
+								<p>
+								{{ $errors->first('age_limit') }}
+								</p>
 
-<p>
-    {!!  Form::label('job_notification', 'Job Notification')!!}
-    {!!  Form::text('job_notification', $jobData->job_notification, array('placeholder' => 'Job Notification')) !!}
-</p>
+								<p>
+								{{ $errors->first('how_to_apply') }}
+								</p>
 
-<p>
-    {!!  Form::label('descipline', 'Descipline')!!}
-    {!!  Form::text('descipline', $jobData->descipline, array('placeholder' => 'Descipline')) !!}
-</p>
+								<p>
+								{{ $errors->first('application_fees') }}
+								</p>
 
-<p>
-    {!!  Form::label('imp_date', 'Imp Date')!!}
-    {!!  Form::date('imp_date', $jobData->imp_date, array('placeholder' => 'Imp Date')) !!}
-</p>
+								<p>
+								{{ $errors->first('website_link') }}
+								</p>
 
-<p>
-    {!!  Form::label('no_of_post', 'No. Of Post')!!}
-    {!!  Form::number('no_of_post', $jobData->no_of_post , array('placeholder' => 'No. Of Post')) !!}
-</p>
+								<p>
+								{{ $errors->first('logo') }}
+								</p>
 
-<p>
-    {!!  Form::label('post_description', 'Post Description')!!}
-    {!!  Form::text('post_description', $jobData->post_description , array('placeholder' => 'Post Description')) !!}
-</p>
+								<p>
+								{{ $errors->first('detailed_notification') }}
+								</p>
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class=" display-hide">
+										<button class="close" data-close="alert"></button>
+										
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Category Name <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!!  Form::select('category', $categoriesdrop ,array('class' => 'form-control'), array('id' => 'category') ) !!}
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Sub Category Name <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!!  Form::select('subcategory', array('none' => 'Select Subcategory'), array('class' => 'form-control'),array('id' => 'subcategory')) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Select Job Type <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!!  Form::select('job_type', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'), array('class' => 'form-control'),array('id' => 'job-type')) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group" id="stateDropdown" style="display: none">
+										<label class="control-label col-md-3">Select State <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="job_state" value="" >
+												<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
+												<option value='Andhra Pradesh'>Andhra Pradesh</option>
+												<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+												<option value='Assam'>Assam</option>
+												<option value='Bihar'>Bihar</option>
+												<option value='Chandigarh'>Chandigarh</option>
+												<option value='Chhattisgarh'>Chhattisgarh</option>
+												<option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli</option>
+												<option value='Daman and Diu'>Daman and Diu</option>
+												<option value='Delhi'>Delhi</option>
+												<option value='Goa'>Goa</option>
+												<option value='Gujarat'>Gujarat</option>
+												<option value='Haryana'>Haryana</option>
+												<option value='Himachal Pradesh'>Himachal Pradesh</option>
+												<option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+												<option value='Jharkhand'>Jharkhand</option>
+												<option value='Karnataka'>Karnataka</option>
+												<option value='Kerala'>Kerala</option>
+												<option value='Lakshadweep'>Lakshadweep</option>
+												<option value='Madhya Pradesh'>Madhya Pradesh</option>
+												<option value='Maharashtra'>Maharashtra</option>
+												<option value='Manipur'>Manipur</option>
+												<option value='Meghalaya'>Meghalaya</option>
+												<option value='Mizoram'>Mizoram</option>
+												<option value='Nagaland'>Nagaland</option>
+												<option value='Odisha'>Odisha</option>
+												<option value='Puducherry'>Puducherry</option>
+												<option value='Punjab'>Punjab</option>
+												<option value='Rajasthan'>Rajasthan</option>
+												<option value='Sikkim'>Sikkim</option>
+												<option value='Tamil Nadu'>Tamil Nadu</option>
+												<option value='Telengana'>Telengana</option>
+												<option value='Tripura'>Tripura</option>
+												<option value='Uttar Pradesh'>Uttar Pradesh</option>
+												<option value='Uttarakhand'>Uttarakhand</option>
+												<option value='West Bengal'>West Bengal</option>
+												</select>
+											</div>
+										</div>
+									</div>
+                                   
+                                   
+                                   <div class="form-group">
+										<label class="control-label col-md-3">Job Title <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('job_name', Input::old('job_name'), array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
+											</div>
+										</div>
+									</div>
+
+									
+                                  
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Descipline <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('descipline', Input::old('descipline'), array('class' => 'form-control'),array('placeholder' => 'Descipline')) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Imp. Date <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::date('imp_date', Input::old('imp_date'), array('class' => 'form-control'), array('placeholder' => 'Imp Date')) !!}
+											</div>
+										</div>
+									</div>
 
 
-<p>
-    {!!  Form::label('eligibility', 'Eligibility')!!}
-    {!!  Form::select('eligibility', $eligibility ,$jobData->eligibility) !!}
-</p>
 
-
-<p>
-    {!!  Form::label('qualification', 'Qualification')!!}
-    {!!  Form::select('qualification', $qualification ,$jobData->qualification )  !!}
-</p>
-
-
-<p>
-    {!!  Form::label('exp_req', 'Experience Required')!!}
-    {!!  Form::text('exp_req', $jobData->exp_req, array('placeholder' => 'Experience Required')) !!}
-</p>
-
-<p>
-    {!!  Form::label('age_limit', 'Age Limit')!!}
-    {!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'], $jobData->age_limit) !!}
-</p>
+									<div class="form-group">
+										<label class="control-label col-md-3">No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+											</div>
+										</div>
+									</div>
 
 
 
-<p>
-    {!!  Form::label('how_to_apply', 'How to Apply')!!}
-    {!!  Form::text('how_to_apply',$jobData->how_to_apply, array('placeholder' => 'How To Apply')) !!}
-</p>
 
-<p>
-    {!!  Form::label('application_fees', 'Application Fees')!!}
-    {!!  Form::number('application_fees', $jobData->application_fees, array('placeholder' => 'Application Fees')) !!}
-</p>
+									<div class="form-group">
+										<label class="control-label col-md-3">Eligibility <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::select('eligibility', $eligibility) !!}
+											</div>
+										</div>
+									</div>
+                                 
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Qualification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!!  Form::select('qualification', $qualification)  !!}
+											</div>
+										</div>
+									</div>
+                                  
+
+                                     
+									<div class="form-group">
+										<label class="control-label col-md-3">Experience Required <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Website Url <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('website_link', Input::old('website_link'), array('class' => 'form-control'),array('placeholder' => 'Website Url'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Logo <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!! Form::file('logo')!!}
+											</div>
+										</div>
+									</div>
 
 
-<p>
-    {!!  Form::label('website_link', 'Website Url')!!}
-    {!!  Form::text('website_link', $jobData->website_link, array('placeholder' => 'Website Url')) !!}
-</p>
+									<div class="form-group">
+										<label class="control-label col-md-3">Detailed Notification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!! Form::file('detailed_notification_file')!!}
+											</div>
+										</div>
+									</div>
 
-<p>
-    {!!  Form::label('logo', 'Logo')!!}
-    {!! Form::file('logo')!!}
-</p>
 
-<p>
-    {!!  Form::label('detailed_notification', 'Detailed Notifrication')!!}
-    {!!  Form::text('detailed_notification', $jobData->detailed_notification, array('placeholder' => 'Detailed Notifrication')) !!}
-</p>
+									<div class="form-group">
+										<label class="control-label col-md-3">Job Description <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{{ Form::textarea('post_description','job description', ['size' => '100x100']) }}
+											</div>
+										</div>
+									</div>
+	                              
+	                              <div class="form-group">
+										<label class="control-label col-md-3">Job Notification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{{ Form::textarea('job_notification',null, ['size' => '100x100']) }}
+											
+											</div>
+										</div>
+									</div>
 
-<p>{!! Form::submit('Submit!') !!}</p>
-{!! Form::close() !!}
-</div>
+									 <div class="form-group">
+										<label class="control-label col-md-3">How To Apply  <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{{ Form::textarea('how_to_apply',null, ['size' => '100x100']) }}
+											
+											</div>
+										</div>
+									</div>
+
+                                    <div class="form-group">
+										<label class="control-label col-md-3">Details Notification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{{ Form::textarea('detailed_notification',null, ['size' => '100x100']) }}
+											
+											</div>
+										</div>
+									</div>									
+
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save Job</button>
+											<button type="button" class="btn default">Cancel</button>
+										</div>
+									</div>
+								</div>
+							{!! Form::close() !!}
+							<!-- END FORM-->
+						</div>
+					</div>
+				</div>
+				
+			</div>
+    </div>
+    <footer>
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+	<?php echo ($footer) ?> 
+</footer>
+
 <script type="text/javascript">
 	$(document).ready(function() {
         $('#category').on('change', function() {
@@ -188,6 +485,5 @@
         $('textarea').ckeditor();
         // $('.textarea').ckeditor(); // if class is prefered.
     </script>
-
-</body>
-</html>
+    </body>
+    </html>
