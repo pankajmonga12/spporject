@@ -250,7 +250,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('subcategory', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'), array('class' => 'form-control'),array('id' => 'job-type')) !!}
+												 {!!  Form::select('job_type', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'), array('class' => 'form-control'),array('id' => 'job-type')) !!}
 											</div>
 										</div>
 									</div>
@@ -262,7 +262,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="state" value="" >
+												<select name="job_state" value="" >
 												<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
 												<option value='Andhra Pradesh'>Andhra Pradesh</option>
 												<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
@@ -598,15 +598,12 @@ Demo.init(); // init demo features
     });
 </script>
 
-
-
-
 <script type="text/javascript">
 	$(document).ready(function() {
         $('#job-type').on('change', function() {
         	
         	var id = $(this).val();
-            console.log('type val = '+id);
+            //console.log('type val = '+id);
 
             if (id == 2) {
 

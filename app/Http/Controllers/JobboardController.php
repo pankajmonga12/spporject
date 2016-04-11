@@ -108,6 +108,8 @@ class JobboardController extends Controller
 	    'eligibility'    => Input::get('eligibility'),
 	    'qualification'    => Input::get('qualification'),
 	    'exp_req'    => Input::get('exp_req'),
+	    'job_type'    => Input::get('job_type'),
+	    'job_state'    => '',
 	    'age_limit'    => Input::get('age_limit'),
 	    'how_to_apply'    => Input::get('how_to_apply'),
 	    'application_fees'    => Input::get('application_fees'),
@@ -116,7 +118,11 @@ class JobboardController extends Controller
 	    'detailed_notification_file'    => $fileNamedoc,
 	    'detailed_notification'    => Input::get('detailed_notification')
     );
-
+   
+     if ($jobData['job_type'] == 2) {
+     	
+     	$jobData['job_state'] == Input::get('job_state');
+     }
     
      $qualification = new Jobboard;
                 $qualification->fill( $jobData );
