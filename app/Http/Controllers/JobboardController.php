@@ -122,8 +122,10 @@ class JobboardController extends Controller
       $jobType = print_r( $jobData['job_type'] , TRUE);
    
      if ($jobType  = "2" ) {
-     	
+     	 echo "enter loop"; 
      	$jobData['job_state'] == Input::get('job_state');
+     } else {
+     	echo "exit loop ";
      }
 
      echo "job state data : ".print_r(Input::get('job_state') , TRUE)."</pre>";
