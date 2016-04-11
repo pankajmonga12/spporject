@@ -148,7 +148,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::select('job_type', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'), array('class' => 'form-control'),array('id' => 'job-type')) !!}
+												 {!!  Form::select('job_type', array('none' => ' ---Select--- ',1 =>'Central', '2' => 'State'),$jobData->job_type, array('class' => 'form-control'),array('id' => 'job-type')) !!}
 											</div>
 										</div>
 									</div>
@@ -266,7 +266,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::select('eligibility', $jobData->eligibility , $jobData->eligibility) !!}
+												{!!  Form::select('eligibility', $eligibility , $jobData->eligibility) !!}
 											</div>
 										</div>
 									</div>
@@ -279,7 +279,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('qualification', $jobData->qualification , $jobData->qualification)  !!}
+												 {!!  Form::select('qualification', $qualification , $jobData->qualification)  !!}
 											</div>
 										</div>
 									</div>
@@ -305,7 +305,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'], $jobData->age_limit) !!}
+												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage'],$jobData->age_limit) !!}
 											</div>
 										</div>
 									</div>
