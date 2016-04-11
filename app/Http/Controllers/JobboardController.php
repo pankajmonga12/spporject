@@ -123,6 +123,10 @@ class JobboardController extends Controller
      	
      	$jobData['job_state'] == Input::get('job_state');
      }
+
+
+     echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>";
+     die();
     
      $qualification = new Jobboard;
                 $qualification->fill( $jobData );
