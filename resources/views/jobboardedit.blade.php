@@ -266,7 +266,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::select('eligibility', $eligibility , $jobData->eligibility) !!}
+												{!!  Form::select('eligibility', $jobData->eligibility , $jobData->eligibility) !!}
 											</div>
 										</div>
 									</div>
