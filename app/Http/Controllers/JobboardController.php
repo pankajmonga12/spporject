@@ -124,7 +124,7 @@ class JobboardController extends Controller
      	$jobData['job_state'] == Input::get('job_state');
      }
 
-
+     echo "job state data : ".print_r(Input::get('job_state') , TRUE)."</pre>";
      echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>";
      die();
     
