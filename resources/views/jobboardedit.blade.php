@@ -477,8 +477,17 @@
 <style type="text/css">
 	select {
     max-width: 226px;
+
 }
 </style>
+<style type="text/css">
+	.form-group {
+    /* width: 998px; */
+    margin-bottom: 55px;
+    padding: 8px;
+    /* margin-right: -159px; */
+}
+</style
  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
     <script>
