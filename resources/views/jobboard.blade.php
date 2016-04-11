@@ -407,7 +407,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('post_description',null, ['size' => '100x100']) }}
+												{{ Form::textarea('post_description','job description', ['size' => '100x100']) }}
 											</div>
 										</div>
 									</div>
