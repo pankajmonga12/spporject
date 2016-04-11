@@ -78,9 +78,18 @@ class JobboardController extends Controller
    	 $file = array('image' => Input::file('logo'));
 
    	 $docs = array('pdffile' => Input::file('detailed_notification_file'));
+   	  $extdoc = Input::file('detailed_notification_file')->getClientOriginalExtension();
+      $fileNamedoc = '';
+   	  if (isset($extdoc)) {
+   	  	
+   	  $destinationPath = 'files'; // upload path
+      $extension = Input::file('detailed_notification_file')->getClientOriginalExtension(); // getting image extension
+      $fileNamedoc = rand(11111,99999).'.'.$extension; // renameing image
+      Input::file('detailed_notification_file')->move($destinationPath, $fileNamedoc); // uploading file to given path
+   	  }
      
       echo "<pre> data : ".print_r($docs , TRUE)."</pre>";
-      die();
+      //die();
    	  $destinationPath = 'logos'; // upload path
       $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
       $fileName = rand(11111,99999).'.'.$extension; // renameing image
@@ -104,7 +113,8 @@ class JobboardController extends Controller
 	    'application_fees'    => Input::get('application_fees'),
 	    'website_link'    => Input::get('website_link'),
 	    'logo'    => $fileName,
-	    'detailed_notification'    => Input::get('detailed_notification'),
+	    'detailed_notification_file'    => $fileNamedoc,
+	    'detailed_notification'    => Input::get('detailed_notification')
     );
 
     
