@@ -487,7 +487,7 @@
     padding: 8px;
     /* margin-right: -159px; */
 }
-</style
+</style>
  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
     <script>
