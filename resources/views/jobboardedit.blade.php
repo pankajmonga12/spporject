@@ -45,7 +45,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<?php  echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>"; ?>
+							<?php  //echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>"; ?>
 							{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
 								
 								<div class="form-body" style="margin-bottom: 40px; height: 2413px;">
@@ -115,7 +115,7 @@
 										<button class="close" data-close="alert"></button>
 										
 									</div>
-									<div class="form-group">
+									<!--<div class="form-group">
 										<label class="control-label col-md-3">Category Name <span class="required">
 										* </span>
 										</label>
@@ -139,7 +139,7 @@
 												
 											</div>
 										</div>
-									</div>
+									</div> -->
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Select Job Type <span class="required">
@@ -423,6 +423,7 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		document.querySelector('[name="job_state"]').value = <?php echo $jobData->job_state; ?>; 
+
         $('#category').on('change', function() {
         	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         	var id = $(this).val();

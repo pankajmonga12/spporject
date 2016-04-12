@@ -23,6 +23,7 @@
 
 
 	Route::get('admin', array('uses' => 'AdminController@showLogin'));
+	Route::get('logout', array('uses' => 'AdminController@doLogout'));
 
 	// route to process the form
 	Route::post('admin', array('uses' => 'AdminController@doLogin'));

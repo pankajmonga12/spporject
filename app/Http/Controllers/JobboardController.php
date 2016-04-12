@@ -88,7 +88,7 @@ class JobboardController extends Controller
       Input::file('detailed_notification_file')->move($destinationPath, $fileNamedoc); // uploading file to given path
    	  }
      
-      echo "<pre> data : ".print_r($docs , TRUE)."</pre>";
+    //  echo "<pre> data : ".print_r($docs , TRUE)."</pre>";
       //die();
    	  $destinationPath = 'logos'; // upload path
       $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
@@ -148,9 +148,22 @@ class JobboardController extends Controller
 		// echo "<pre> data : ".print_r($file , TRUE)."</pre>";
 		
 
+     $extdoc = Input::file('logo')->getClientOriginalExtension();
+	    
+	    $fileNamedoc = '';
+		  
+		if (isset($extdoc)) {
+		  	
+	   	  $destinationPath = 'logos'; // upload path
+	      $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
+	      $fileNamedoc = rand(11111,99999).'.'.$extension; // renameing image
+	      Input::file('logo')->move($destinationPath, $fileNamedoc); // uploading file to given path
+		}
         $jobboard = Jobboard::find( $request->id );
 
         $jobboard->job_name = $request->job_name;
+        $jobboard->job_type = $request->job_type;
+        $jobboard->job_state = $request->job_state;
         $jobboard->job_notification = $request->job_notification;
         $jobboard->descipline = $request->descipline;
         $jobboard->imp_date = $request->imp_date;
@@ -160,6 +173,7 @@ class JobboardController extends Controller
         $jobboard->qualification = $request->qualification;
         $jobboard->exp_req = $request->exp_req;
         $jobboard->age_limit = $request->age_limit;
+        $jobboard->logo = $fileNamedoc;
         $jobboard->application_fees = $request->application_fees;
         $jobboard->website_link = $request->website_link;
         $jobboard->detailed_notification = $request->detailed_notification;
