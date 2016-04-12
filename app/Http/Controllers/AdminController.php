@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Vinelab\Editor\EditorServiceProvider;
+use Session;
 
 class AdminController   extends Controller
 {
