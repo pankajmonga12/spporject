@@ -60,7 +60,7 @@
 							<i class="icon-user"></i> My Profile </a>
 						</li>
 						<li>
-							<a href="login.html">
+							<a href="{!! URL::to('logout') !!}">
 							<i class="icon-key"></i> Log Out </a>
 						</li>
 					</ul>
@@ -107,7 +107,8 @@
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
-		<div class="page-content"><div class="modal fade" id="change-category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="page-content">
+		<div class="modal fade" id="change-category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
