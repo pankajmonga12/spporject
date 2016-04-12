@@ -422,7 +422,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		document.querySelector('[name="job_state"]').value = <?php echo $jobData->job_state; ?>; 
+		document.querySelector('[name="job_state"]').value = 'Bihar'; 
         $('#category').on('change', function() {
         	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         	var id = $(this).val();
