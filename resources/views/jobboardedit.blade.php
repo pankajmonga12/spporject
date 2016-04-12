@@ -160,7 +160,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="job_state" value="<?php echo $jobData->job_state; ?>" >
+												<select name="job_state" value="Bihar<?php //echo $jobData->job_state; ?>" >
 												<option value='Andaman and Nicobar Islands'>Andaman and Nicobar Islands</option>
 												<option value='Andhra Pradesh'>Andhra Pradesh</option>
 												<option value='Arunachal Pradesh'>Arunachal Pradesh</option>
