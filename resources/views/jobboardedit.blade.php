@@ -45,7 +45,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<?php  //echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>"; ?>
+							<?php  echo "<pre> Job Data : ".print_r($jobData , TRUE)."</pre>"; ?>
 							{!! Form::open(array('url' => 'savejob' , 'method' => 'post' , 'files'=>true)) !!}
 								
 								<div class="form-body" style="margin-bottom: 40px; height: 2413px;">
