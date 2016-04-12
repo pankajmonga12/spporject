@@ -21,6 +21,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Vinelab\Editor\EditorServiceProvider;
 use Session;
+use Illuminate\Support\Facades\Redirect;
 
 class AdminController   extends Controller
 {
