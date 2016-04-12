@@ -483,5 +483,25 @@
         $('textarea').ckeditor();
         // $('.textarea').ckeditor(); // if class is prefered.
     </script>
+
+    
+<script type="text/javascript">
+	$(document).ready(function() {
+        $('#job-type').on('change', function() {
+        	
+        	var id = $(this).val();
+            //console.log('type val = '+id);
+
+            if (id == 2) {
+
+            	document.getElementById('stateDropdown').style.display = 'block';
+            } else {
+
+            	document.getElementById('stateDropdown').style.display = 'none';
+            }
+
+        });
+    });
+</script>
     </body>
     </html>
