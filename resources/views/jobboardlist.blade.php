@@ -86,6 +86,7 @@
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
+
 	<div class="page-sidebar-wrapper">
 		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
 		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
@@ -108,6 +109,70 @@
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
 		<div class="page-content">
+			<div class="modal fade" id="change-category" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div class="modal-body">
+							<div class="portlet light bordered">
+					<?php //echo $this->session->flashdata('error_msg'); ?>
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span class="caption-subject bold uppercase"> CHANGE CATEGORY</span>
+							</div>
+					
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							<form action="/changecategory" id="changepasswordform" class="form-horizontal"  method="POST">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-md-3">New Category <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="hidden" class="form-control" id="catcid" name="id"/>
+												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+												<input type="text" class="form-control" id="category" name="category"/>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save Cateogry</button>
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+
 			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 			<!-- /.modal -->
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -195,7 +260,7 @@
         	 {{ $joblistD->application_fees  }}
         	</td>
         	<td>
-        	<button onclick="Editjob({{ $joblistD->id }})" value="Edit"> Add Post  </button>
+        	<button onclick="Addpost({{ $joblistD->id }})" value="Edit"> Add Post  </button>
         	</td>
         	<td>
         	<button onclick="Editjob({{ $joblistD->id }})" value="Edit"> Edit  </button>
@@ -273,5 +338,13 @@ Demo.init(); // init demo features
 	function Editjob(id) {
 
          window.open('jobboardedit/'+id, "MsgWindow", "width=1000, height=1000");
+	}
+</script>
+
+
+<script type="text/javascript">
+	function Addpost( id) {
+
+		$('#change-category').modal('show');
 	}
 </script>
