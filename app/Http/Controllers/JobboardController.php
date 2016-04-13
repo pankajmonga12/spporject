@@ -151,15 +151,16 @@ class JobboardController extends Controller
      $extdoc = Input::file('logo')->getClientOriginalExtension();
 	    
 	    $fileNamedoc = '';
-		  
+		$jobboard = Jobboard::find( $request->id );
 		if (isset($extdoc)) {
 		  	
 	   	  $destinationPath = 'logos'; // upload path
 	      $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
 	      $fileNamedoc = rand(11111,99999).'.'.$extension; // renameing image
-	      Input::file('logo')->move($destinationPath, $fileNamedoc); // uploading file to given path
+	      Input::file('logo')->move($destinationPath, $fileNamedoc);
+	        $jobboard->logo = $fileNamedoc; // uploading file to given path
 		}
-        $jobboard = Jobboard::find( $request->id );
+        
 
         $jobboard->job_name = $request->job_name;
         $jobboard->job_type = $request->job_type;
@@ -173,7 +174,6 @@ class JobboardController extends Controller
         $jobboard->qualification = $request->qualification;
         $jobboard->exp_req = $request->exp_req;
         $jobboard->age_limit = $request->age_limit;
-        $jobboard->logo = $fileNamedoc;
         $jobboard->application_fees = $request->application_fees;
         $jobboard->website_link = $request->website_link;
         $jobboard->detailed_notification = $request->detailed_notification;
