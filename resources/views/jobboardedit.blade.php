@@ -210,6 +210,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
+												{{ Form::hidden('id', $jobData->id ) }}
 												{!!  Form::text('job_name',$jobData->job_name, array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
 											</div>
 										</div>
