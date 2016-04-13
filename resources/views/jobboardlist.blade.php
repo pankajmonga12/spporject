@@ -122,7 +122,7 @@
 						<div class="portlet-title">
 							<div class="caption font-red-sunglo">
 								<i class="icon-settings font-red-sunglo"></i>
-								<span class="caption-subject bold uppercase"> CHANGE CATEGORY</span>
+								<span class="caption-subject bold uppercase"> ADD POST </span>
 							</div>
 					
 						</div>
@@ -140,7 +140,7 @@
 									</div>
 									
 									<div class="form-group">
-										<label class="control-label col-md-3">New Category <span class="required">
+										<label class="control-label col-md-3">Post For : <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-7">
@@ -152,12 +152,51 @@
 											</div>
 										</div>
 									</div>
+
+
+										<div class="form-group">
+										<label class="control-label col-md-3"> Qualification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="category" name="category"/>
+											</div>
+										</div>
+									</div>
+
+
+										<div class="form-group">
+										<label class="control-label col-md-3">Eligibility <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												
+												<input type="text" class="form-control" id="category" name="category"/>
+											</div>
+										</div>
+									</div>
+
+										<div class="form-group">
+										<label class="control-label col-md-3">No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="category" name="category"/>
+											</div>
+										</div>
+									</div>
 									
 								</div>
 								<div class="form-actions">
 									<div class="row">
 										<div class="col-md-offset-3 col-md-9">
-											<button type="submit" class="btn green">Save Cateogry</button>
+											<button type="submit" class="btn green">Save Post</button>
 											<button type="button" class="btn default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
