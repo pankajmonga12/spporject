@@ -148,11 +148,10 @@ class JobboardController extends Controller
 		// echo "<pre> data : ".print_r($file , TRUE)."</pre>";
 		
 
-     $extdoc = Input::file('logo')->getClientOriginalExtension();
 	    
 	    $fileNamedoc = '';
 		$jobboard = Jobboard::find( $request->id );
-		if (isset($extdoc)) {
+		if (Input::file('logo')) {
 		  	
 	   	  $destinationPath = 'logos'; // upload path
 	      $extension = Input::file('logo')->getClientOriginalExtension(); // getting image extension
