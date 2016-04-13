@@ -14,6 +14,10 @@ class CreatePosttypeTable extends Migration
     {
         Schema::create('posttype', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('posttype');
+            $table->integer('qualificatiion');
+            $table->integer('eligibility');
+            $table->integer('no_of_post');
             $table->timestamps();
         });
     }
