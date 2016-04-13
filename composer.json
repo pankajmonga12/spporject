@@ -10,7 +10,8 @@
         "twitter/bootstrap": "*",
         "illuminate/html": "5.*",
         "vinelab/laravel-editor": "*",
-        "laravelcollective/html": "~5.0"
+        "laravelcollective/html": "~5.0",
+        "unisharp/laravel-ckeditor": "^4.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
