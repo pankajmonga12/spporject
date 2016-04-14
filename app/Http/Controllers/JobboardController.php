@@ -225,6 +225,7 @@ echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
   function fetchposttypetest() {
 
 
+DB::enableQueryLog();
         $posttype = DB::table('posttype')
             ->join('qualification as ql', 'ql.id', '=', 'posttype.qualificatiion')
             ->join('eligibility as el', 'el.id', '=', 'posttype.eligibility')
@@ -233,7 +234,7 @@ echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
 
 echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
 //$posttype = Posttype::where('post_id', '=',  $id)->get();
-
+dd(DB::getQueryLog());
      /*   $posttypeData = array();
      
      foreach ($posttype as $posttypes) {
