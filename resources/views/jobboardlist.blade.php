@@ -202,6 +202,10 @@
 								</div>
 							</form>
 							<!-- END FORM-->
+
+							<table id="postTable" class="table table-striped table-bordered table-hover">
+								
+							</table>
 						</div>
 					</div>
 						</div>
@@ -401,6 +405,27 @@ Demo.init(); // init demo features
             dataType: 'json',
             success: function (data) {
                    console.log(data);
+                
+                var tr="<tr>";
+				var td1="<td>Post For</td>";
+				var td2="<td>Eligibility</td>";
+				var td3="<td>Qualification</td>";
+				var td4="<td>No Of Post</td></tr>";
+
+				$("#postTable").append(tr+td1+td2+td3+td4);
+
+				for(var i=0;i<obj.length;i++)
+				{
+
+				var tr="<tr>";
+				var td1="<td>"+obj[i]["posttype"]+"</td>";
+				var td2="<td>"+obj[i]["eligibility"]+"</td>";
+				var td3="<td>"+obj[i]["qualification"]+"</td>";
+				var td4="<td>"+obj[i]["no_of_post"]+"</td></tr>";
+
+				$("#postTable").append(tr+td1+td2+td3+td4); 
+
+				} 
                 
             },
             
