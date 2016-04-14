@@ -326,6 +326,11 @@
 <footer>
 	<?php echo ($footer) ?> 
 </footer>
+<style type="text/css">
+	select {
+    max-width: 226px;
+}
+</style>
 <script>
     jQuery(document).ready(function() {    
        Metronic.init(); // init metronic core components
