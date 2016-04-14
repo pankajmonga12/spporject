@@ -403,8 +403,8 @@ Demo.init(); // init demo features
             type: 'post',
             data: post,
             dataType: 'json',
-            success: function (data) {
-                   console.log(data);
+            success: function (obj) {
+                   console.log(obj);
                 
                 var tr="<tr>";
 				var td1="<td>Post For</td>";
