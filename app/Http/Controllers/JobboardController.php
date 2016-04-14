@@ -192,7 +192,7 @@ class JobboardController extends Controller
 
         $id = $request->input('id');
         echo "<pre> Request Data  ".print_r($id , TRUE)."</pre>";
-        $posttype = Posttype::find($id);
+        $posttype = Posttype::where('post_id', '=',  $id)->get();
         echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
         die();
 
