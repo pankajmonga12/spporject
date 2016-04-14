@@ -175,7 +175,7 @@ class JobboardController extends Controller
         
       $jobData = array(
         'posttype'    => Input::get('posttype'),
-	    'qualificatiion'    => Input::get('qualificatiion'),
+	    'qualification'    => Input::get('qualification'),
 	    'eligibility'    => Input::get('eligibility'),
 	    'no_of_post'    => Input::get('no_of_post')
     );
