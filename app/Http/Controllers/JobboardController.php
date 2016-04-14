@@ -198,7 +198,7 @@ class JobboardController extends Controller
             ->join('qualification as ql', 'ql.id', '=', 'posttype.qualification')
             ->join('eligibility as el', 'el.id', '=', 'posttype.eligibility')
             ->where('post_id', '=',  $id)
-            ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post')
+            ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post');
 
 //$posttype = Posttype::where('post_id', '=',  $id)->get();
 
