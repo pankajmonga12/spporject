@@ -16,6 +16,7 @@ use App\Qualification;
 use Illuminate\Support\Facades\Redirect;
 use App\Agelimit;
 use App\Jobboard;
+use App\Posttype;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 
@@ -45,23 +46,8 @@ class JobboardController extends Controller
    function saveJob() {
 
    	 $rules = array(
-    'category'    => 'required',
-    'subcategory'    => 'required',
     'job_name'    => 'required',
-    'job_notification'    => 'required',
-    'descipline'    => 'required',
-    'imp_date'    => 'required',
-    'no_of_post'    => 'required',
-    'post_description'    => 'required',
-    'eligibility'    => 'required',
-    'qualification'    => 'required',
-    'exp_req'    => 'required',
-    'age_limit'    => 'required',
-    'how_to_apply'    => 'required',
-    'application_fees'    => 'required',
-    'website_link'    => 'required',
-    'logo'    => 'required',
-    'detailed_notification'    => 'required'
+
 
      );
 
@@ -119,7 +105,7 @@ class JobboardController extends Controller
 	    'detailed_notification'    => Input::get('detailed_notification')
     );
 
-      $jobType = print_r( $jobData['job_type'] , TRUE);
+     // $jobType = print_r( $jobData['job_type'] , TRUE);
    
      if ($jobType  = "2" ) {
      	// echo "enter loop"; 
@@ -181,5 +167,23 @@ class JobboardController extends Controller
         $jobboard->save();
 
         return Redirect::to('updatedjobview');
+    }
+
+    function saveposts() {
+
+
+        
+      $jobData = array(
+        'posttype'    => Input::get('posttype'),
+	    'qualificatiion'    => Input::get('qualificatiion'),
+	    'eligibility'    => Input::get('eligibility'),
+	    'no_of_post'    => Input::get('no_of_post')
+    );
+
+
+    	$posttype = new Posttype;
+                $posttype->fill( $jobData );
+                $posttype->save();
+
     }
 }

@@ -128,7 +128,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="/changecategory" id="changepasswordform" class="form-horizontal"  method="POST">
+							<form action="/saveposttype" id="changepasswordform" class="form-horizontal"  method="POST">
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -146,9 +146,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="hidden" class="form-control" id="catcid" name="id"/>
-												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-												<input type="text" class="form-control" id="category" name="category"/>
+												<input type="text" class="form-control" id="posttype" name="posttype"/>
 											</div>
 										</div>
 									</div>

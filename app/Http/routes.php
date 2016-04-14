@@ -71,6 +71,8 @@
     Route::post('changequalification', 'QualificationController@updatequalification');
 
     Route::post('updatesubcategory', 'CategoriesController@updatesubcat');
+
+    Route::post('saveposttype', 'JobboardController@saveposts');
    
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
