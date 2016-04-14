@@ -16,6 +16,7 @@ use App\Eligibility;
 use App\Qualification;
 use App\Agelimit;
 use App\Jobboard;
+use App\Posttype;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -382,7 +383,12 @@ function showJobBoard()
 	   
 	   $data['eligibility'] = $eligibilityData;
 	   $data['qualification'] = $qualificationData;
-    //echo "<pre> Data  ".print_r($jobList , TRUE)."</pre>";
+
+	    $posttypeData = DB::table('posttype')->get();
+
+
+    echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+    die();
      return view('jobboardlist' , $data );
    	
    }
