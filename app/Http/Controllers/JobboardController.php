@@ -191,7 +191,7 @@ class JobboardController extends Controller
   function fetchposttype(Request $request) {
 
         $id = $request->input('id');
-        echo "<pre> Request Data  ".print_r($id , TRUE)."</pre>";
+        //echo "<pre> Request Data  ".print_r($id , TRUE)."</pre>";
 
 
           $posttype = DB::table('posttype')
@@ -199,7 +199,7 @@ class JobboardController extends Controller
             ->leftJoin('eligibility as el', 'el.id', '=', 'posttype.eligibility')
             ->where('post_id', '=', $id)
             ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post')->get();
-echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
+   ..echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
 //$posttype = Posttype::where('post_id', '=',  $id)->get();
 
        $posttypeData = array();
@@ -213,7 +213,9 @@ echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
     	$posttypeD['no_of_post'] = $posttypes->no_of_post;
     	$posttypeData[] = $posttypeD;
     }
-       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+      // echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+
+       echo json_encode($posttypeData , TRUE);
         die();
 
   }
