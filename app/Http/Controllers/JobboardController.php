@@ -211,7 +211,7 @@ $posttype = Posttype::where('post_id', '=',  $id)->get();
     	$posttypeD['eligibility'] = $posttypes->eligibility;
     	$posttypeD['posttype'] = $posttypes->posttype;
     	$posttypeD['no_of_post'] = $posttypes->no_of_post;
-    	$posttypeData[] = $posttypetD;
+    	$posttypeData[] = $posttypeD;
     }
        echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
         die();
