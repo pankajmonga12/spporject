@@ -180,11 +180,22 @@ class JobboardController extends Controller
 	    'no_of_post'    => Input::get('no_of_post')
     );
 
-echo "<pre> Data : ".print_r($jobData , TRUE)."</pre>";
+//echo "<pre> Data : ".print_r($jobData , TRUE)."</pre>";
 
     	$posttype = new Posttype;
                 $posttype->fill( $jobData );
                 $posttype->save();
 
     }
+
+  function fetchposttype(Request $request) {
+
+        $id = $request->input('id');
+        $posttype = Posttype::find($id);
+        echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
+        die();
+
+  }
+
+
 }

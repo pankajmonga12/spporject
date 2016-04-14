@@ -384,11 +384,6 @@ function showJobBoard()
 	   $data['eligibility'] = $eligibilityData;
 	   $data['qualification'] = $qualificationData;
 
-	    $posttypeData = DB::table('posttype')->get();
-
-
-    echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
-    die();
      return view('jobboardlist' , $data );
    	
    }

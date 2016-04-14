@@ -146,6 +146,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
+												<input type="hidden" class="form-control" id="pid" name="id"/>
 												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 												<input type="text" class="form-control" id="posttype" name="posttype"/>
 											</div>
@@ -386,6 +387,24 @@ Demo.init(); // init demo features
 
 <script type="text/javascript">
 	function Addpost( id) {
+     
+     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        var post = {
+            id: id,
+            _token: CSRF_TOKEN
+        }
+
+      $.ajax({
+            url: 'fetchposttype',
+            type: 'post',
+            data: post,
+            dataType: 'json',
+            success: function (data) {
+                   console.log(data);
+                
+            },
+            
+        });
 
 		$('#change-category').modal('show');
 	}

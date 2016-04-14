@@ -73,6 +73,8 @@
     Route::post('updatesubcategory', 'CategoriesController@updatesubcat');
 
     Route::post('saveposttype', 'JobboardController@saveposts');
+
+     Route::post('fetchposttype', 'JobboardController@fetchposttype');
    
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
