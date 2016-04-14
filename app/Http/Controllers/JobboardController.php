@@ -199,7 +199,7 @@ class JobboardController extends Controller
             ->leftJoin('eligibility as el', 'el.id', '=', 'posttype.eligibility')
             ->where('post_id', '=', $id)
             ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post')->get();
-   ..echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
+   //echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
 //$posttype = Posttype::where('post_id', '=',  $id)->get();
 
        $posttypeData = array();
@@ -213,9 +213,9 @@ class JobboardController extends Controller
     	$posttypeD['no_of_post'] = $posttypes->no_of_post;
     	$posttypeData[] = $posttypeD;
     }
-       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+       //echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
 
-      echo json_encode($posttypeData);
+         echo json_encode($posttypeData);
         die();
 
   }
