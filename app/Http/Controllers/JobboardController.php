@@ -191,6 +191,7 @@ class JobboardController extends Controller
   function fetchposttype(Request $request) {
 
         $id = $request->input('id');
+        echo "<pre> Request Data  ".print_r($request , TRUE)."</pre>";
         $posttype = Posttype::find($id);
         echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
         die();
