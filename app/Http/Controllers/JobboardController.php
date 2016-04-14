@@ -229,7 +229,7 @@ DB::enableQueryLog();
         $posttype = DB::table('posttype')
             ->join('qualification as ql', 'ql.id', '=', 'posttype.qualificatiion')
             ->join('eligibility as el', 'el.id', '=', 'posttype.eligibility')
-            ->where('post_id', '=', 3)
+            ->where('post_id', '=', '3')
             ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post')->get();
 
 echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
