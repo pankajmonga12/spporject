@@ -200,9 +200,10 @@ class JobboardController extends Controller
             ->where('post_id', '=',  $id)
             ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post');
 
+echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
 //$posttype = Posttype::where('post_id', '=',  $id)->get();
 
-        $posttypeData = array();
+     /*   $posttypeData = array();
      
      foreach ($posttype as $posttypes) {
     	$posttypeD = array();
@@ -213,7 +214,7 @@ class JobboardController extends Controller
     	$posttypeD['no_of_post'] = $posttypes->no_of_post;
     	$posttypeData[] = $posttypetD;
     }
-       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";*/
         die();
 
   }
