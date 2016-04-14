@@ -74,8 +74,10 @@
 
     Route::post('saveposttype', 'JobboardController@saveposts');
 
-     Route::post('fetchposttype', 'JobboardController@fetchposttype');
+    Route::post('fetchposttype', 'JobboardController@fetchposttype');
    
+    Route::get('fetchposttypetest', 'JobboardController@fetchposttypetest');
+
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
     Route::get('updatedjobview', function () {
