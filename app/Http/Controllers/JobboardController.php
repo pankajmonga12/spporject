@@ -213,9 +213,9 @@ class JobboardController extends Controller
     	$posttypeD['no_of_post'] = $posttypes->no_of_post;
     	$posttypeData[] = $posttypeD;
     }
-      // echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
 
-       echo json_encode($posttypeData , TRUE);
+      echo json_encode($posttypeData);
         die();
 
   }
