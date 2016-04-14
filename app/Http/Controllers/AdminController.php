@@ -388,7 +388,7 @@ function showJobBoard()
 
 
     echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
-    die();
+    
      return view('jobboardlist' , $data );
    	
    }
