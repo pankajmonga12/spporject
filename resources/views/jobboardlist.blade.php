@@ -155,27 +155,26 @@
 
 
 										<div class="form-group">
-										<label class="control-label col-md-3"> Qualification <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-7">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												<input type="text" class="form-control" id="category" name="category"/>
-											</div>
-										</div>
-									</div>
-
-
-										<div class="form-group">
 										<label class="control-label col-md-3">Eligibility <span class="required">
 										* </span>
 										</label>
-										<div class="col-md-7">
+										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												
-												<input type="text" class="form-control" id="category" name="category"/>
+												{!!  Form::select('eligibility', $eligibility) !!}
+											</div>
+										</div>
+									</div>
+                                 
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Qualification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!!  Form::select('qualification', $qualification)  !!}
 											</div>
 										</div>
 									</div>
@@ -187,7 +186,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="category" name="category"/>
+												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
 											</div>
 										</div>
 									</div>

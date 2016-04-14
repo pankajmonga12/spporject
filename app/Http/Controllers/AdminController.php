@@ -354,6 +354,22 @@ function showJobBoard()
             ->join('eligibility as el', 'el.id', '=', 'jobboard.eligibility')
             ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(15);
 
+     $eligibilities = Eligibility::where('status', '=', 1)->get();
+      $eligibilityData = array();
+      $eligibilityData[0] ='Select Eligibility';
+    foreach ($eligibilities as $eligibility) {
+
+    	$eligibilityData[$eligibility->id] = $eligibility->title;
+    }
+
+
+     $qualification = Qualification::where('status', '=', 1)->get();
+     $qualificationData = array();
+     $qualificationData[0] ='Select Qualification';
+    foreach ($qualification as $qualificationm) {
+    	$qualificationData[$qualificationm->id] = $qualificationm->title;
+    }
+
      $activeD['active']= 'jobboardlist';    
      $data['header'] = View::make('partial.header');
 
@@ -363,6 +379,9 @@ function showJobBoard()
 	   $data['submenu'] = View::make('partial.submenu',$activeD);
 
 	   $data['joblist'] = $jobList;   
+	   
+	   $data['eligibility'] = $eligibilityData;
+	   $data['qualification'] = $qualificationData;
     //echo "<pre> Data  ".print_r($jobList , TRUE)."</pre>";
      return view('jobboardlist' , $data );
    	

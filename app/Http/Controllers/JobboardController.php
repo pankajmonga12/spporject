@@ -151,6 +151,7 @@ class JobboardController extends Controller
 	    
 	    $fileNamedoc = '';
 		$jobboard = Jobboard::find( $request->id );
+		
 		if (Input::file('logo')) {
 		  	
 	   	  $destinationPath = 'logos'; // upload path
