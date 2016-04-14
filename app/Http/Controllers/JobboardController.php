@@ -175,7 +175,7 @@ class JobboardController extends Controller
         
       $jobData = array(
         'posttype'    => Input::get('posttype'),
-	    'qualification'    => Input::get('qualification'),
+	    'qualificatiion'    => Input::get('qualification'),
 	    'eligibility'    => Input::get('eligibility'),
 	    'no_of_post'    => Input::get('no_of_post')
     );
@@ -194,16 +194,15 @@ class JobboardController extends Controller
         echo "<pre> Request Data  ".print_r($id , TRUE)."</pre>";
 
 
-        $posttype = DB::table('posttype')
-            ->join('qualification as ql', 'ql.id', '=', 'posttype.qualification')
-            ->join('eligibility as el', 'el.id', '=', 'posttype.eligibility')
-            ->where('post_id', '=',  $id)
-            ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post');
-
+          $posttype = DB::table('posttype')
+            ->leftJoin('qualification as ql', 'ql.id', '=', 'posttype.qualificatiion')
+            ->leftJoin('eligibility as el', 'el.id', '=', 'posttype.eligibility')
+            ->where('post_id', '=', $id)
+            ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post')->get();
 echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
-//$posttype = Posttype::where('post_id', '=',  $id)->get();
+$posttype = Posttype::where('post_id', '=',  $id)->get();
 
-     /*   $posttypeData = array();
+       $posttypeData = array();
      
      foreach ($posttype as $posttypes) {
     	$posttypeD = array();
@@ -214,7 +213,7 @@ echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
     	$posttypeD['no_of_post'] = $posttypes->no_of_post;
     	$posttypeData[] = $posttypetD;
     }
-       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";*/
+       echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
         die();
 
   }
