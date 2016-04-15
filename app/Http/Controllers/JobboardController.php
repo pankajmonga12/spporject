@@ -187,6 +187,7 @@ class JobboardController extends Controller
                 $posttype->fill( $jobData );
                 $posttype->save();
 
+         return Redirect::to('addjob');
     }
 
   function fetchposttype(Request $request) {
