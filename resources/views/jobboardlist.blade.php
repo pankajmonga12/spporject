@@ -393,6 +393,7 @@ Demo.init(); // init demo features
 	function Addpost( id) {
      
      document.getElementById('pid').value = id;
+     document.getElementById('postTable').innerHTML = '';
 
      var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         var post = {
