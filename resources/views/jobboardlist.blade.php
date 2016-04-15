@@ -392,6 +392,8 @@ Demo.init(); // init demo features
 <script type="text/javascript">
 	function Addpost( id) {
      
+     document.getElementById('pid').value = id;
+
      var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         var post = {
             id: id,
