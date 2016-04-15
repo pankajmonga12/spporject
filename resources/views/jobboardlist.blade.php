@@ -458,7 +458,7 @@ Demo.init(); // init demo features
 				var td2="<td>"+obj[i]["eligibility"]+"</td>";
 				var td3="<td>"+obj[i]["qualification"]+"</td>";
 				var td4="<td>"+obj[i]["no_of_post"]+"</td>";
-				var td5="<td> <button onclick=Deletepost("+obj[i]["id"]+") ></button></td></tr>";
+				var td5="<td> <button onclick=Deletepost("+obj[i]["id"]+") >Delete Post</button></td></tr>";
 
 				$("#postTable").append(tr+td1+td2+td3+td4+td5); 
 
