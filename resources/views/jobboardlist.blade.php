@@ -308,7 +308,7 @@
         	<button onclick="Editjob({{ $joblistD->id }})" value="Edit"> Edit  </button>
         	</td>
         	<td>
-        	<button onclick="" value="Delete"> Delete </button>
+        	<button onclick="DeleteJob({{ $joblistD->id }})" value="Delete"> Delete </button>
         	</td>
         </tr>
         
@@ -350,7 +350,7 @@ Demo.init(); // init demo features
 
  
 <script type="text/javascript">
-	function Deletecat(id) {
+	function DeleteJob(id) {
    
     if (confirm("Are You Sure you want to Delete ? ") == true) {
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
@@ -360,7 +360,39 @@ Demo.init(); // init demo features
         }
 
       $.ajax({
-            url: 'deletequalification',
+            url: 'deletejob',
+            type: 'post',
+            data: user,
+            dataType: 'json',
+            success: function (data) {
+                   console.log(data);
+                   if (data.status==true) {}
+                  window.location.reload();
+            },
+            
+        });
+
+    } else {
+      
+
+    }
+    
+}
+</script>
+
+
+<script type="text/javascript">
+	function Deletepost(id) {
+   
+    if (confirm("Are You Sure you want to Delete ? ") == true) {
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+       var user = {
+            id: id,
+            _token: CSRF_TOKEN
+        }
+
+      $.ajax({
+            url: 'deletepost',
             type: 'post',
             data: user,
             dataType: 'json',
@@ -413,9 +445,10 @@ Demo.init(); // init demo features
 				var td1="<td>Post For</td>";
 				var td2="<td>Eligibility</td>";
 				var td3="<td>Qualification</td>";
-				var td4="<td>No Of Post</td></tr>";
+				var td4="<td>No Of Post</td>";
+				var td5="<td>Action</td></tr>";
 
-				$("#postTable").append(tr+td1+td2+td3+td4);
+				$("#postTable").append(tr+td1+td2+td3+td4+td5);
 
 				for(var i=0;i<obj.length;i++)
 				{
@@ -424,9 +457,10 @@ Demo.init(); // init demo features
 				var td1="<td>"+obj[i]["posttype"]+"</td>";
 				var td2="<td>"+obj[i]["eligibility"]+"</td>";
 				var td3="<td>"+obj[i]["qualification"]+"</td>";
-				var td4="<td>"+obj[i]["no_of_post"]+"</td></tr>";
+				var td4="<td>"+obj[i]["no_of_post"]+"</td>";
+				var td5="<td> <button onclick=Deletepost("+obj[i]["id"]+") ></button></td></tr>";
 
-				$("#postTable").append(tr+td1+td2+td3+td4); 
+				$("#postTable").append(tr+td1+td2+td3+td4+td5); 
 
 				} 
                 

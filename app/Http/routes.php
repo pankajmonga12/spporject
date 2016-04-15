@@ -71,8 +71,12 @@
     Route::post('changequalification', 'QualificationController@updatequalification');
 
     Route::post('updatesubcategory', 'CategoriesController@updatesubcat');
-
+    
     Route::post('saveposttype', 'JobboardController@saveposts');
+
+    Route::post('deletejob', 'JobboardController@deletejob');
+
+    Route::post('deletepost', 'JobboardController@deletepost');
 
     Route::post('fetchposttype', 'JobboardController@fetchposttype');
    

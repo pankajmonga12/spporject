@@ -223,7 +223,30 @@ class JobboardController extends Controller
   }
 
 
+function deletejob(Request $request) {
 
+        $id = $request->input('id');
+    $jobboard = Jobboard::find($id);
+    $jobboard->delete();
+    Session::flash('message', ' Jobboard option is deleted now !');
+    Session::flash('alert-class', 'alert-danger');
+    echo json_encode($array= array('status'=> true));
+    die();
+
+  }
+
+
+  function deletepost(Request $request) {
+
+        $id = $request->input('id');
+    $posttype = Posttype::find($id);
+    $posttype->delete();
+    Session::flash('message', ' Jobboard option is deleted now !');
+    Session::flash('alert-class', 'alert-danger');
+    echo json_encode($array= array('status'=> true));
+    die();
+
+  }
 
   function fetchposttypetest() {
 
