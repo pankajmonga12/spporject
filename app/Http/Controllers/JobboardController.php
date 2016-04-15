@@ -181,13 +181,13 @@ class JobboardController extends Controller
 	    'no_of_post'    => Input::get('no_of_post')
     );
 
-//echo "<pre> Data : ".print_r($jobData , TRUE)."</pre>";
-
+echo "<pre> Data : ".print_r($jobData , TRUE)."</pre>";
+die();
     	$posttype = new Posttype;
                 $posttype->fill( $jobData );
                 $posttype->save();
 
-         return Redirect::to('addjob');
+         return Redirect::to('jobboardlist');
     }
 
   function fetchposttype(Request $request) {
