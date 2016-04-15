@@ -172,7 +172,7 @@ class JobboardController extends Controller
     function saveposts() {
 
 
- DB::enableQueryLog();       
+ //DB::enableQueryLog();       
       $postData = array(
       	'post_id'    => Input::get('id'),
         'posttype'    => Input::get('posttype'),
@@ -181,13 +181,13 @@ class JobboardController extends Controller
 	    'no_of_post'    => Input::get('no_of_post')
     );
 
-echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
+//echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
 
     	$posttype = new Posttype;
                 $posttype->fill( $postData );
                 $posttype->save();
-dd(DB::getQueryLog());
-         //return Redirect::to('jobboardlist');
+//dd(DB::getQueryLog());
+         return Redirect::to('jobboardlist');
     }
 
   function fetchposttype(Request $request) {
