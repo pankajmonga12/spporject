@@ -8,6 +8,6 @@ class Posttype extends Model
 {
     protected $table = 'posttype';
      protected $fillable = [
-        'posttype', 'qualificatiion','eligibility','no_of_post'
+        'post_id','posttype', 'qualificatiion','eligibility','no_of_post'
     ];
 }
