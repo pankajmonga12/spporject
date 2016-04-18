@@ -371,6 +371,17 @@ function showJobBoard()
     	$qualificationData[$qualificationm->id] = $qualificationm->title;
     }
 
+    $agelimitData = array();
+     
+     foreach ($agelimit as $agelimitm) {
+        $agelimitD = array();
+        $agelimitD['id'] = $agelimitm->id;
+        $agelimitD['minage'] = $agelimitm->minage;
+        $agelimitD['maxage'] = $agelimitm->maxage;
+        $agelimitData[] = $agelimitD;
+    }
+
+
      $activeD['active']= 'jobboardlist';    
      $data['header'] = View::make('partial.header');
 
@@ -383,6 +394,7 @@ function showJobBoard()
 	   
 	   $data['eligibility'] = $eligibilityData;
 	   $data['qualification'] = $qualificationData;
+       $data['agelimit'] = $agelimitData;
 
      return view('jobboardlist' , $data );
    	
