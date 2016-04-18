@@ -371,6 +371,7 @@ function showJobBoard()
     	$qualificationData[$qualificationm->id] = $qualificationm->title;
     }
 
+    $agelimit = Agelimit::where('id', '=', 1)->get();
     $agelimitData = array();
      
      foreach ($agelimit as $agelimitm) {
