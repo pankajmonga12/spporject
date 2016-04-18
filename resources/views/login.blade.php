@@ -34,11 +34,11 @@ License: You must have a valid license purchased only from themeforest(the above
 </div>
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGO -->
-<div class="logo">
+<!--<div class="logo">
 	<a href="index.html">
 	<img src="../../assets/admin/layout/img/logo-big.png" alt=""/>
 	</a>
-</div>
+</div> -->
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
 <div class="content">
