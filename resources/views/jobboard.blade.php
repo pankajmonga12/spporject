@@ -359,6 +359,51 @@
 										</div>
 									</div>
 
+									<div class="form-group">
+										<label class="control-label col-md-3"> General No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('general_no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('scst_no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">OBC No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('obc_no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Others No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('others_no_of_post', Input::old('no_of_post'), array('class' => 'form-control'),array('placeholder' => 'no of Post')) !!}
+											</div>
+										</div>
+									</div>
+
 
 
 
@@ -402,7 +447,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Age Limit <span class="required">
+										<label class="control-label col-md-3"> Genral Min Age Limit <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -414,13 +459,126 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Application Fees <span class="required">
+										<label class="control-label col-md-3"> Genral Max Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Min Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('scst_min_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Max Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('scst_max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Min Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('obc_min_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Max Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('obc_max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+
+                                     <div class="form-group">
+										<label class="control-label col-md-3"> Others Min Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('other_min_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Others Max Age Limit <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!! Form::selectRange('other_max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Genral Application Fees <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('scst_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('obc_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Others Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
