@@ -537,51 +537,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3"> Genral Application Fees <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
-											</div>
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-3"> SC/ST Application Fees <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												{!!  Form::number('scst_application_fees', Input::old('scst_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3"> OBC Application Fees <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												{!!  Form::number('obc_application_fees', Input::old('obc_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3"> Others Application Fees <span class="required">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<div class="input-icon right">
-												<i class="fa"></i>
-												{!!  Form::number('others_application_fees', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
-											</div>
-										</div>
-									</div>
+									
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Website Url <span class="required">
