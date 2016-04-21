@@ -109,13 +109,6 @@ class JobboardController extends Controller
       'other_min_age_limit'    => Input::get('other_min_age_limit'),
       'other_max_age_limit'    => Input::get('other_max_age_limit'),
 	    'how_to_apply'    => Input::get('how_to_apply'),
-	    'application_fees'    => Input::get('application_fees'),
-      'scst_application_fees'    => Input::get('scst_application_fees'),
-      'obc_application_fees'    => Input::get('obc_application_fees'),
-      'application_fees'    => Input::get('application_fees'),
-      'scst_application_fees'    => Input::get('scst_application_fees'),
-      'obc_application_fees'    => Input::get('obc_application_fees'),
-      'others_application_fees'    => Input::get('others_application_fees'),
 	    'website_link'    => Input::get('website_link'),
 	    'logo'    => $fileName,
 	    'detailed_notification_file'    => $fileNamedoc,
@@ -195,7 +188,11 @@ class JobboardController extends Controller
         'posttype'    => Input::get('posttype'),
 	    'qualificatiion'    => Input::get('qualification'),
 	    'eligibility'    => Input::get('eligibility'),
-	    'no_of_post'    => Input::get('no_of_post')
+	    'no_of_post'    => Input::get('no_of_post'),
+      'general_application_fees'    => Input::get('application_fees'),
+      'scst_application_fees'    => Input::get('scst_application_fees'),
+      'obc_application_fees'    => Input::get('obc_application_fees'),
+      'others_application_fees'    => Input::get('others_application_fees'),
     );
 
 //echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
