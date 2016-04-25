@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-               {!! Form::open(array('url' => 'jobbist' , 'method' => 'post' , 'files'=>true)) !!}
+               {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
                 <div class="form-group">
                                         <label class="control-label col-md-3">Job Title <span class="required">
                                         * </span>
