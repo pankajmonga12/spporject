@@ -85,7 +85,7 @@
 
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
-    Route::get('jobblist', 'HomeController@Jobsearch');
+    Route::post('jobblist', 'HomeController@Jobsearch');
 
     Route::get('updatedjobview', function () {
 	return view('updatedjobview');
