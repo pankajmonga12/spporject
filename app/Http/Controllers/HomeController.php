@@ -41,7 +41,8 @@ class HomeController extends Controller
             ->where('qualification', '=', 21)
             ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(1);
 
-      return view('joblist' , $jobList );
+      $data['jobList'] =  $jobList;
+      return view('joblist' , $data);
 
     }
 }
