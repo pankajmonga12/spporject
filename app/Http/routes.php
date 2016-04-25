@@ -21,7 +21,7 @@
 	return view('login');
 	});
 
-    Route::get('home', array('uses' => 'AdminController@homepage'));
+    Route::get('home', array('uses' => 'HomeController@homepage'));
 
 	Route::get('admin', array('uses' => 'AdminController@showLogin'));
 	Route::get('logout', array('uses' => 'AdminController@doLogout'));
