@@ -27,6 +27,31 @@ use Illuminate\Support\Facades\Redirect;
 class HomeController extends Controller
 {
     
+    function homepage( )
+    {
+    	
+      $eligibilities = Eligibility::where('status', '=', 1)->get();
+      $eligibilityData = array();
+      $eligibilityData[0] ='Select Eligibility';
+    foreach ($eligibilities as $eligibility) {
+
+    	$eligibilityData[$eligibility->id] = $eligibility->title;
+    }
+
+
+     $qualification = Qualification::where('status', '=', 1)->get();
+     $qualificationData = array();
+     $qualificationData[0] ='Select Qualification';
+    foreach ($qualification as $qualificationm) {
+    	$qualificationData[$qualificationm->id] = $qualificationm->title;
+    }
+     
+     $data['eligibility'] = $eligibilityData;
+	 $data['qualification'] = $qualificationData;
+
+     return view('home' , $data );
+
+    }
      function Jobsearch()
     {
       
