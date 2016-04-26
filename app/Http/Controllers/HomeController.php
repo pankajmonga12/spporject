@@ -55,6 +55,25 @@ class HomeController extends Controller
      function Jobsearch( Request $request )
     {
       
+      $eligibilities = Eligibility::where('status', '=', 1)->get();
+      $eligibilityData = array();
+      $eligibilityData[0] ='Select Eligibility';
+    foreach ($eligibilities as $eligibility) {
+
+    	$eligibilityData[$eligibility->id] = $eligibility->title;
+    }
+
+
+     $qualification = Qualification::where('status', '=', 1)->get();
+     $qualificationData = array();
+     $qualificationData[0] ='Select Qualification';
+    foreach ($qualification as $qualificationm) {
+    	$qualificationData[$qualificationm->id] = $qualificationm->title;
+    }
+     
+     $data['eligibility'] = $eligibilityData;
+	 $data['qualification'] = $qualificationData;
+	 
       $job_name = $request->input('job_name');
       $eligibility = $request->input('eligibility');
       $qualification = $request->input('qualification');
