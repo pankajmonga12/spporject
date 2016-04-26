@@ -46,7 +46,7 @@
                             {!! Form::close() !!}     
             </div>
         </div>
-        <?php echo "<pre> Data : ".print_r(jobList , TRUE)."</pre>";
+        <?php echo "<pre> Data : ".print_r(jobList , TRUE)."</pre>"; ?>
 <div class="container">
     <?php foreach ($jobList as $user): ?>
  
@@ -56,7 +56,7 @@
                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
-                        <?php echo $user->job_name; ?></h4>
+                        <?php echo $user->job_name; ?> </h4>
                     <p class="group inner list-group-item-text">
                         Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                         sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
