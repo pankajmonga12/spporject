@@ -65,7 +65,7 @@
                                 No. Of Post : <?php echo $user->no_of_post; ?></p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
+                            <a class="btn btn-success" href="#">Details</a> &nbsp; &nbsp; &nbsp; &nbsp;  <a class="btn btn-success" href="#">Quick View</a>
                         </div>
                     </div>
                 </div>
