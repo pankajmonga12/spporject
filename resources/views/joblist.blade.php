@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
-                                $21.000</p>
+                                No. Of Post : <?php echo $user->no_of_post; ?></p>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <a class="btn btn-success" href="http://www.jquery2dotnet.com">Add to cart</a>
