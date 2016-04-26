@@ -46,41 +46,17 @@
                             {!! Form::close() !!}     
             </div>
         </div>
+        <?php echo "<pre> Data : ".print_r(jobList , TRUE)."</pre>";
 <div class="container">
-  <table border="1" >
-    <tr>
-    <td>
-    Jobname
-    </td>
-    <td>
-    </td>
-    </tr>
     <?php foreach ($jobList as $user): ?>
-      <tr>
-        <td>
-        <?php echo $user->job_name; ?>
-        </td>
-      </tr>
-        
-    <?php endforeach; ?>
-    </table>
-</div>
-
-<?php echo $jobList->render(); ?>
-
-
-          <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
-            </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
-                class="glyphicon glyphicon-th"></span>Grid</a>
-        </div>
-    </div>
-    <div id="products" class="row list-group">
+ 
+         <div id="products" class="row list-group">
         <div class="item  col-xs-4 col-lg-4 list-group-item">
             <div class="thumbnail">
                 <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
-                        Product title</h4>
+                        <?php echo $user->job_name; ?></h4>
                     <p class="group inner list-group-item-text">
                         Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                         sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
@@ -98,6 +74,13 @@
         </div>
     </div>
 </div>
+    <?php endforeach; ?>
+   
+</div>
+
+<?php echo $jobList->render(); ?>
+
+   
 <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
 <script   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
