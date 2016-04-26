@@ -58,8 +58,7 @@
                     <h4 class="group inner list-group-item-heading">
                         <?php echo $user->job_name; ?> </h4>
                     <p class="group inner list-group-item-text">
-                        Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <?php echo $user->job_notification; ?></p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
