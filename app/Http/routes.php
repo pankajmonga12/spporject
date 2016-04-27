@@ -88,6 +88,8 @@
     Route::post('jobblist', 'HomeController@Jobsearch');
     Route::get('jobblist', 'HomeController@JobsearchPage');
 
+    Route::get('productdetail', 'HomeController@JobData');
+
     Route::get('updatedjobview', function () {
 	return view('updatedjobview');
 	});
