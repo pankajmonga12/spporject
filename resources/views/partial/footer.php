@@ -1,5 +1,5 @@
 <div class="copyright">
-	 2014 © Metronic. Admin Dashboard Template.
+	 
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

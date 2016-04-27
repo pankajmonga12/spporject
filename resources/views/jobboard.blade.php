@@ -8,7 +8,7 @@
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="index.html">
-			<img src="../../assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			]
 			</a>
 			<div class="menu-toggler sidebar-toggler">
 			</div>
@@ -322,7 +322,7 @@
                                   
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Descipline <span class="required">
+										<label class="control-label col-md-3">Descipline
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -334,7 +334,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Imp. Date <span class="required">
+										<label class="control-label col-md-3">Imp. Date 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -348,7 +348,7 @@
 
 
 									<div class="form-group">
-										<label class="control-label col-md-3"> Total No. Of Post <span class="required">
+										<label class="control-label col-md-3"> Total No. Of Post 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -360,7 +360,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3"> General No. Of Post <span class="required">
+										<label class="control-label col-md-3"> General No. Of Post 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -371,7 +371,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3"> SC/ST No. Of Post <span class="required">
+										<label class="control-label col-md-3"> SC/ST No. Of Post
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -382,7 +382,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3">OBC No. Of Post <span class="required">
+										<label class="control-label col-md-3">OBC No. Of Post 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -393,7 +393,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3">Others No. Of Post <span class="required">
+										<label class="control-label col-md-3">Others No. Of Post
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -408,8 +408,7 @@
 
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Eligibility <span class="required">
-										* </span>
+										<label class="control-label col-md-3">Eligibility 
 										</label>
 										<div class="col-md-4">
 											<div class="input-icon right">
@@ -421,7 +420,7 @@
                                  
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Qualification <span class="required">
+										<label class="control-label col-md-3">Qualification 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -435,7 +434,7 @@
 
                                      
 									<div class="form-group">
-										<label class="control-label col-md-3">Experience Required <span class="required">
+										<label class="control-label col-md-3">Experience Required 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -447,7 +446,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3"> Genral Min Age Limit <span class="required">
+										<label class="control-label col-md-3"> Genral Min Age Limit
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -459,7 +458,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3"> Genral Max Age Limit <span class="required">
+										<label class="control-label col-md-3"> Genral Max Age Limit
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -470,7 +469,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3"> SC/ST Min Age Limit <span class="required">
+										<label class="control-label col-md-3"> SC/ST Min Age Limit
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -481,7 +480,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3"> SC/ST Max Age Limit <span class="required">
+										<label class="control-label col-md-3"> SC/ST Max Age Limit 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -493,7 +492,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3"> OBC Min Age Limit <span class="required">
+										<label class="control-label col-md-3"> OBC Min Age Limit 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -504,7 +503,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3"> OBC Max Age Limit <span class="required">
+										<label class="control-label col-md-3"> OBC Max Age Limit 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -516,7 +515,7 @@
 									</div>
 
                                      <div class="form-group">
-										<label class="control-label col-md-3"> Others Min Age Limit <span class="required">
+										<label class="control-label col-md-3"> Others Min Age Limit 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -527,7 +526,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-md-3"> Others Max Age Limit <span class="required">
+										<label class="control-label col-md-3"> Others Max Age Limit 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -540,8 +539,7 @@
 									
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Website Url <span class="required">
-										* </span>
+										<label class="control-label col-md-3">Website Url 
 										</label>
 										<div class="col-md-4">
 											<div class="input-icon right">
@@ -565,7 +563,7 @@
 
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Detailed Notification <span class="required">
+										<label class="control-label col-md-3">Detailed Notification 
 										* </span>
 										</label>
 										<div class="col-md-4">
@@ -578,7 +576,7 @@
 
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Job Description <span class="required">
+										<label class="control-label col-md-3">Job Description 
 										* </span>
 										</label>
 										<div class="col-md-7">
@@ -590,7 +588,7 @@
 									</div>
 	                              
 	                              <div class="form-group">
-										<label class="control-label col-md-3">Job Notification <span class="required">
+										<label class="control-label col-md-3">Job Notification
 										* </span>
 										</label>
 										<div class="col-md-7">
@@ -603,7 +601,7 @@
 									</div>
 
 									 <div class="form-group">
-										<label class="control-label col-md-3">How To Apply  <span class="required">
+										<label class="control-label col-md-3">How To Apply 
 										* </span>
 										</label>
 										<div class="col-md-7">
@@ -616,7 +614,7 @@
 									</div>
 
                                     <div class="form-group">
-										<label class="control-label col-md-3">Details Notification <span class="required">
+										<label class="control-label col-md-3">Details Notification 
 										* </span>
 										</label>
 										<div class="col-md-7">
