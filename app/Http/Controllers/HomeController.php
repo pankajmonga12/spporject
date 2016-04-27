@@ -88,7 +88,7 @@ class HomeController extends Controller
             ->where('job_name', 'LIKE', '%'.$job_name.'%')
             ->where('eligibility', '=', $eligibility )
             ->where('qualification', '=', $qualification )
-            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(1);
+            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(15);
 
       $data['jobList'] =  $jobList;
       return view('joblist' , $data);
@@ -130,7 +130,7 @@ class HomeController extends Controller
             ->where('job_name', 'LIKE', '%'.$job_name.'%')
             ->where('eligibility', '=', $eligibility )
             ->where('qualification', '=', $qualification )
-            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(1);
+            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(15);
 
       $data['jobList'] =  $jobList;
       return view('joblist' , $data);
