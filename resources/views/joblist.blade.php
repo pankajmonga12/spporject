@@ -55,7 +55,7 @@
          <div id="products" class="row list-group">
         <div class="item  col-xs-4 col-lg-4 list-group-item">
             <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <img class="group list-group-image" src="http://128.199.192.88/logos/<?php echo $user->logo; ?>" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         <?php echo $user->job_name; ?> </h4>
