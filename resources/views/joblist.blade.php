@@ -46,8 +46,10 @@
                             {!! Form::close() !!}     
             </div>
         </div>
-        <?php echo "<pre> Data : ".print_r($jobList->total() , TRUE)."</pre>"; ?>
+        <?php// echo "<pre> Data : ".print_r($jobList->total() , TRUE)."</pre>"; ?>
+<?php if($jobList->total() > 0 ) { ?>
 <div class="container">
+
     <?php foreach ($jobList as $user): ?>
  
          <div id="products" class="row list-group">
@@ -74,11 +76,14 @@
     </div>
 </div>
     <?php endforeach; ?>
-   
+
 </div>
 
 <?php echo $jobList->render(); ?>
-
+ <?php } else {
+     echo "No Record found ";
+    } ?>
+   
    
 <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
 <script   src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
