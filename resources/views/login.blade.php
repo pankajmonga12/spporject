@@ -383,7 +383,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	</form>
 	<!-- END REGISTRATION FORM -->
 </div>
-<?php echo $footer; ?> 
+<?php// echo $footer; ?> 
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {     
