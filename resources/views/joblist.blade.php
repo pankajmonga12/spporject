@@ -67,7 +67,7 @@
                                 No. Of Post : <?php echo $user->no_of_post; ?></p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://128.199.192.88/productdetail/<?php echo $user->id; ?>">Details</a> &nbsp; &nbsp; &nbsp; &nbsp;  <a class="btn btn-success" href="">Quick View</a>
+                            <a class="btn btn-success" href="http://128.199.192.88/jobDetail/<?php echo $user->id; ?>">Details</a> &nbsp; &nbsp; &nbsp; &nbsp;  <a class="btn btn-success" href="">Quick View</a>
                         </div>
                     </div>
                 </div>
