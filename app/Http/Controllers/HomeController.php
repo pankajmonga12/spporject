@@ -148,9 +148,30 @@ class HomeController extends Controller
             ->leftJoin('qualification as ql', 'ql.id', '=', 'jobboard.qualification')
             ->leftJoin('eligibility as el', 'el.id', '=', 'jobboard.eligibility')
             ->where('jobboard.id', '=', $id )
-            ->select('jobboard.id','scat.id','jobboard.subcategory as ssubc', 'jobboard.qualification as squa','jobboard.eligibility as sel','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->get();
+            ->select('jobboard.id','scat.id','jobboard.subcategory as ssubc','Jobboard.*','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->get();
 
             echo "<pre> Data Job : ".print_r($jobList , TRUE)."</pre>";
+
+            
+          $posttype = DB::table('posttype')
+            ->leftJoin('qualification as ql', 'ql.id', '=', 'posttype.qualificatiion')
+            ->leftJoin('eligibility as el', 'el.id', '=', 'posttype.eligibility')
+            ->where('post_id', '=', $id)
+            ->select('posttype.id','posttype','ql.title as qualification', 'el.title as eligibility','no_of_post')->get();
+  // echo "<pre> Data  ".print_r($posttype , TRUE)."</pre>";
+//$posttype = Posttype::where('post_id', '=',  $id)->get();
+
+       $posttypeData = array();
+     
+     foreach ($posttype as $posttypes) {
+    	$posttypeD = array();
+    	$posttypeD['id'] = $posttypes->id;
+    	$posttypeD['qualification'] = $posttypes->qualification;
+    	$posttypeD['eligibility'] = $posttypes->eligibility;
+    	$posttypeD['posttype'] = $posttypes->posttype;
+    	$posttypeD['no_of_post'] = $posttypes->no_of_post;
+    	$posttypeData[] = $posttypeD;
+    }
             dd(DB::getQueryLog());
     }
 
