@@ -46,7 +46,7 @@
                             {!! Form::close() !!}     
             </div>
         </div>
-        <?php echo "<pre> Data : ".print_r($jobList->total , TRUE)."</pre>"; ?>
+        <?php echo "<pre> Data : ".print_r($jobList , TRUE)."</pre>"; ?>
 <div class="container">
     <?php foreach ($jobList as $user): ?>
  
