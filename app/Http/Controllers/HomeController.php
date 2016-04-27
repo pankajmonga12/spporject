@@ -148,7 +148,7 @@ class HomeController extends Controller
             ->leftJoin('qualification as ql', 'ql.id', '=', 'jobboard.qualification')
             ->leftJoin('eligibility as el', 'el.id', '=', 'jobboard.eligibility')
             ->where('jobboard.id', '=', $id )
-            ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->get();
+            ->select('jobboard.id','scat.id','jobboard.subcategory', 'jobboard.qualification','jobboard.eligibility','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->get();
 
             echo "<pre> Data Job : ".print_r($jobList , TRUE)."</pre>";
             dd(DB::getQueryLog());
