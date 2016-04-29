@@ -454,7 +454,7 @@
 												<i class="fa"></i>
 												<select name="age_limit">
 												<option value="0">Nill</option>
-													<?php for ($i=$agelimit[0]['minage']; $i <$agelimit[0]['maxage'] ; $i++) {  ?>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
 													<?php } ?>
 												</select>
