@@ -452,7 +452,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
 											</div>
 										</div>
 									</div>

@@ -35,11 +35,11 @@
 											} ?>">
 												<a href="/subcategory">Add SubCategory</a>
 											</li>
-											<li  class="<?php if ($active == 'eligibility') {
+										<!--	<li  class="<?php if ($active == 'eligibility') {
 												echo 'active';
 											} ?>">
 												<a href="/addeligibility">Add Eligibilities</a>
-											</li>
+											</li> -->
 											<li class="<?php if ($active == 'agelimit') {
 												echo 'active';
 											} ?>">
