@@ -470,7 +470,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
 											</div>
 										</div>
 									</div>
@@ -481,7 +487,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('scst_min_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="scst_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
 											</div>
 										</div>
 									</div>
@@ -492,7 +504,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('scst_max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="scst_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
 											</div>
 										</div>
 									</div>
@@ -504,7 +522,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('obc_min_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="obc_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
 											</div>
 										</div>
 									</div>
@@ -515,7 +539,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('obc_max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="obc_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
 											</div>
 										</div>
 									</div>
@@ -527,7 +557,13 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('other_min_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="other_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
 											</div>
 										</div>
 									</div>
@@ -538,11 +574,62 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('other_max_age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="other_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
 											</div>
 										</div>
 									</div>
-									
+									<div class="form-group">
+										<label class="control-label col-md-3"> Genral Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('scst_application_fees', Input::old('scst_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('obc_application_fees', Input::old('obc_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Others Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('others_application_fees', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Website Url 
