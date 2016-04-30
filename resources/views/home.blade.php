@@ -39,18 +39,45 @@
         <div class="container">
             <div class="content">
                {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
-                <div class="form-group">
-                                        <label class="control-label col-md-3">Job Title <span class="required">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Name :  <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-4">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
-                                                {!!  Form::text('job_name', Input::old('job_name'), array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
+                                                {!!  Form::text('job_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
                                             </div>
                                         </div>
                                     </div>
-        <div class="form-group">
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Email Id :  <span class="required">
+                                        * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                {!!  Form::text('job_name', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Phone No. :  <span class="required">
+                                        * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                {!!  Form::text('job_name', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="form-group">
                                         <label class="control-label col-md-3">Eligibility <span class="required">
                                         * </span>
                                         </label>
