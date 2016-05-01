@@ -61,8 +61,9 @@ class HomeController extends Controller
     	echo "Data ";
 
       $email_id = $request->input('email_id'); 
-      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
-      echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
+      echo "data : ".$email_id;
+      //$usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
+      //echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
       die();
      /* $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
