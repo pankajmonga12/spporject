@@ -62,6 +62,42 @@ class HomeController extends Controller
 
       $email_id = $request->input('email_id'); 
       echo "data : ".$email_id;
+
+
+
+       $rules = array(
+        
+        'email_id'    => 'required',
+        'user_name'    => 'required',
+        'phone_no'    => 'required',
+        'qualification'    => 'required'
+
+     );
+
+	 $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) {
+
+                 return Redirect::to('home')
+        ->withErrors($validator);
+        }  else {
+
+        $searchData = array(
+        'email_id'     => Input::get('email_id'),
+        'user_name'     => Input::get('user_name'),
+        'phone_no'     => Input::get('phone_no'),
+        'qualification'     => Input::get('qualification')
+    );
+
+echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
+                $usersearch = new Usersearch;
+                $usersearch->fill( $searchData );
+                $usersearch->save();
+           // return Redirect::to('addqualification');
+
+        }
+
+
       //$usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
       //echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
       die();
