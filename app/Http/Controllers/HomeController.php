@@ -102,7 +102,7 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
 */
       
       echo "<pre> User Search Data : ".print_r( $usersearch , TRUE)."</pre>";
-       echo "Id : ".$usersearch->id;
+       echo "Id : ".$usersearch[0]->id;
       die();
      /* $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
