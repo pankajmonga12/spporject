@@ -59,7 +59,7 @@ class HomeController extends Controller
       //$job_name = $request->input('job_name');
     	echo "<pre> Data : ".print_r( $request , TRUE)."</pre>";
     	die();
-      $email_id = $request->input('email_id'); 
+     /* $email_id = $request->input('email_id'); 
       $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
       echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
       die();
@@ -98,7 +98,7 @@ class HomeController extends Controller
             ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(15);
 
       $data['jobList'] =  $jobList;
-      return view('joblist' , $data);
+      return view('joblist' , $data);*/
 
     }
 
