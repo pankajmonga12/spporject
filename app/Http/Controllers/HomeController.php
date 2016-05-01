@@ -61,7 +61,7 @@ class HomeController extends Controller
     	echo "Data ";
     	$email_id = $request->input('email_id'); 
      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
-     echo "Id : ".$usersearch->id;
+    // echo "Id : ".$usersearch->id;
      /*$email_id = $request->input('email_id'); 
       echo "data : ".$email_id;
 
@@ -102,6 +102,7 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
 */
       
       echo "<pre> User Search Data : ".print_r( $usersearch , TRUE)."</pre>";
+       echo "Id : ".$usersearch->id;
       die();
      /* $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
