@@ -168,16 +168,12 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
 
       
       $qualification = $request->input('qualification');
-      Session::put('job_name', $job_name );
-      Session::put('eligibility', $eligibility );
       Session::put('qualification', $qualification );
       $jobList = DB::table('jobboard')
             ->join('categories as cat', 'cat.id', '=', 'jobboard.category')
             ->join('categories as scat', 'scat.id', '=', 'jobboard.subcategory')
             ->join('qualification as ql', 'ql.id', '=', 'jobboard.qualification')
             ->join('eligibility as el', 'el.id', '=', 'jobboard.eligibility')
-            ->where('job_name', 'LIKE', '%'.$job_name.'%')
-            ->where('eligibility', '=', $eligibility )
             ->where('qualification', '=', $qualification )
             ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(15);
 
@@ -208,9 +204,6 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
      $data['eligibility'] = $eligibilityData;
 	 $data['qualification'] = $qualificationData;
 	 
-
-      $job_name = Session::get('job_name');
-      $eligibility = Session::get('eligibility');
       $qualification = Session::get('qualification');
       $jobList = DB::table('jobboard')
             ->join('categories as cat', 'cat.id', '=', 'jobboard.category')
