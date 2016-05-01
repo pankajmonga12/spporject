@@ -58,6 +58,7 @@ class HomeController extends Controller
       
       //$job_name = $request->input('job_name');
     	echo "<pre> Data : ".print_r( $request , TRUE)."</pre>";
+    	die();
       $email_id = $request->input('email_id'); 
       $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
       echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
