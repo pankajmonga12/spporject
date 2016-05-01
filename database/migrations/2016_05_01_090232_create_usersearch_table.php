@@ -14,6 +14,10 @@ class CreateUsersearchTable extends Migration
     {
         Schema::create('usersearch', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('user_name');
+            $table->string('email_id');
+            $table->integer('phone_no');
+            $table->integer('qualification');
             $table->timestamps();
         });
     }
