@@ -58,9 +58,52 @@ class HomeController extends Controller
       
       //$job_name = $request->input('job_name');
     	//echo "<pre> Data : ".print_r( $request , TRUE)."</pre>";
-    	echo "Data ";
-    	$email_id = $request->input('email_id'); 
+    	//echo "Data ";
+     $email_id = $request->input('email_id'); 
      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
+     
+     if (isset($usersearch[0]->id)) {
+
+     	 $usersearch = Usersearch::find( $usersearch[0]->id );
+
+         $usersearch->user_name = Input::get('user_name');
+          $usersearch->phone_no = Input::get('phone_no');
+           $usersearch->qualification = Input::get('qualification');
+
+        $usersearch->save();
+     }  else  {
+
+     	 $rules = array(
+        
+        'email_id'    => 'required',
+        'user_name'    => 'required',
+        'phone_no'    => 'required',
+        'qualification'    => 'required'
+
+     );
+
+	 $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) {
+
+                 return Redirect::to('home')
+        ->withErrors($validator);
+        }  else {
+
+        $searchData = array(
+        'email_id'     => Input::get('email_id'),
+        'user_name'     => Input::get('user_name'),
+        'phone_no'     => Input::get('phone_no'),
+        'qualification'     => Input::get('qualification')
+    );
+
+//echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
+                $usersearch = new Usersearch;
+                $usersearch->fill( $searchData );
+                $usersearch->save();
+
+     }
+ }
     // echo "Id : ".$usersearch->id;
      /*$email_id = $request->input('email_id'); 
       echo "data : ".$email_id;
@@ -101,10 +144,10 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
 
 */
       
-      echo "<pre> User Search Data : ".print_r( $usersearch , TRUE)."</pre>";
-       echo "Id : ".$usersearch[0]->id;
-      die();
-     /* $eligibilities = Eligibility::where('status', '=', 1)->get();
+     // echo "<pre> User Search Data : ".print_r( $usersearch , TRUE)."</pre>";
+       //echo "Id : ".$usersearch[0]->id;
+      //die();
+     $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
       $eligibilityData[0] ='Select Eligibility';
     foreach ($eligibilities as $eligibility) {
@@ -139,7 +182,7 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
             ->select('jobboard.id','cat.category as category', 'scat.category as subcategory', 'ql.title as qualification', 'el.title as eligibility','logo','jobboard.job_name','jobboard.job_notification','jobboard.imp_date','jobboard.no_of_post','jobboard.application_fees')->paginate(15);
 
       $data['jobList'] =  $jobList;
-      return view('joblist' , $data);*/
+      return view('joblist' , $data);
 
     }
 
