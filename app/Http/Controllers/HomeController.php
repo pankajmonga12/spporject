@@ -61,7 +61,7 @@ class HomeController extends Controller
     	echo "Data ";
     	$email_id = $request->input('email_id'); 
      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
-     echo "Id : " $usersearch->id;
+     echo "Id : ".$usersearch->id;
      /*$email_id = $request->input('email_id'); 
       echo "data : ".$email_id;
 
