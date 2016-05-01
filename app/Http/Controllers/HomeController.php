@@ -17,6 +17,7 @@ use App\Qualification;
 use App\Agelimit;
 use App\Jobboard;
 use App\Posttype;
+use App\Usersearch;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -55,6 +56,11 @@ class HomeController extends Controller
      function Jobsearch( Request $request )
     {
       
+      //$job_name = $request->input('job_name');
+      $email_id = $request->input('email_id'); 
+      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
+      echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
+      die();
       $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
       $eligibilityData[0] ='Select Eligibility';
@@ -74,8 +80,7 @@ class HomeController extends Controller
      $data['eligibility'] = $eligibilityData;
 	 $data['qualification'] = $qualificationData;
 
-      $job_name = $request->input('job_name');
-      $eligibility = $request->input('eligibility');
+      
       $qualification = $request->input('qualification');
       Session::put('job_name', $job_name );
       Session::put('eligibility', $eligibility );
@@ -98,7 +103,6 @@ class HomeController extends Controller
      function JobsearchPage()
     {
 
-    	
       $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
       $eligibilityData[0] ='Select Eligibility';
