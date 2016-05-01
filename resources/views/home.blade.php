@@ -46,7 +46,7 @@
                                         <div class="col-md-4">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
-                                                {!!  Form::text('job_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
+                                                {!!  Form::text('user_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                         <div class="col-md-4">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
-                                                {!!  Form::text('job_name', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
+                                                {!!  Form::text('email_id', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                         <div class="col-md-4">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
-                                                {!!  Form::text('job_name', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
+                                                {!!  Form::text('phone_no', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
                                             </div>
                                         </div>
                                     </div>
