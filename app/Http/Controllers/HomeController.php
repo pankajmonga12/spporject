@@ -98,8 +98,8 @@ echo "<pre> searchData : ".print_r( $searchData , TRUE)."</pre>";
         }
 
 
-      //$usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
-      //echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
+      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
+      echo "<pre> User Search Data : ".print_r( $usersearch , TRUE)."</pre>";
       die();
      /* $eligibilities = Eligibility::where('status', '=', 1)->get();
       $eligibilityData = array();
