@@ -192,13 +192,141 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Age Limit <span class="required">
+										<label class="control-label col-md-3"> Genral Min Age Limit
 										* </span>
 										</label>
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!! Form::selectRange('age_limit', $agelimit[0]['minage'], $agelimit[0]['maxage']) !!}
+												<select name="age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> Genral Max Age Limit
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Min Age Limit
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="scst_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Max Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="scst_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Min Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="obc_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Max Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="obc_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+
+                                     <div class="form-group">
+										<label class="control-label col-md-3"> Others Min Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="other_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Others Max Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="other_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
 											</div>
 										</div>
 									</div>
@@ -211,6 +339,17 @@
 											<div class="input-icon right">
 												<i class="fa"></i>
 												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+											</div>
+										</div>
+									</div>
+                                    <div class="form-group">
+										<label class="control-label col-md-3">Job Description 
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{{ Form::textarea('post_description','job description', ['size' => '100x100']) }}
 											</div>
 										</div>
 									</div>
@@ -541,3 +680,10 @@ Demo.init(); // init demo features
 		$('#change-category').modal('show');
 	}
 </script>
+
+ <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+    <script>
+        $('textarea').ckeditor();
+        // $('.textarea').ckeditor(); // if class is prefered.
+    </script>
