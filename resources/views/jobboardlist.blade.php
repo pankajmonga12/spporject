@@ -523,7 +523,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="age_limit" id="age_limitp">
+												<select name="age_limitp" id="age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -541,7 +541,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="max_age_limit" id="max_age_limitp">
+												<select name="max_age_limitp" id="max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -558,7 +558,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="scst_min_age_limit"  id="scst_min_age_limitp">
+												<select name="scst_min_age_limitp"  id="scst_min_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -575,7 +575,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="scst_max_age_limit"  id="scst_max_age_limitp">
+												<select name="scst_max_age_limitp"  id="scst_max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -593,7 +593,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="obc_min_age_limit" id="obc_min_age_limitp">
+												<select name="obc_min_age_limitp" id="obc_min_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -610,7 +610,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="obc_max_age_limit" id="obc_max_age_limitp">
+												<select name="obc_max_age_limitp" id="obc_max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -628,7 +628,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="other_min_age_limit"  id="other_min_age_limitp">
+												<select name="other_min_age_limitp"  id="other_min_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -645,7 +645,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="other_max_age_limit" id="other_max_age_limitp">
+												<select name="other_max_age_limitp" id="other_max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -663,7 +663,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="no_of_postp" name="no_of_post"/>
+												<input type="text" class="form-control" id="no_of_postp" name="no_of_postp"/>
 											</div>
 										</div>
 									</div>
@@ -686,7 +686,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('application_feesp', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+												{!!  Form::number('application_feesp', Input::old('application_feesp'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
@@ -1022,6 +1022,23 @@ Demo.init(); // init demo features
             success: function (obj) {
                    console.log(obj);
                    document.getElementById('posttypep').value = obj[0].posttype;
+                   document.querySelector('[name="eligibilityp"]').value = obj[0].eligibility;
+                   document.querySelector('[name="qualificationp"]').value = obj[0].qualification;
+                   document.querySelector('[name="exp_reqp"]').value = obj[0].exp_req;
+                   document.querySelector('[name="age_limitp"]').value = obj[0].age_limit;
+                   document.querySelector('[name="max_age_limitp"]').value = obj[0].max_age_limit;
+                   document.querySelector('[name="scst_min_age_limitp"]').value = obj[0].scst_min_age_limit;
+                   document.querySelector('[name="scst_max_age_limitp"]').value = obj[0].scst_max_age_limit;
+                   document.querySelector('[name="obc_min_age_limitp"]').value = obj[0].obc_min_age_limit;
+                   document.querySelector('[name="obc_max_age_limitp"]').value = obj[0].obc_max_age_limit;
+                   document.querySelector('[name="other_min_age_limitp"]').value = obj[0].other_min_age_limit;
+                   document.querySelector('[name="other_max_age_limitp"]').value = obj[0].other_max_age_limit;
+                   document.querySelector('[name="no_of_postp"]').value = obj[0].no_of_post;
+                   document.querySelector('[name="post_descriptionp"]').value = obj[0].post_description;
+                   document.querySelector('[name="application_feesp"]').value = obj[0].application_fees;
+                   document.querySelector('[name="scst_application_feesp"]').value = obj[0].scst_application_fees;
+                   document.querySelector('[name="obc_application_feesp"]').value = obj[0].obc_application_fees;
+                   document.querySelector('[name="others_application_feesp"]').value = obj[0].others_application_fees;
                  
                 $('#changepostdata').modal('show');
             },
