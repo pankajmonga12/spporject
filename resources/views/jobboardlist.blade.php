@@ -722,9 +722,18 @@
 												<i class="fa"></i>
 												{!!  Form::number('others_application_fees', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
+											
+									</div>
+
+								</div>
+
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save Post</button>
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
-									
 								</div>
 							</form>
 						   </div>	
