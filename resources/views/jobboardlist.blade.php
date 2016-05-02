@@ -511,7 +511,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'),,array('id' => 'exp_reqp'))!!}
+												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'),array('id' => 'exp_reqp'))!!}
 											</div>
 										</div>
 									</div>
