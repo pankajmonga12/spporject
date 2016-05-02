@@ -301,7 +301,7 @@ dd(DB::getQueryLog());
    $posttypeDa = array();
    $posttypeData = array();
 
-   $posttypeDa['id'] = $posttypes->id;
+   $posttypeDa['id'] = $posttype->id;
       $posttypeDa['qualification'] = $posttype->qualification;
       $posttypeDa['eligibility'] = $posttype->eligibility;
       $posttypeDa['posttype'] = $posttype->posttype;
