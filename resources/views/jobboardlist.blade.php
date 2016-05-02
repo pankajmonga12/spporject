@@ -748,6 +748,29 @@ Demo.init(); // init demo features
 		console.log(id);
 		$('#change-category').modal('hide');
 		$('#changepostdata').modal('show');
+
+		//document.getElementById('pid').value = id;
+  
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+         
+         var postData = {
+            id: id,
+            _token: CSRF_TOKEN
+        }
+
+
+         $.ajax({
+            url: 'fetchposttypedata',
+            type: 'post',
+            data: postData,
+            dataType: 'json',
+            success: function (obj) {
+                   console.log(obj);
+                 
+                
+            },
+            
+        });
 	}
 </script>
  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>

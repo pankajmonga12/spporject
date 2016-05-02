@@ -291,4 +291,27 @@ dd(DB::getQueryLog());
 
   }
 
+
+  function Fetchposttypedata(Request $request)
+  {
+      
+    $id = $request->input('id');
+    $posttype = Posttype::find($id);
+     $posttypeData = array();
+     
+     foreach ($posttype as $posttypes) {
+      $posttypeD = array();
+      $posttypeD['id'] = $posttypes->id;
+      $posttypeD['qualification'] = $posttypes->qualification;
+      $posttypeD['eligibility'] = $posttypes->eligibility;
+      $posttypeD['posttype'] = $posttypes->posttype;
+      $posttypeD['no_of_post'] = $posttypes->no_of_post;
+      $posttypeData[] = $posttypeD;
+    }
+       //echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
+
+         echo json_encode($posttypeData);
+        die();    
+  }
+
 }

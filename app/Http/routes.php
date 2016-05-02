@@ -86,6 +86,9 @@
     Route::get('jobboardlist', 'AdminController@showJobBoardList');
 
     Route::post('jobblist', 'HomeController@Jobsearch');
+
+    Route::post('fetchposttypedata', 'JobboardController@Fetchposttypedata');
+
     Route::get('jobblist', 'HomeController@JobsearchPage');
 
     Route::get('jobDetail/{id}', 'HomeController@JobData');
