@@ -464,7 +464,7 @@
 										Your form validation is successful!
 									</div>
 									
-								   <div class="form-group">
+									<div class="form-group">
 										<label class="control-label col-md-3">Post For : <span class="required">
 										* </span>
 										</label>
@@ -477,9 +477,7 @@
 											</div>
 										</div>
 									</div>
-
-
-
+								</div>
 							</form>
 						   </div>	
 						</div>
