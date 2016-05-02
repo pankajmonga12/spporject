@@ -296,8 +296,9 @@ dd(DB::getQueryLog());
   {
       
     $id = $request->input('id');
-    $posttype = Posttype::find($id);
-     $posttypeData = array();
+   $posttype = Posttype::find($id);
+   echo "<pre> Post Data : ".print_r($posttype , TRUE)."</pre>";
+   /*   $posttypeData = array();
      
      foreach ($posttype as $posttypes) {
       $posttypeD = array();
@@ -311,7 +312,7 @@ dd(DB::getQueryLog());
        //echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
 
          echo json_encode($posttypeData);
-        die();    
+        die();    */
   }
 
 }
