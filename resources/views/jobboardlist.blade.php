@@ -1021,6 +1021,7 @@ Demo.init(); // init demo features
             dataType: 'json',
             success: function (obj) {
                    console.log(obj);
+                   document.getElementById('posttype').value = obj[0].posttype;
                  
                 $('#changepostdata').modal('show');
             },
