@@ -747,7 +747,7 @@ Demo.init(); // init demo features
 		
 		console.log(id);
 		$('#change-category').modal('hide');
-		$('#changepostdata').modal('show');
+		
 
 		//document.getElementById('pid').value = id;
   
@@ -758,7 +758,8 @@ Demo.init(); // init demo features
             _token: CSRF_TOKEN
         }
 
-
+         console.log(postData);
+         
          $.ajax({
             url: 'fetchposttypedata',
             type: 'post',
@@ -767,7 +768,7 @@ Demo.init(); // init demo features
             success: function (obj) {
                    console.log(obj);
                  
-                
+                $('#changepostdata').modal('show');
             },
             
         });
