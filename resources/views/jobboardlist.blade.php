@@ -486,7 +486,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::select('eligibility', $eligibility) !!}
+												{!!  Form::select('eligibilityp', $eligibility) !!}
 											</div>
 										</div>
 									</div>
@@ -499,7 +499,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												 {!!  Form::select('qualification', $qualification)  !!}
+												 {!!  Form::select('qualificationp', $qualification)  !!}
 											</div>
 										</div>
 									</div>
@@ -511,7 +511,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'))!!}
+												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'),,array('id' => 'exp_reqp'))!!}
 											</div>
 										</div>
 									</div>
@@ -523,7 +523,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="age_limit">
+												<select name="age_limit" id="age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -541,7 +541,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="max_age_limit">
+												<select name="max_age_limit" id="max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -558,7 +558,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="scst_min_age_limit">
+												<select name="scst_min_age_limit"  id="scst_min_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -575,7 +575,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="scst_max_age_limit">
+												<select name="scst_max_age_limit"  id="scst_max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -593,7 +593,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="obc_min_age_limit">
+												<select name="obc_min_age_limit" id="obc_min_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -610,7 +610,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="obc_max_age_limit">
+												<select name="obc_max_age_limit" id="obc_max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -628,7 +628,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="other_min_age_limit">
+												<select name="other_min_age_limit"  id="other_min_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -645,7 +645,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<select name="other_max_age_limit">
+												<select name="other_max_age_limit" id="other_max_age_limitp">
 												<option value="0">Nill</option>
 													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
 														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -663,7 +663,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+												<input type="text" class="form-control" id="no_of_postp" name="no_of_post"/>
 											</div>
 										</div>
 									</div>
@@ -674,7 +674,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{{ Form::textarea('post_description','job description', ['size' => '100x100']) }}
+												{{ Form::textarea('post_descriptionp','job description', ['size' => '100x100']) }}
 											</div>
 										</div>
 									</div>
@@ -686,7 +686,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+												{!!  Form::number('application_feesp', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
@@ -698,7 +698,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('scst_application_fees', Input::old('scst_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+												{!!  Form::number('scst_application_feesp', Input::old('scst_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
@@ -709,7 +709,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('obc_application_fees', Input::old('obc_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+												{!!  Form::number('obc_application_feesp', Input::old('obc_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
@@ -720,7 +720,7 @@
 										<div class="col-md-4">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												{!!  Form::number('others_application_fees', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+												{!!  Form::number('others_application_feesp', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
 											</div>
 										</div>
 									</div>
