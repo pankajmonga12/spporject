@@ -297,7 +297,7 @@ dd(DB::getQueryLog());
       
     $id = $request->input('id');
    $posttype = Posttype::find($id);
-   echo "<pre> Post Data : ".print_r($posttype[0] , TRUE)."</pre>";
+   echo "<pre> Post Data : ".print_r($posttype, TRUE)."</pre>";
    $posttypeData = array();
      /*
      foreach ( $posttype as $posttypes ) {
