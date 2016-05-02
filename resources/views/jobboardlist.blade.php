@@ -421,7 +421,323 @@
 					</div>
 					<!-- /.modal-content -->
 				</div>
+
+
+
+
+				<div class="modal fade" id="changepostdata" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div class="modal-body">
+							<div class="portlet light bordered">
+					<?php //echo $this->session->flashdata('error_msg'); ?>
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span class="caption-subject bold uppercase"> ADD POST </span>
+							</div>
+					
+						</div>
+						<div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							<form action="/saveposttype" id="changepasswordform" class="form-horizontal"  method="POST">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-md-3">Post For : <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="hidden" class="form-control" id="pid" name="id"/>
+												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+												<input type="text" class="form-control" id="posttype" name="posttype"/>
+											</div>
+										</div>
+									</div>
+
+
+										<div class="form-group">
+										<label class="control-label col-md-3">Eligibility <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::select('eligibility', $eligibility) !!}
+											</div>
+										</div>
+									</div>
+                                 
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Qualification <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												 {!!  Form::select('qualification', $qualification)  !!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Experience Required <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::text('exp_req', Input::old('exp_req'), array('class' => 'form-control'),array('placeholder' => 'Experience Required'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> Genral Min Age Limit
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> Genral Max Age Limit
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Min Age Limit
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="scst_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Max Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="scst_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Min Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="obc_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+												
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Max Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="obc_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+
+                                     <div class="form-group">
+										<label class="control-label col-md-3"> Others Min Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="other_min_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Others Max Age Limit 
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<select name="other_max_age_limit">
+												<option value="0">Nill</option>
+													<?php for ($i=$agelimit[0]['minage']; $i <=$agelimit[0]['maxage'] ; $i++) {  ?>
+														<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+													<?php } ?>
+												</select>
+											
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+											</div>
+										</div>
+									</div>
+                                    <div class="form-group">
+										<label class="control-label col-md-3">Job Description 
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{{ Form::textarea('post_description','job description', ['size' => '100x100']) }}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> Genral Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('application_fees', Input::old('application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3"> SC/ST Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('scst_application_fees', Input::old('scst_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> OBC Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('obc_application_fees', Input::old('obc_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3"> Others Application Fees <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												{!!  Form::number('others_application_fees', Input::old('others_application_fees'), array('class' => 'form-control'),array('placeholder' => 'Application Fees'))!!}
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="form-actions">
+									<div class="row">
+										<div class="col-md-offset-3 col-md-9">
+											<button type="submit" class="btn green">Save Post</button>
+											<button type="button" class="btn default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- END FORM-->
+						</div>
+					</div>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
 				<!-- /.modal-dialog -->
+
+
+
+
 			</div>
 
 			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
@@ -668,7 +984,7 @@ Demo.init(); // init demo features
 				var td3="<td>"+obj[i]["qualification"]+"</td>";
 				var td4="<td>"+obj[i]["no_of_post"]+"</td>";
 				var td5="<td> <button onclick=Deletepost("+obj[i]["id"]+") >Delete Post</button></td>";
-				var td6="<td> <button onclick=Editpost("+obj[i]["id"]+") >Edit Post</button></td></tr>";
+				var td6="<td> <button onclick=Editpostdata("+obj[i]["id"]+") >Edit Post</button></td></tr>";
 
 				$("#postTable").append(tr+td1+td2+td3+td4+td5+td6); 
 
@@ -681,7 +997,14 @@ Demo.init(); // init demo features
 		$('#change-category').modal('show');
 	}
 </script>
-
+<script type="text/javascript">
+	function Editpostdata(id) {
+		
+		console.log(id);
+		$('#change-category').modal('hide');
+		$('#changepostdata').modal('show');
+	}
+</script>
  <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
     <script>
