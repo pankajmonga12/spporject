@@ -442,7 +442,44 @@
 							<h4 class="modal-title"></h4>
 						</div>
 						<div class="modal-body">
-						TestModel
+						  <div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<i class="icon-settings font-red-sunglo"></i>
+								<span class="caption-subject bold uppercase"> EDIT POST </span>
+							</div>
+					
+					      </div>
+
+					      <div class="portlet-body form">
+							<!-- BEGIN FORM-->
+							<form action="/savechangePost" id="changepasswordform" class="form-horizontal"  method="POST">
+								<div class="form-body">
+
+								<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									
+									<div class="form-group">
+										<label class="control-label col-md-3">Post For : <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="hidden" class="form-control" id="pid" name="id"/>
+												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+												<input type="text" class="form-control" id="posttype" name="posttype"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						   </div>	
 						</div>
 					</div>
 					<!-- /.modal-content -->
