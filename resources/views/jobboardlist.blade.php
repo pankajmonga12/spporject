@@ -473,7 +473,7 @@
 												<i class="fa"></i>
 												<input type="hidden" class="form-control" id="pid" name="id"/>
 												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-												<input type="text" class="form-control" id="posttype" name="posttype"/>
+												<input type="text" class="form-control" id="posttypep" name="posttype"/>
 											</div>
 										</div>
 									</div>
@@ -1021,7 +1021,7 @@ Demo.init(); // init demo features
             dataType: 'json',
             success: function (obj) {
                    console.log(obj);
-                   document.getElementById('posttype').value = obj[0].posttype;
+                   document.getElementById('posttypep').value = obj[0].posttype;
                  
                 $('#changepostdata').modal('show');
             },
