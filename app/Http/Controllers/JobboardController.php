@@ -297,8 +297,20 @@ dd(DB::getQueryLog());
       
     $id = $request->input('id');
    $posttype = Posttype::find($id);
-   echo "<pre> Post Data : ".print_r($posttype->id, TRUE)."</pre>";
+   echo "<pre> Post Data : ".print_r($posttype, TRUE)."</pre>";
+   $posttypeDa = array();
    $posttypeData = array();
+
+   $posttypeDa['id'] = $posttypes->id;
+      $posttypeDa['qualification'] = $posttype->qualification;
+      $posttypeDa['eligibility'] = $posttype->eligibility;
+      $posttypeDa['posttype'] = $posttype->posttype;
+      $posttypeDa['no_of_post'] = $posttype->no_of_post;
+      $posttypeDa['id'] = $posttypes->id;
+      $posttypeDa['qualification'] = $posttypes->qualification;
+      $posttypeDa['eligibility'] = $posttypes->eligibility;
+      $posttypeDa['posttype'] = $posttypes->posttype;
+      $posttypeDa['no_of_post'] = $posttypes->no_of_post;
      /*
      foreach ( $posttype as $posttypes ) {
       $posttypeDa = array();
