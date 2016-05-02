@@ -297,7 +297,7 @@ dd(DB::getQueryLog());
       
     $id = $request->input('id');
    $posttype = Posttype::find($id);
-   echo "<pre> Post Data : ".print_r($posttype, TRUE)."</pre>";
+   //echo "<pre> Post Data : ".print_r($posttype, TRUE)."</pre>";
    $posttypeDa = array();
    $posttypeData = array();
 
@@ -306,11 +306,21 @@ dd(DB::getQueryLog());
       $posttypeDa['eligibility'] = $posttype->eligibility;
       $posttypeDa['posttype'] = $posttype->posttype;
       $posttypeDa['no_of_post'] = $posttype->no_of_post;
-      $posttypeDa['id'] = $posttypes->id;
-      $posttypeDa['qualification'] = $posttypes->qualification;
-      $posttypeDa['eligibility'] = $posttypes->eligibility;
-      $posttypeDa['posttype'] = $posttypes->posttype;
-      $posttypeDa['no_of_post'] = $posttypes->no_of_post;
+      $posttypeDa['exp_req'] = $posttype->exp_req;
+      $posttypeDa['age_limit'] = $posttype->age_limit;
+      $posttypeDa['general_application_fees'] = $posttype->general_application_fees;
+      $posttypeDa['scst_application_fees'] = $posttype->scst_application_fees;
+      $posttypeDa['obc_application_fees'] = $posttype->obc_application_fees;
+      $posttypeDa['others_application_fees'] = $posttype->others_application_fees;
+      $posttypeDa['max_age_limit'] = $posttype->max_age_limit;
+      $posttypeDa['scst_min_age_limit'] = $posttype->scst_min_age_limit;
+      $posttypeDa['scst_max_age_limit'] = $posttype->scst_max_age_limit;
+      $posttypeDa['obc_min_age_limit'] = $posttype->obc_min_age_limit;
+      $posttypeDa['obc_max_age_limit'] = $posttype->obc_max_age_limit;
+      $posttypeDa['other_min_age_limit'] = $posttype->other_min_age_limit;
+      $posttypeDa['other_max_age_limit'] = $posttype->other_max_age_limit;
+      $posttypeDa['post_description'] = $posttype->post_description;
+      $posttypeData[] = $posttypeDa;
      /*
      foreach ( $posttype as $posttypes ) {
       $posttypeDa = array();
