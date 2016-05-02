@@ -655,7 +655,7 @@ Demo.init(); // init demo features
 				var td2="<td>Eligibility</td>";
 				var td3="<td>Qualification</td>";
 				var td4="<td>No Of Post</td>";
-				var td5="<td>Action</td></tr>";
+				var td5="<td colspan='2'>Action</td></tr>";
 
 				$("#postTable").append(tr+td1+td2+td3+td4+td5);
 
@@ -667,9 +667,10 @@ Demo.init(); // init demo features
 				var td2="<td>"+obj[i]["eligibility"]+"</td>";
 				var td3="<td>"+obj[i]["qualification"]+"</td>";
 				var td4="<td>"+obj[i]["no_of_post"]+"</td>";
-				var td5="<td> <button onclick=Deletepost("+obj[i]["id"]+") >Delete Post</button></td></tr>";
+				var td5="<td> <button onclick=Deletepost("+obj[i]["id"]+") >Delete Post</button></td>";
+				var td6="<td> <button onclick=Editpost("+obj[i]["id"]+") >Edit Post</button></td></tr>";
 
-				$("#postTable").append(tr+td1+td2+td3+td4+td5); 
+				$("#postTable").append(tr+td1+td2+td3+td4+td5+td6); 
 
 				} 
                 
