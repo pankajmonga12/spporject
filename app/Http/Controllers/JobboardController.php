@@ -300,15 +300,16 @@ dd(DB::getQueryLog());
    echo "<pre> Post Data : ".print_r($posttype , TRUE)."</pre>";
    $posttypeData = array();
      
-     foreach ($posttype as $posttypes) {
+     foreach ( $posttype as $posttypes ) {
       $posttypeDa = array();
-
-      $posttypeDa['id'] = $posttypes->id;
+      
+      echo "<pre> Post Data : ".print_r($posttypes , TRUE)."</pre>";
+    /*  $posttypeDa['id'] = $posttypes->id;
       $posttypeDa['qualification'] = $posttypes->qualification;
       $posttypeDa['eligibility'] = $posttypes->eligibility;
       $posttypeDa['posttype'] = $posttypes->posttype;
       $posttypeDa['no_of_post'] = $posttypes->no_of_post;
-      $posttypeData[] = $posttypeDa;
+      $posttypeData[] = $posttypeDa;*/
     }
        //echo "<pre> Data  ".print_r($posttypeData , TRUE)."</pre>";
 
