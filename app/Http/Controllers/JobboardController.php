@@ -369,6 +369,7 @@ dd(DB::getQueryLog());
 
 
         $posttype->save();
+        return Redirect::to('jobboardlist');
   }
 
 }
