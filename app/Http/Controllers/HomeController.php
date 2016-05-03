@@ -64,7 +64,7 @@ class HomeController extends Controller
      
      echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
      echo "count :".count($usersearch);
-     if (isset($usersearch)) {
+     if ( count($usersearch) > 0 ) {
 
      	echo "enter loop";
 
