@@ -89,6 +89,8 @@
 
     Route::post('fetchposttypedata', 'JobboardController@Fetchposttypedata');
 
+    Route::post('savechangePost', 'JobboardController@SavechangePost');
+
     Route::get('jobblist', 'HomeController@JobsearchPage');
 
     Route::get('jobDetail/{id}', 'HomeController@JobData');

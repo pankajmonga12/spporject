@@ -339,4 +339,36 @@ dd(DB::getQueryLog());
         die();  
   }
 
+
+  function SavechangePost( Request $request ) {
+      
+      $id = $request->input('id');
+      $posttype = Posttype::find($id);
+      
+
+        $posttype->qualification = $request->qualificationp;
+        $posttype->eligibility = $request->eligibilityp;
+        $posttype->posttype = $request->posttypep;
+        $posttype->no_of_post = $request->no_of_postp;
+        $posttype->exp_req = $request->exp_reqp;
+        $posttype->age_limit = $request->age_limitp;
+        $posttype->general_application_fees = $request->general_application_feesp;
+        $posttype->scst_application_fees = $request->scst_application_feesp;
+        $posttype->obc_application_fees = $request->obc_application_feesp;
+        $posttype->others_application_fees = $request->others_application_feesp;
+        $posttype->max_age_limit = $request->max_age_limitp;
+        $posttype->scst_min_age_limit = $request->scst_min_age_limitp;
+        $posttype->scst_max_age_limit = $request->scst_max_age_limitp;
+        $posttype->obc_min_age_limit = $request->obc_min_age_limitp;
+        $posttype->obc_max_age_limit = $request->obc_max_age_limitp;
+        $posttype->obc_min_age_limit = $request->obc_min_age_limitp;
+        $posttype->obc_max_age_limit = $request->obc_max_age_limitp;
+        $posttype->other_min_age_limit = $request->other_min_age_limitp;
+        $posttype->other_max_age_limit = $request->other_max_age_limitp;
+        $posttype->post_description = $request->post_descriptionp;
+
+
+        $posttype->save();
+  }
+
 }

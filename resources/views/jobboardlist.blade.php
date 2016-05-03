@@ -471,7 +471,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="hidden" class="form-control" id="pid" name="id"/>
+												<input type="hidden" class="form-control" id="pcid" name="id"/>
 												<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 												<input type="text" class="form-control" id="posttypep" name="posttype"/>
 											</div>
@@ -999,7 +999,9 @@ Demo.init(); // init demo features
 <script type="text/javascript">
 	function Editpostdata(id) {
 		
-		console.log(id);
+		//console.log(id);
+		document.getElementById('pcid').value = id;
+		
 		$('#change-category').modal('hide');
 		
 
@@ -1007,7 +1009,7 @@ Demo.init(); // init demo features
   
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
          
-         var postData = {
+        var postData = {
             id: id,
             _token: CSRF_TOKEN
         }
