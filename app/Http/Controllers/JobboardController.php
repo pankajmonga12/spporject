@@ -352,7 +352,7 @@ dd(DB::getQueryLog());
         $posttype->no_of_post = $request->no_of_postp;
         $posttype->exp_req = $request->exp_reqp;
         $posttype->age_limit = $request->age_limitp;
-        $posttype->general_application_fees = $request->general_application_feesp;
+        $posttype->general_application_fees = $request->application_feesp;
         $posttype->scst_application_fees = $request->scst_application_feesp;
         $posttype->obc_application_fees = $request->obc_application_feesp;
         $posttype->others_application_fees = $request->others_application_feesp;
