@@ -302,7 +302,7 @@ dd(DB::getQueryLog());
    $posttypeData = array();
 
    $posttypeDa['id'] = $posttype->id;
-      $posttypeDa['qualification'] = $posttype->qualification;
+      $posttypeDa['qualification'] = $posttype->qualificatiion;
       $posttypeDa['eligibility'] = $posttype->eligibility;
       $posttypeDa['posttype'] = $posttype->posttype;
       $posttypeDa['no_of_post'] = $posttype->no_of_post;
@@ -346,7 +346,7 @@ dd(DB::getQueryLog());
       $posttype = Posttype::find($id);
       
 
-        $posttype->qualification = $request->qualificationp;
+        $posttype->qualificatiion = $request->qualificationp;
         $posttype->eligibility = $request->eligibilityp;
         $posttype->posttype = $request->posttypep;
         $posttype->no_of_post = $request->no_of_postp;
