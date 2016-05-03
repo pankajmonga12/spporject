@@ -62,7 +62,9 @@ class HomeController extends Controller
      $email_id = $request->input('email_id'); 
      $usersearch = Usersearch::where( 'email_id', '=', $email_id )->get();
      
-     if (isset($usersearch[0]->id)) {
+     echo "<pre> Data : ".print_r( $usersearch , TRUE)."</pre>";
+
+     if (isset($usersearch)) {
 
      	 $usersearch = Usersearch::find( $usersearch[0]->id );
 
