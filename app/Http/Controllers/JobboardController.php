@@ -348,7 +348,7 @@ dd(DB::getQueryLog());
 
         $posttype->qualificatiion = $request->qualificationp;
         $posttype->eligibility = $request->eligibilityp;
-        $posttype->posttype = $request->posttypep;
+        $posttype->posttype = $request->posttype;
         $posttype->no_of_post = $request->no_of_postp;
         $posttype->exp_req = $request->exp_reqp;
         $posttype->age_limit = $request->age_limitp;
