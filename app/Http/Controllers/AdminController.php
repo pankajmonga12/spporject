@@ -470,7 +470,7 @@ function showJobBoard()
    function showUsersearchList() {
 
      $usersearchData = DB::table('usersearch')
-            ->join('qualification as ql', 'ql.id', '=', 'usersearch.qualification')
+            ->leftJoin('qualification as ql', 'ql.id', '=', 'usersearch.qualification')
              ->select('usersearch.id','usersearch.user_name', 'usersearch.email_id', 'usersearch.phone_no', 'ql.title as qualification')->paginate(15);
 
     $activeD['active']= 'job';    
