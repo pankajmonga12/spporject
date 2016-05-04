@@ -97,9 +97,9 @@ class HomeController extends Controller
 	 $validator = Validator::make(Input::all(), $rules,$messages);
 
         if ($validator->fails()) {
-
+                 
                  return Redirect::to('home')
-        ->withErrors($validator);
+        ->withErrors($validator)>withInput();
         }  else {
 
         $searchData = array(
