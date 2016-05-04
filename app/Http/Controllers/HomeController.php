@@ -99,7 +99,7 @@ class HomeController extends Controller
         if ($validator->fails()) {
                  
                  return Redirect::to('home')
-        ->withErrors($validator)>withInput();
+        ->withErrors($validator)->withInput();
         }  else {
 
         $searchData = array(
