@@ -58,8 +58,9 @@
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('user_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
-                                                {{ $errors->search->first('user_name') }} 
+                                               
                                             </div>
+                                              <div class="help-block with-errors"> {{ $errors->search->first('user_name') }}  </div>
                                         </div>
                                     </div>
 
@@ -94,7 +95,7 @@
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3">Qualification <span class="required">
+                                        <label class="control-label col-md-5">Qualification <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-7">
