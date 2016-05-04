@@ -40,6 +40,7 @@
         @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
+                <?php echo "<pre> Data :".print_r($errors->all() , TRUE)."</pre>"; ?>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
