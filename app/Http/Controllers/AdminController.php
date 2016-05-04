@@ -17,6 +17,7 @@ use App\Qualification;
 use App\Agelimit;
 use App\Jobboard;
 use App\Posttype;
+use App\Usersearch;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -347,7 +348,7 @@ function showJobBoard()
     function showJobBoardList() 
    {
      
-     $users = Jobboard::paginate(1);
+    // $users = Jobboard::paginate(1);
      $jobList = DB::table('jobboard')
             ->join('categories as cat', 'cat.id', '=', 'jobboard.category')
             ->join('categories as scat', 'scat.id', '=', 'jobboard.subcategory')
@@ -464,6 +465,14 @@ function showJobBoard()
 
      return view('jobboardedit' , $data );
    	
+   }
+
+   function showUsersearchList() {
+
+    $usersearchData = Usersearch::paginate(1);
+
+    return view('usersearchlist' , $usersearchData );
+
    }
 
 
