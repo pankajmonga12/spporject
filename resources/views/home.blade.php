@@ -71,8 +71,9 @@
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('email_id', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
-                                                {{ $errors->search->first('email_id') }} 
+                                                
                                             </div>
+                                            <div class="help-block with-errors">{{ $errors->search->first('email_id') }} </div>
                                         </div>
                                     </div>
                                     
@@ -85,8 +86,9 @@
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('phone_no', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
-                                                {{ $errors->search->first('phone_no') }} 
+                                                 
                                             </div>
+                                             <div class="help-block with-errors">{{ $errors->search->first('phone_no') }} </div>
                                         </div>
                                     </div>
 
