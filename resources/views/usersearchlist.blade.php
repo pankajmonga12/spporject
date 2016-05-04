@@ -150,78 +150,7 @@
 			<div class="row">
 				<meta name="csrf-token" content="{{ csrf_token() }}" />
 				<?php  echo "<pre> Data : ".print_r( $usersearchData , TRUE )."</pre>"; ?>
-<!--<table class="table table-striped table-bordered table-hover">
-	<tr>
-		<th>
-			S. No.
-		</th>
-		<th>
-			Job Name
-		</th>
-        <th>
-			Logo
-		</th>
-		<th>
-			Category
-		</th>
-		<th>
-			Sub - Category
-		</th>
-		<th>
-			Imp Date
-		</th>
-		<th>
-			No. Of Post
-		</th>
-		<th>
-			Aplication Fees
-		</th>
-		<th colspan="3">
-			Action
-		</th>
 
-	</tr>
-
-    
-    @foreach ($joblist as $joblistD)
-        <tr>
-        	<td>
-        		
-        	</td>
-        	<td>
-             {{ $joblistD->job_name }}      
-        	</td>
-        	<td>
-        	<img src="http://128.199.192.88/logos/{{ $joblistD->logo }}" width="100" height="100"></img> 
-        	</td>
-        	<td>
-        	   {{ $joblistD->category }}
-        	</td>
-        	<td>
-        	  {{ $joblistD->subcategory }}	
-        	</td>
-        	<td>
-        	 {{ date("F jS, Y",strtotime($joblistD->imp_date)) }}
-        	</td>
-        	<td>
-        	 {{ $joblistD->no_of_post }}
-        	</td>
-        	<td>
-        	 {{ $joblistD->application_fees  }}
-        	</td>
-        	<td>
-        	<button onclick="Addpost({{ $joblistD->id }})" value="Edit"> Add Post  </button>
-        	</td>
-        	<td>
-        	<button onclick="Editjob({{ $joblistD->id }})" value="Edit"> Edit  </button>
-        	</td>
-        	<td>
-        	<button onclick="DeleteJob({{ $joblistD->id }})" value="Delete"> Delete </button>
-        	</td>
-        </tr>
-        
-    @endforeach
-    </table>  -->
 			</div>
         {!! $usersearchData->render() !!}
 			</div>
