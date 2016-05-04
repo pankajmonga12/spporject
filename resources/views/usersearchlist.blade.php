@@ -149,8 +149,62 @@
 			<!-- END PAGE CONTENT-->
 			<div class="row">
 				<meta name="csrf-token" content="{{ csrf_token() }}" />
-				<?php  echo "<pre> Data : ".print_r( $usersearchData , TRUE )."</pre>"; ?>
+				
+<table class="table table-striped table-bordered table-hover">
+	<tr>
+		<th>
+			S. No.
+		</th>
+		<th>
+			User Name
+		</th>
+        <th>
+			Email Id
+		</th>
+		<th>
+			Phone no
+		</th>
+		<th>
+			Qualification
+		</th>
 
+		<th>
+			First Time Search
+		</th>
+		<th>
+			Last time Search
+		</th>
+
+	</tr>
+
+    
+    @foreach ($usersearchData as $usersearch)
+        <tr>
+        	<td>
+        		
+        	</td>
+        	<td>
+             {{ $usersearch->user_name }}      
+        	</td>
+        	<td>
+        	{{ $usersearch->email_id }}  
+        	</td>
+        	<td>
+        	   {{ $usersearch->phone_no }}
+        	</td>
+        	<td>
+        	  {{ $usersearch->qualification }}	
+        	</td>
+        	<td>
+        	 {{ date("F jS, Y",strtotime($usersearch->created_at)) }}
+        	</td>
+        	<td>
+        	 {{ date("F jS, Y",strtotime($usersearch->updated_at)) }}
+        	</td>
+        </tr>
+        
+    @endforeach
+    </table>  
 			</div>
         {!! $usersearchData->render() !!}
 			</div>

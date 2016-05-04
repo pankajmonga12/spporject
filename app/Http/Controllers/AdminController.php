@@ -471,7 +471,7 @@ function showJobBoard()
 
      $usersearchData = DB::table('usersearch')
             ->leftJoin('qualification as ql', 'ql.id', '=', 'usersearch.qualification')
-             ->select('usersearch.id','usersearch.user_name', 'usersearch.email_id', 'usersearch.phone_no', 'ql.title as qualification')->paginate(15);
+             ->select('usersearch.id','usersearch.user_name', 'usersearch.email_id', 'usersearch.phone_no','usersearch.created_at','usersearch.updated_at', 'ql.title as qualification')->paginate(15);
 
     $activeD['active']= 'job';    
     $data['header'] = View::make('partial.header');
