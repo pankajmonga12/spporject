@@ -67,7 +67,7 @@
                                         <label class="control-label col-md-3">Email Id :  <span class="required">
                                         * </span>
                                         </label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-7">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('email_id', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
@@ -81,7 +81,7 @@
                                         <label class="control-label col-md-3">Phone No. :  <span class="required">
                                         * </span>
                                         </label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-7">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('phone_no', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
@@ -95,7 +95,7 @@
                                         <label class="control-label col-md-3">Qualification <span class="required">
                                         * </span>
                                         </label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-7">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                  {!!  Form::select('qualification', $qualification)  !!}
