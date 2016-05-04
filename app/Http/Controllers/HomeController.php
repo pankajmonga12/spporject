@@ -89,6 +89,10 @@ class HomeController extends Controller
 	 $validator = Validator::make(Input::all(), $rules);
 
         if ($validator->fails()) {
+         
+         echo "<pre> searchData : ".print_r( $validator , TRUE)."</pre>";
+
+         die();
 
                  return Redirect::to('home')
         ->withErrors($validator);
