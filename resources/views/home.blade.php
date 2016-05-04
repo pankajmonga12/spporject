@@ -51,7 +51,7 @@
             <div class="content">
                {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
                                     <div class="form-group">
-                                        <label class="control-label col-md-3">Name :  <span class="required">
+                                        <label class="control-label col-md-5">Name :  <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-7">
@@ -64,7 +64,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3">Email Id :  <span class="required">
+                                        <label class="control-label col-md-5">Email Id :  <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-7">
@@ -79,7 +79,7 @@
                                     
 
                                     <div class="form-group">
-                                        <label class="control-label col-md-3">Phone No. :  <span class="required">
+                                        <label class="control-label col-md-5">Phone No. :  <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-7">
