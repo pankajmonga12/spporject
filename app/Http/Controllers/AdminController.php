@@ -471,7 +471,18 @@ function showJobBoard()
 
     $usersearchData = Usersearch::paginate(1);
 
-    return view('usersearchlist' , $usersearchData );
+    $activeD['active']= 'job';    
+    $data['header'] = View::make('partial.header');
+
+    $data['usersearchData'] = $usersearchData;
+
+   /* Footer partial view */
+    $data['footer'] = View::make('partial.footer');
+
+    $data['submenu'] = View::make('partial.submenu',$activeD);
+
+
+    return view('usersearchlist' , $data );
 
    }
 
