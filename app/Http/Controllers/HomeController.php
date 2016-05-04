@@ -86,13 +86,17 @@ class HomeController extends Controller
 
      );
 
-	 $validator = Validator::make(Input::all(), $rules);
+     	 $messages = [
+
+        'email_id.required' => 'please fill Email Id field',
+        'user_name.required' => 'please fill Name field',
+        'phone_no.required' => 'Please fill Phone No field'
+
+    ];
+
+	 $validator = Validator::make(Input::all(), $rules,$messages);
 
         if ($validator->fails()) {
-         
-         echo "<pre> searchData : ".print_r( $validator , TRUE)."</pre>";
-
-         die();
 
                  return Redirect::to('home')
         ->withErrors($validator);
