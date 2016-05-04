@@ -54,7 +54,7 @@
                                         <label class="control-label col-md-3">Name :  <span class="required">
                                         * </span>
                                         </label>
-                                        <div class="col-md-4">
+                                        <div class="col-md-7">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('user_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
