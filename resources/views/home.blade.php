@@ -47,7 +47,7 @@
                 </ul>
             </div>
         @endif
-        
+        <?php echo "<pre> Data :".print_r({{ $errors->search->first('email_id') }} , TRUE)."</pre>"; ?>
             <div class="content">
                {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
                                     <div class="form-group">
