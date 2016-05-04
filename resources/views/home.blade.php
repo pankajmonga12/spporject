@@ -47,7 +47,7 @@
                 </ul>
             </div>
         @endif
-        <?php echo "<pre> Data :".print_r($errors->search->first('email_id'), TRUE)."</pre>"; ?>
+       
             <div class="content">
                {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
                                     <div class="form-group">
@@ -58,6 +58,7 @@
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('user_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
+                                                {{ $errors->search->first('user_name') }} 
                                             </div>
                                         </div>
                                     </div>
@@ -70,6 +71,7 @@
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('email_id', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
+                                                {{ $errors->search->first('email_id') }} 
                                             </div>
                                         </div>
                                     </div>
@@ -83,6 +85,7 @@
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
                                                 {!!  Form::text('phone_no', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
+                                                {{ $errors->search->first('phone_no') }} 
                                             </div>
                                         </div>
                                     </div>
