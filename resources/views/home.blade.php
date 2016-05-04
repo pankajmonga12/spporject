@@ -40,14 +40,14 @@
         @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
-                  <?php echo "<pre> Data :".print_r({{ $errors->search->first('email_id') }} , TRUE)."</pre>"; ?>
+                  <?php echo "<pre> Data :".print_r( $errors->search->first('email_id') , TRUE)."</pre>"; ?>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>
         @endif
-        <?php echo "<pre> Data :".print_r({{ $errors->search->first('email_id') }} , TRUE)."</pre>"; ?>
+        <?php echo "<pre> Data :".print_r($errors->search->first('email_id'), TRUE)."</pre>"; ?>
             <div class="content">
                {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
                                     <div class="form-group">
