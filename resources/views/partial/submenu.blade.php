@@ -54,9 +54,17 @@
 												echo 'active';
 											} ?>">
 												<a href="/addjob">Add New Job</a>
-											</li>
-											<li>
+											</li >
+											<li class="<?php if ($active == 'jobboardlist') {
+												echo 'active';
+											} ?>">
 												<a href="/jobboardlist">Job Listing</a>
+											</li>
+
+											<li class="<?php if ($active == 'usersearch') {
+												echo 'active';
+											} ?>">
+												<a href="/usersearchlist">User Search </a>
 											</li>
 										</ul>
 									</div>
