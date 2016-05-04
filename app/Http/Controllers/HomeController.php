@@ -79,7 +79,7 @@ class HomeController extends Controller
 
      	 $rules = array(
         
-        'email_id'    => 'required',
+        'email_id'    => 'required|email',
         'user_name'    => 'required',
         'phone_no'    => 'required',
         'qualification'    => 'required'
