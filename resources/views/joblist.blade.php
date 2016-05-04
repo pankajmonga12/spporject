@@ -1,29 +1,46 @@
   <div class="container">
             <div class="content">
-               {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
-                <div class="form-group">
-                                        <label class="control-label col-md-3">Job Title <span class="required">
+                 {!! Form::open(array('url' => 'jobblist' , 'method' => 'post' , 'files'=>true)) !!}
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Name :  <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-4">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
-                                                {!!  Form::text('job_name', Input::old('job_name'), array('class' => 'form-control'),array('placeholder' => 'Job Title')) !!}
+                                                {!!  Form::text('user_name', Input::old('user_name'), array('class' => 'form-control'),array('placeholder' => 'Name')) !!}
+                                                {{ $errors->search->first('user_name') }} 
                                             </div>
                                         </div>
                                     </div>
-        <div class="form-group">
-                                        <label class="control-label col-md-3">Eligibility <span class="required">
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Email Id :  <span class="required">
                                         * </span>
                                         </label>
                                         <div class="col-md-4">
                                             <div class="input-icon right">
                                                 <i class="fa"></i>
-                                                {!!  Form::select('eligibility', $eligibility) !!}
+                                                {!!  Form::text('email_id', Input::old('email_id'), array('class' => 'form-control'),array('placeholder' => 'Email Id')) !!}
+                                                {{ $errors->search->first('email_id') }} 
                                             </div>
                                         </div>
                                     </div>
-                                 
+                                    
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Phone No. :  <span class="required">
+                                        * </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                {!!  Form::text('phone_no', Input::old('phone_no'), array('class' => 'form-control'),array('placeholder' => 'Phone No')) !!}
+                                                {{ $errors->search->first('phone_no') }} 
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3">Qualification <span class="required">
@@ -43,7 +60,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            {!! Form::close() !!}     
+                            {!! Form::close() !!}        
             </div>
         </div>
         
@@ -55,7 +72,7 @@
          <div id="products" class="row list-group">
         <div class="item  col-xs-4 col-lg-4 list-group-item">
             <div class="thumbnail">
-                <img class="group list-group-image" width="400" height-"400" src="http://128.199.192.88/logos/<?php echo $user->logo; ?>" alt="" />
+                <img class="group list-group-image" width="300" height="300" src="http://128.199.192.88/logos/<?php echo $user->logo; ?>" alt="" />
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">
                         <?php echo $user->job_name; ?> </h4>
