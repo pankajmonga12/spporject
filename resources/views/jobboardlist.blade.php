@@ -374,7 +374,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+												<input type="text" class="form-control" id="other_no_of_post" name="other_no_of_post"/>
 											</div>
 										</div>
 									</div>
@@ -693,13 +693,49 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">No. Of Post <span class="required">
+										<label class="control-label col-md-3">Genral No. Of Post <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
 												<input type="text" class="form-control" id="no_of_postp" name="no_of_postp"/>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">SC/ST No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="scst_no_of_postp" name="scst_no_of_postp"/>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">OBC No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="obc_no_of_postp" name="obc_no_of_postp"/>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Others No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="other_no_of_postp" name="other_no_of_postp"/>
 											</div>
 										</div>
 									</div>

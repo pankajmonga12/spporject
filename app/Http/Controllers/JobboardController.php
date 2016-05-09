@@ -189,6 +189,9 @@ class JobboardController extends Controller
 	    'qualificatiion'    => Input::get('qualification'),
 	    'eligibility'    => Input::get('eligibility'),
 	    'no_of_post'    => Input::get('no_of_post'),
+      'scst_no_of_post'    => Input::get('scst_no_of_post'),
+      'obc_no_of_post'    => Input::get('obc_no_of_post'),
+      'other_no_of_post'    => Input::get('other_no_of_post'),
       'general_application_fees'    => Input::get('application_fees'),
       'scst_application_fees'    => Input::get('scst_application_fees'),
       'obc_application_fees'    => Input::get('obc_application_fees'),
@@ -306,6 +309,9 @@ dd(DB::getQueryLog());
       $posttypeDa['eligibility'] = $posttype->eligibility;
       $posttypeDa['posttype'] = $posttype->posttype;
       $posttypeDa['no_of_post'] = $posttype->no_of_post;
+      $posttypeDa['scst_no_of_post'] = $posttype->scst_no_of_post;
+      $posttypeDa['obc_no_of_post'] = $posttype->obc_no_of_post;
+      $posttypeDa['other_no_of_post'] = $posttype->other_no_of_post;
       $posttypeDa['exp_req'] = $posttype->exp_req;
       $posttypeDa['age_limit'] = $posttype->age_limit;
       $posttypeDa['general_application_fees'] = $posttype->general_application_fees;
@@ -350,6 +356,9 @@ dd(DB::getQueryLog());
         $posttype->eligibility = $request->eligibilityp;
         $posttype->posttype = $request->posttype;
         $posttype->no_of_post = $request->no_of_postp;
+        $posttype->scst_no_of_post = $request->scst_no_of_postp;
+        $posttype->obc_no_of_post = $request->obc_no_of_postp;
+        $posttype->other_no_of_post = $request->other_no_of_postp;
         $posttype->exp_req = $request->exp_reqp;
         $posttype->age_limit = $request->age_limitp;
         $posttype->general_application_fees = $request->application_feesp;
