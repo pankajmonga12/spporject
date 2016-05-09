@@ -66,10 +66,10 @@
         
 <?php if($jobList->total() > 0 ) { ?>
 <div class="container">
-
+<div id="products" class="row list-group">
     <?php foreach ($jobList as $user): ?>
  
-         <div id="products" class="row list-group">
+         
         <div class="item  col-xs-4 col-lg-4 list-group-item">
             <div class="thumbnail">
                 <img class="group list-group-image" width="300" height="300" src="http://128.199.192.88/logos/<?php echo $user->logo; ?>" alt="" />
@@ -91,9 +91,9 @@
             </div>
         </div>
     </div>
-</div>
-    <?php endforeach; ?>
 
+    <?php endforeach; ?>
+</div>
 </div>
 
 <?php echo $jobList->render(); ?>
