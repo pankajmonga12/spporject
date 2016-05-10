@@ -84,7 +84,7 @@
                                 No. Of Post : <?php echo $user->no_of_post; ?></p>
                         </div>
                         <div class="col-xs-12 col-md-6">
-                            <a class="btn btn-success" href="http://128.199.192.88/jobDetail/<?php echo $user->id; ?>">Details</a>
+                            <a class="btn btn-success" href="http://rozgarconnect.in/jobDetail/<?php echo $user->id; ?>">Details</a>
                         </div>
                     </div>
                 </div>

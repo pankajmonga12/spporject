@@ -168,12 +168,26 @@ class JobboardController extends Controller
         $jobboard->descipline = $request->descipline;
         $jobboard->imp_date = $request->imp_date;
         $jobboard->no_of_post = $request->no_of_post;
+        $jobboard->general_no_of_post = $request->general_no_of_post;
+        $jobboard->scst_no_of_post = $request->scst_no_of_post;
+        $jobboard->obc_no_of_post = $request->obc_no_of_post;
+        $jobboard->others_no_of_post = $request->others_no_of_post;
         $jobboard->post_description = $request->post_description;
         $jobboard->eligibility = $request->eligibility;
         $jobboard->qualification = $request->qualification;
         $jobboard->exp_req = $request->exp_req;
         $jobboard->age_limit = $request->age_limit;
+        $jobboard->max_age_limit = $request->max_age_limit;
+        $jobboard->scst_min_age_limit = $request->scst_min_age_limit;
+        $jobboard->scst_max_age_limit = $request->scst_max_age_limit;
+        $jobboard->obc_min_age_limit = $request->obc_min_age_limit;
+        $jobboard->obc_max_age_limit = $request->obc_max_age_limit;
+        $jobboard->other_min_age_limit = $request->other_min_age_limit;
+        $jobboard->other_max_age_limit = $request->other_max_age_limit;   
         $jobboard->application_fees = $request->application_fees;
+        $jobboard->scst_application_fees = $request->scst_application_fees;
+        $jobboard->obc_application_fees = $request->obc_application_fees;
+        $jobboard->others_application_fees = $request->others_application_fees;
         $jobboard->website_link = $request->website_link;
         $jobboard->detailed_notification = $request->detailed_notification;
 
