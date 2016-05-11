@@ -330,6 +330,19 @@
 											</div>
 										</div>
 									</div>
+                                    
+
+                                    <div class="form-group">
+										<label class="control-label col-md-3">No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+											</div>
+										</div>
+									</div>
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Genral No. Of Post <span class="required">
@@ -338,7 +351,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+												<input type="text" class="form-control" id="genral_no_of_post" name="no_of_post"/>
 											</div>
 										</div>
 									</div>
@@ -693,13 +706,25 @@
 									</div>
 
 									<div class="form-group">
+										<label class="control-label col-md-3">No. Of Post <span class="required">
+										* </span>
+										</label>
+										<div class="col-md-7">
+											<div class="input-icon right">
+												<i class="fa"></i>
+												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
 										<label class="control-label col-md-3">Genral No. Of Post <span class="required">
 										* </span>
 										</label>
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="no_of_postp" name="no_of_postp"/>
+												<input type="text" class="form-control" id="genral_no_of_post" name="no_of_post"/>
 											</div>
 										</div>
 									</div>
