@@ -712,7 +712,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="no_of_post" name="no_of_post"/>
+												<input type="text" class="form-control" id="no_of_post" name="no_of_postp"/>
 											</div>
 										</div>
 									</div>
@@ -724,7 +724,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="genral_no_of_post" name="no_of_post"/>
+												<input type="text" class="form-control" id="genral_no_of_post" name="genral_no_of_postp"/>
 											</div>
 										</div>
 									</div>
@@ -1133,6 +1133,7 @@ Demo.init(); // init demo features
                    document.querySelector('[name="other_min_age_limitp"]').value = obj[0].other_min_age_limit;
                    document.querySelector('[name="other_max_age_limitp"]').value = obj[0].other_max_age_limit;
                    document.querySelector('[name="no_of_postp"]').value = obj[0].no_of_post;
+                   document.querySelector('[name="genral_no_of_postp"]').value = obj[0].genral_no_of_post;
                    document.querySelector('[name="post_descriptionp"]').value = obj[0].post_description;
                    document.querySelector('[name="application_feesp"]').value = obj[0].application_fees;
                    document.querySelector('[name="scst_application_feesp"]').value = obj[0].scst_application_fees;
