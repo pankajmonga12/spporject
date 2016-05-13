@@ -209,15 +209,15 @@ class JobboardController extends Controller
 	    'no_of_post'    => Input::get('no_of_post'),
       'scst_no_of_post'    => Input::get('scst_no_of_post'),
       'obc_no_of_post'    => Input::get('obc_no_of_post'),
-      'other_no_of_post'    => Input::get('other_no_of_post'),
+      'others_no_of_post'    => Input::get('others_no_of_post'),
       'general_application_fees'    => Input::get('application_fees'),
       'scst_application_fees'    => Input::get('scst_application_fees'),
       'obc_application_fees'    => Input::get('obc_application_fees'),
       'others_application_fees'    => Input::get('others_application_fees'),
     );
 
-echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
-die();
+//echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
+//die();
 
     	$posttype = new Posttype;
                 $posttype->fill( $postData );
