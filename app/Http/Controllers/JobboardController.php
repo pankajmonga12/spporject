@@ -216,7 +216,8 @@ class JobboardController extends Controller
       'others_application_fees'    => Input::get('others_application_fees'),
     );
 
-//echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
+echo "<pre> Data : ".print_r($postData , TRUE)."</pre>";
+die();
 
     	$posttype = new Posttype;
                 $posttype->fill( $postData );
