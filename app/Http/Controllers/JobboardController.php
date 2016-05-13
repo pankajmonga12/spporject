@@ -204,6 +204,7 @@ class JobboardController extends Controller
       	'post_id'    => Input::get('id'),
         'posttype'    => Input::get('posttype'),
 	    'qualificatiion'    => Input::get('qualification'),
+      'post_description'    => Input::get('post_description'),
 	    'eligibility'    => Input::get('eligibility'),
 	    'no_of_post'    => Input::get('no_of_post'),
       'scst_no_of_post'    => Input::get('scst_no_of_post'),
