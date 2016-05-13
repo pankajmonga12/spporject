@@ -387,7 +387,7 @@
 										<div class="col-md-7">
 											<div class="input-icon right">
 												<i class="fa"></i>
-												<input type="text" class="form-control" id="other_no_of_post" name="others_no_of_post"/>
+												<input type="text" class="form-control" id="other_no_of_post" name="other_no_of_post"/>
 											</div>
 										</div>
 									</div>

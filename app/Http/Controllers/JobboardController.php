@@ -216,6 +216,7 @@ class JobboardController extends Controller
       'other_min_age_limit'    => Input::get('other_min_age_limit'),
       'other_max_age_limit'    => Input::get('other_max_age_limit'),
 	    'no_of_post'    => Input::get('no_of_post'),
+      'genral_no_of_post'    => Input::get('genral_no_of_post'),
       'scst_no_of_post'    => Input::get('scst_no_of_post'),
       'obc_no_of_post'    => Input::get('obc_no_of_post'),
       'others_no_of_post'    => Input::get('others_no_of_post'),
